@@ -1,0 +1,58 @@
+services:
+  pom_dz_regression:
+    image: pom_dz:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/workspace
+      - /dev/shm:/dev/shm
+    command: /bin/sh -c "STAGE=$$STAGE BROWSER=$$BROWSER pytest -sv -m=$$MARKER -o log_cli=true --alluredir=allure-results"
+    # /bin/sh -c "STAGE=release BROWSER=chrome pytest -sv -o log_cli=true --alluredir=allure-results" - если сразу в команде указать переменные окружения
+    shm_size: 2gb
+    environment:
+      STAGE: ${STAGE:-release}
+      BROWSER: ${BROWSER:-chrome}
+      MARKER: ${MARKER:-regression}
+    tty: true
+
+  pom_dz_smoke:
+    image: pom_dz:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/workspace
+      - /dev/shm:/dev/shm
+    command: /bin/sh -c 'echo "STAGE=$STAGE BROWSER=$BROWSER MARKER=$MARKER KEY=$KEY"; pytest -sv $${KEY:+-k "$$KEY"} $${MARKER:+-m "$$MARKER"} -o log_cli=true --alluredir=allure-results'
+    # echo.. - таким образом выведем еще принтом текущие значения переменных окружения, $${KEY:+-k "$$KEY"} добавит -k "..." только если KEY непустой. Аналогично
+    # для MARKER, т.е. здесь сделал поиск и по маркеру и ключу, если они переданы, если не переданы, то искать по ним не будет
+    shm_size: 2gb
+    environment:
+      STAGE: ${STAGE:-release}
+      BROWSER: ${BROWSER:-chrome}
+      MARKER: ${MARKER:-}
+      # по умолчанию пустая строка
+      KEY: ${KEY:-}
+    tty: true
+
+# Запуск: $env:STAGE="release"; $env:BROWSER="chrome"; $env:MARKER="regression"; docker-compose up pom_dz_regression - это правильная команда !!!!
+# переменные окружения здесь через $env - т.к Windows и PowerShell
+# но можем не указывать переменные окружения, они заданы по дефолту, можем именно запускать разные контейнеры просто и в одном контейнере запустятся smoke тесты,
+# в другом regression, пишем команду:
+# docker-compose up pom_dz_smoke   # pom_dz_smoke - имя контейнера, это будет оркестрация!!!
+
+# docker run -it --rm -e STAGE=release -e BROWSER=chrome -v ./:/usr/workspace pom_dz:v1 sh -c "pytest -sv" - запуск через образ и здесь переменные окружения ->
+                                                    # указываем через -e, такой синтаксис в командах docker  (здесь эту команду написал просто для наглядности)
+
+# !!!! Был проблема при запуске docker-compose up pom_dz_smoke, значение переменной окружения MARKER не менялось и оставалось = regression, после запуска
+# pom_dz_regression, надо принудительно сначала выполнить команду $env:MARKER="smoke", а потом уже docker-compose up pom_dz_smoke !!!!
+# И наоборот после запуска pom_dz_smoke, при запуске pom_dz_regression тоже запускались smoke тесты, пока принудительно не изменил значение переменной
+# но если в CMD сразу указать параметры переменных: /bin/sh -c "STAGE=release BROWSER=chrome pytest -sv -m=regression -o log_cli=true --alluredir=allure-results"
+# то переопределяется значения переменных и запускается то что нужно!
+# Надо вот так команду писать, чтобы переопределялась переменная:
+# $env:MARKER="regression"; docker-compose up pom_dz_regression
+
+
+
+
