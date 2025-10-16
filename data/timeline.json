@@ -1,65 +1,65 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "0b076e35f7bc",
+    "name" : "e9c4a0bbd455",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
-        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "3357874a1343c3b5",
-        "parentUid" : "f89917b896b4f640cf565f43ad36502d",
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "44cd541c2d7dd66b",
+        "parentUid" : "b3be10fc0fb1cdaad4b5775848169f64",
         "status" : "passed",
         "time" : {
-          "start" : 1760635058572,
-          "stop" : 1760635066304,
-          "duration" : 7732
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "adc52bf16b719aef",
-        "parentUid" : "f89917b896b4f640cf565f43ad36502d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1760635066764,
-          "stop" : 1760635070394,
-          "duration" : 3630
+          "start" : 1760639390799,
+          "stop" : 1760639397827,
+          "duration" : 7028
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Тестирование авторизации",
-        "uid" : "ed4dbe595928106b",
-        "parentUid" : "f89917b896b4f640cf565f43ad36502d",
+        "uid" : "cd473a797596bcad",
+        "parentUid" : "b3be10fc0fb1cdaad4b5775848169f64",
         "status" : "passed",
         "time" : {
-          "start" : 1760635078323,
-          "stop" : 1760635081140,
-          "duration" : 2817
+          "start" : 1760639398286,
+          "stop" : 1760639401145,
+          "duration" : 2859
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "821f044d7974d2be",
-        "parentUid" : "f89917b896b4f640cf565f43ad36502d",
+        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+        "uid" : "571d07d93626e92e",
+        "parentUid" : "b3be10fc0fb1cdaad4b5775848169f64",
         "status" : "passed",
         "time" : {
-          "start" : 1760635070842,
-          "stop" : 1760635077875,
-          "duration" : 7033
+          "start" : 1760639387175,
+          "stop" : 1760639390332,
+          "duration" : 3157
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+        "uid" : "a2a51f1a75f6b060",
+        "parentUid" : "b3be10fc0fb1cdaad4b5775848169f64",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760639379034,
+          "stop" : 1760639386708,
+          "duration" : 7674
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f89917b896b4f640cf565f43ad36502d"
+      "uid" : "b3be10fc0fb1cdaad4b5775848169f64"
     } ],
-    "uid" : "c137867693c351f6552e1df7cdf1d6e4"
+    "uid" : "eb497cf55b7cd93688c645110bb4b06f"
   } ],
   "name" : "timeline"
 }
