@@ -34,6 +34,8 @@ services:
       MARKER: ${MARKER:-}
       # по умолчанию пустая строка
       KEY: ${KEY:-}
+      RELEASE_LOGIN: ${RELEASE_LOGIN}         # просто прокидываем, чтобы при запуске через github в allure отображались
+      RELEASE_PASSWORD: ${RELEASE_PASSWORD}
     tty: true
 
   # для генерации allure-report из папки allure-result
