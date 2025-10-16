@@ -1,11 +1,11 @@
 [ {
-  "uid" : "77293d400534577c",
+  "uid" : "c2fa99f814dd95ca",
   "name" : "Тестирование авторизации",
   "time" : {
-    "start" : 1760621011099,
-    "stop" : 1760621014074,
-    "duration" : 2975
+    "start" : 1760621340126,
+    "stop" : 1760621343113,
+    "duration" : 2987
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "normal"
 } ]
