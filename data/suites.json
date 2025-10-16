@@ -3,18 +3,81 @@
   "children" : [ {
     "name" : "Тренировочный проект на https://release-crm.qa-playground.com",
     "children" : [ {
+      "name" : "contact_test",
+      "children" : [ {
+        "name" : "TestContact",
+        "children" : [ {
+          "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+          "uid" : "d113679559566bda",
+          "parentUid" : "187bcf986f40953fc573c25ec323ebfd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1760626313595,
+            "stop" : 1760626321043,
+            "duration" : 7448
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "187bcf986f40953fc573c25ec323ebfd"
+      } ],
+      "uid" : "cc609708eea3904c933292b5365d9ffd"
+    }, {
+      "name" : "dashboard_test",
+      "children" : [ {
+        "name" : "TestDashboard",
+        "children" : [ {
+          "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+          "uid" : "451e3af15513d175",
+          "parentUid" : "b922ff9dcf778f4ff150ac53840bfcda",
+          "status" : "passed",
+          "time" : {
+            "start" : 1760626321504,
+            "stop" : 1760626324720,
+            "duration" : 3216
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "b922ff9dcf778f4ff150ac53840bfcda"
+      } ],
+      "uid" : "6d86d8783926a502241b250db360d606"
+    }, {
+      "name" : "deals_test",
+      "children" : [ {
+        "name" : "TestDeals",
+        "children" : [ {
+          "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+          "uid" : "d47dd34cfe86448c",
+          "parentUid" : "523c63783683eb2f860ba5c26fc248b2",
+          "status" : "passed",
+          "time" : {
+            "start" : 1760626325180,
+            "stop" : 1760626331743,
+            "duration" : 6563
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "523c63783683eb2f860ba5c26fc248b2"
+      } ],
+      "uid" : "ece95496aa98e8d305e16005052d7426"
+    }, {
       "name" : "login_test",
       "children" : [ {
         "name" : "TestLogin",
         "children" : [ {
           "name" : "Тестирование авторизации",
-          "uid" : "d91e918b6f2bb4a6",
+          "uid" : "1d1b79ef8c3d7218",
           "parentUid" : "2e52a80f63eff45fe4fabb2575edc341",
           "status" : "passed",
           "time" : {
-            "start" : 1760625420420,
-            "stop" : 1760625423873,
-            "duration" : 3453
+            "start" : 1760626332188,
+            "stop" : 1760626335007,
+            "duration" : 2819
           },
           "flaky" : false,
           "newFailed" : false,
