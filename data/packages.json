@@ -4,13 +4,13 @@
     "name" : "tests.login_test",
     "children" : [ {
       "name" : "Тестирование авторизации",
-      "uid" : "c2fa99f814dd95ca",
+      "uid" : "2f58fe1179538050",
       "parentUid" : "fa8380230272a9bb1a6d6e9ad8189b2e",
       "status" : "broken",
       "time" : {
-        "start" : 1760621340126,
-        "stop" : 1760621343113,
-        "duration" : 2987
+        "start" : 1760621684278,
+        "stop" : 1760621687527,
+        "duration" : 3249
       },
       "flaky" : false,
       "newFailed" : false,
