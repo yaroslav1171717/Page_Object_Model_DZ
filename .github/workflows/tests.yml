@@ -1,12 +1,14 @@
 name: UI Tests
-run-name: Test ${{ github.event.inputs.STAGE }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
+run-name: STAGE ${{ github.event.secrets.STAGE }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
 # Это название в Actions увидим
 # Git hub ranner - это как некий контейнер, внутри него будет запускаться наша job, а внутри джобы уже будет работать наш контейнер docker-compose
 
 on:
   workflow_dispatch:    # Это ручной вариант запуска, в лекции еще описан по расписанию/времени, при пуше в main/master, запуск на каждый PR
     inputs:
-      ENV:   # GitHub Environment (dev/test/etc), это как бы окружение для переменных окружения для конкретного стенда (?)
+      ENV:   # GitHub Environment (dev/test/etc), это как бы окружение для переменных окружения для конкретного стенда, т.е. в настройках проекта в github ->
+        # в разделе Environments добавил окружение release, а в нем уже environment secret, такие как хост стенда - release, логин и пароль, которые нужны в ->
+        # данном проекте RELEASE_LOGIN и RELEASE_PASSWORD, которые при локальном запуске, подтягиваются из .env, но .env мы не пушим в git
         description: "Choose environment"
         required: true
         type: environment # Важно: это тип environment!
