@@ -7,7 +7,7 @@ run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }
 
 on:
   schedule:
-    - cron: '10 21 * * *'  # Запускается ежедневно в 21:10 (9 вечера)
+    - cron: '25 18 * * *'  # Запускается ежедневно в 21:10 (9 вечера)
 
   workflow_dispatch:    # Это ручной вариант запуска, в лекции еще описан по расписанию/времени, при пуше в main/master, запуск на каждый PR
     inputs:
