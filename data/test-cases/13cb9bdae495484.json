@@ -1,0 +1,389 @@
+{
+  "uid" : "13cb9bdae495484",
+  "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+  "fullName" : "tests.dashboard_test.TestDashboard#test_open_menus_by_name",
+  "historyId" : "fdf659477fd6c733f5220db5e41affdd",
+  "time" : {
+    "start" : 1760627470035,
+    "stop" : 1760627474128,
+    "duration" : 4093
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestDashboard",
+    "time" : {
+      "start" : 1760627470034,
+      "stop" : 1760627470034,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1760627469647,
+      "stop" : 1760627470034,
+      "duration" : 387
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/",
+      "time" : {
+        "start" : 1760627470035,
+        "stop" : 1760627472826,
+        "duration" : 2791
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Открываем меню contacts в шапке",
+      "time" : {
+        "start" : 1760627472826,
+        "stop" : 1760627473006,
+        "duration" : 180
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1760627473006,
+        "stop" : 1760627473015,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/contacts'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем меню dashboard в шапке",
+      "time" : {
+        "start" : 1760627473015,
+        "stop" : 1760627473173,
+        "duration" : 158
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1760627473173,
+        "stop" : 1760627473264,
+        "duration" : 91
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем меню companies в шапке",
+      "time" : {
+        "start" : 1760627473264,
+        "stop" : 1760627473410,
+        "duration" : 146
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1760627473410,
+        "stop" : 1760627473414,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/companies'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем меню deals в шапке",
+      "time" : {
+        "start" : 1760627473414,
+        "stop" : 1760627473555,
+        "duration" : 141
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1760627473555,
+        "stop" : 1760627473559,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/deals'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем меню crm в шапке",
+      "time" : {
+        "start" : 1760627473559,
+        "stop" : 1760627474123,
+        "duration" : 564
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1760627474123,
+        "stop" : 1760627474128,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 11,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestDashboard::0",
+    "time" : {
+      "start" : 1760627474129,
+      "stop" : 1760627474129,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1760627474129,
+      "stop" : 1760627474190,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "suite",
+    "value" : "dashboard_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDashboard"
+  }, {
+    "name" : "host",
+    "value" : "1f2ceb112362"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.dashboard_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "863154b1f6e05c57",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Неверный url страницы\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/contacts')\n +    where check_url = <pages.dashboard_page.DashboardPage object at 0x7fa8c11ccb10>.check_url\n +      where <pages.dashboard_page.DashboardPage object at 0x7fa8c11ccb10> = <tests.dashboard_test.TestDashboard object at 0x7fa8c12f0d10>.dashboard_page",
+        "time" : {
+          "start" : 1760627108337,
+          "stop" : 1760627110564,
+          "duration" : 2227
+        }
+      }, {
+        "uid" : "bfb129312f5937ba",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Неверный url страницы\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/contacts')\n +    where check_url = <pages.dashboard_page.DashboardPage object at 0x7fda7e381790>.check_url\n +      where <pages.dashboard_page.DashboardPage object at 0x7fda7e381790> = <tests.dashboard_test.TestDashboard object at 0x7fda7e4985d0>.dashboard_page",
+        "time" : {
+          "start" : 1760626678480,
+          "stop" : 1760626681245,
+          "duration" : 2765
+        }
+      }, {
+        "uid" : "451e3af15513d175",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760626321504,
+          "stop" : 1760626324720,
+          "duration" : 3216
+        }
+      }, {
+        "uid" : "87f537a155258c96",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760619133574,
+          "stop" : 1760619137570,
+          "duration" : 3996
+        }
+      }, {
+        "uid" : "e78c8c99408e0dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760618700152,
+          "stop" : 1760618703882,
+          "duration" : 3730
+        }
+      }, {
+        "uid" : "6275b66946e1296c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760617768257,
+          "stop" : 1760617772292,
+          "duration" : 4035
+        }
+      }, {
+        "uid" : "bf9fcab71e6d5e9a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760617280706,
+          "stop" : 1760617284491,
+          "duration" : 3785
+        }
+      }, {
+        "uid" : "baae2e0549028a7f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760615801949,
+          "stop" : 1760615805481,
+          "duration" : 3532
+        }
+      } ]
+    },
+    "tags" : [ "regression" ]
+  },
+  "source" : "13cb9bdae495484.json",
+  "parameterValues" : [ ]
+}

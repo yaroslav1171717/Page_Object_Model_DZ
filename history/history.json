@@ -4,11 +4,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 6,
+      "passed" : 7,
       "unknown" : 0,
-      "total" : 8
+      "total" : 9
     },
     "items" : [ {
+      "uid" : "3fe90d2c23a903fd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760627461129,
+        "stop" : 1760627469581,
+        "duration" : 8452
+      }
+    }, {
       "uid" : "21ab89cf6d0fb3d0",
       "status" : "broken",
       "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
@@ -343,11 +351,19 @@
       "failed" : 2,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 6,
+      "passed" : 7,
       "unknown" : 0,
-      "total" : 8
+      "total" : 9
     },
     "items" : [ {
+      "uid" : "13cb9bdae495484",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760627470035,
+        "stop" : 1760627474128,
+        "duration" : 4093
+      }
+    }, {
       "uid" : "863154b1f6e05c57",
       "status" : "failed",
       "statusDetails" : "AssertionError: Неверный url страницы\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/contacts')\n +    where check_url = <pages.dashboard_page.DashboardPage object at 0x7fa8c11ccb10>.check_url\n +      where <pages.dashboard_page.DashboardPage object at 0x7fa8c11ccb10> = <tests.dashboard_test.TestDashboard object at 0x7fa8c12f0d10>.dashboard_page",

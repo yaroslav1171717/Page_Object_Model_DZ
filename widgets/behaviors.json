@@ -4,12 +4,12 @@
     "uid" : "fad6093aab492075ffe86dec253642a2",
     "name" : "Тренировочный проект на https://release-crm.qa-playground.com",
     "statistic" : {
-      "failed" : 2,
-      "broken" : 2,
+      "failed" : 0,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 4
+      "total" : 2
     }
   } ]
 }

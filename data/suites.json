@@ -8,13 +8,13 @@
         "name" : "TestContact",
         "children" : [ {
           "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-          "uid" : "21ab89cf6d0fb3d0",
+          "uid" : "3fe90d2c23a903fd",
           "parentUid" : "187bcf986f40953fc573c25ec323ebfd",
-          "status" : "broken",
+          "status" : "passed",
           "time" : {
-            "start" : 1760627090876,
-            "stop" : 1760627107875,
-            "duration" : 16999
+            "start" : 1760627461129,
+            "stop" : 1760627469581,
+            "duration" : 8452
           },
           "flaky" : false,
           "newFailed" : false,
@@ -29,13 +29,13 @@
         "name" : "TestDashboard",
         "children" : [ {
           "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-          "uid" : "863154b1f6e05c57",
+          "uid" : "13cb9bdae495484",
           "parentUid" : "b922ff9dcf778f4ff150ac53840bfcda",
-          "status" : "failed",
+          "status" : "passed",
           "time" : {
-            "start" : 1760627108337,
-            "stop" : 1760627110564,
-            "duration" : 2227
+            "start" : 1760627470035,
+            "stop" : 1760627474128,
+            "duration" : 4093
           },
           "flaky" : false,
           "newFailed" : false,
@@ -44,48 +44,6 @@
         "uid" : "b922ff9dcf778f4ff150ac53840bfcda"
       } ],
       "uid" : "6d86d8783926a502241b250db360d606"
-    }, {
-      "name" : "deals_test",
-      "children" : [ {
-        "name" : "TestDeals",
-        "children" : [ {
-          "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-          "uid" : "626fb29d7907535b",
-          "parentUid" : "523c63783683eb2f860ba5c26fc248b2",
-          "status" : "broken",
-          "time" : {
-            "start" : 1760627144352,
-            "stop" : 1760627160326,
-            "duration" : 15974
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        } ],
-        "uid" : "523c63783683eb2f860ba5c26fc248b2"
-      } ],
-      "uid" : "ece95496aa98e8d305e16005052d7426"
-    }, {
-      "name" : "login_test",
-      "children" : [ {
-        "name" : "TestLogin",
-        "children" : [ {
-          "name" : "Тестирование авторизации",
-          "uid" : "484d0e1bb3758b67",
-          "parentUid" : "2e52a80f63eff45fe4fabb2575edc341",
-          "status" : "failed",
-          "time" : {
-            "start" : 1760627160790,
-            "stop" : 1760627163589,
-            "duration" : 2799
-          },
-          "flaky" : true,
-          "newFailed" : false,
-          "parameters" : [ ]
-        } ],
-        "uid" : "2e52a80f63eff45fe4fabb2575edc341"
-      } ],
-      "uid" : "df0d0a48d83e2329c668e7acb7204389"
     } ],
     "uid" : "c8d271cf21c30a7da842ff560bc37051"
   } ],
