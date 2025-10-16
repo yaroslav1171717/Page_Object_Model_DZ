@@ -36,7 +36,19 @@ services:
       KEY: ${KEY:-}
     tty: true
 
+  # для генерации allure-report из папки allure-result
+  report:
+    image: ui:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/workspace
+    command: /bin/sh -c "ls -la && allure generate allure-results --clean -o allure-report"
+    working_dir: /usr/workspace
+
 # Запуск: $env:STAGE="release"; $env:BROWSER="chrome"; $env:MARKER="regression"; docker-compose up pom_dz_regression - это правильная команда !!!!
+# $env:STAGE="release"; $env:BROWSER="chrome"; $env:MARKER=""; $env:KEY="test_open_from_hot"; docker-compose up pom_dz_smoke - для поиска по названию !!!!
 # переменные окружения здесь через $env - т.к Windows и PowerShell
 # но можем не указывать переменные окружения, они заданы по дефолту, можем именно запускать разные контейнеры просто и в одном контейнере запустятся smoke тесты,
 # в другом regression, пишем команду:
