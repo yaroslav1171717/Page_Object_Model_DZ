@@ -66,8 +66,8 @@ jobs:
       - name: Run tests via docker-compose
         env:               # Должны быть те же переменные окружения, что и в docker-compose, хотя если они из inputs, то автоматом должны подтянутся, но ->
           STAGE: ${{ secrets.STAGE }}            # здесь лишним не будет, а secrets обязательно писать  # STAGE: ${{ secrets.STAGE }}
-          RELEASE_LOGIN: ${{ secrets.LOGIN }}
-          RELEASE_PASSWORD: ${{ secrets.PASSWORD }}
+          LOGIN: ${{ secrets.LOGIN }}
+          PASSWORD: ${{ secrets.PASSWORD }}
           BROWSER: ${{ inputs.BROWSER }}
           MARKER: ${{ inputs.MARKER }}
           KEY: ${{ inputs.KEY }}
