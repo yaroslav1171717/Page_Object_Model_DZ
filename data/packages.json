@@ -6,13 +6,13 @@
       "name" : "contact_test",
       "children" : [ {
         "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "9bc213903349615e",
+        "uid" : "3d890a7d548a55fc",
         "parentUid" : "d12589d8df0dcc6816fe92d7c35548a2",
         "status" : "passed",
         "time" : {
-          "start" : 1760617759421,
-          "stop" : 1760617767786,
-          "duration" : 8365
+          "start" : 1760618690936,
+          "stop" : 1760618699726,
+          "duration" : 8790
         },
         "flaky" : false,
         "newFailed" : false,
@@ -23,13 +23,13 @@
       "name" : "dashboard_test",
       "children" : [ {
         "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "6275b66946e1296c",
+        "uid" : "e78c8c99408e0dd",
         "parentUid" : "762f440dba94479630f6cffcc30d4f11",
         "status" : "passed",
         "time" : {
-          "start" : 1760617768257,
-          "stop" : 1760617772292,
-          "duration" : 4035
+          "start" : 1760618700152,
+          "stop" : 1760618703882,
+          "duration" : 3730
         },
         "flaky" : false,
         "newFailed" : false,
@@ -40,13 +40,13 @@
       "name" : "deals_test",
       "children" : [ {
         "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "e4bd9e8a5e1741cd",
+        "uid" : "b4613d759a17234a",
         "parentUid" : "b391d6861489be57bf39c6c9ce80fb90",
         "status" : "passed",
         "time" : {
-          "start" : 1760617772755,
-          "stop" : 1760617785303,
-          "duration" : 12548
+          "start" : 1760618704292,
+          "stop" : 1760618712298,
+          "duration" : 8006
         },
         "flaky" : false,
         "newFailed" : false,
@@ -57,13 +57,13 @@
       "name" : "login_test",
       "children" : [ {
         "name" : "Тестирование авторизации",
-        "uid" : "d5ab00be9a8624b6",
+        "uid" : "dc55d968ab6798cf",
         "parentUid" : "fa8380230272a9bb1a6d6e9ad8189b2e",
         "status" : "broken",
         "time" : {
-          "start" : 1760617785784,
-          "stop" : 1760617788968,
-          "duration" : 3184
+          "start" : 1760618712711,
+          "stop" : 1760618715538,
+          "duration" : 2827
         },
         "flaky" : false,
         "newFailed" : false,

@@ -6,13 +6,13 @@
       "name" : "TypeError: 'NoneType' object is not iterable",
       "children" : [ {
         "name" : "Тестирование авторизации",
-        "uid" : "d5ab00be9a8624b6",
+        "uid" : "dc55d968ab6798cf",
         "parentUid" : "5ae019e15b757cc14ae13e78aec51419",
         "status" : "broken",
         "time" : {
-          "start" : 1760617785784,
-          "stop" : 1760617788968,
-          "duration" : 3184
+          "start" : 1760618712711,
+          "stop" : 1760618715538,
+          "duration" : 2827
         },
         "flaky" : false,
         "newFailed" : false,

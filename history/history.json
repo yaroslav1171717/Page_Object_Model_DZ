@@ -4,11 +4,19 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 3,
+      "passed" : 4,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "3d890a7d548a55fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760618690936,
+        "stop" : 1760618699726,
+        "duration" : 8790
+      }
+    }, {
       "uid" : "9bc213903349615e",
       "status" : "passed",
       "time" : {
@@ -37,13 +45,22 @@
   "4a2e7f781cbcf7e74a88a7626dcbde05" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 4,
+      "broken" : 5,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 4
+      "total" : 5
     },
     "items" : [ {
+      "uid" : "dc55d968ab6798cf",
+      "status" : "broken",
+      "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+      "time" : {
+        "start" : 1760618712711,
+        "stop" : 1760618715538,
+        "duration" : 2827
+      }
+    }, {
       "uid" : "d5ab00be9a8624b6",
       "status" : "broken",
       "statusDetails" : "TypeError: 'NoneType' object is not iterable",
@@ -86,11 +103,19 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 3,
+      "passed" : 4,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "b4613d759a17234a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760618704292,
+        "stop" : 1760618712298,
+        "duration" : 8006
+      }
+    }, {
       "uid" : "e4bd9e8a5e1741cd",
       "status" : "passed",
       "time" : {
@@ -121,11 +146,19 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 3,
+      "passed" : 4,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "e78c8c99408e0dd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760618700152,
+        "stop" : 1760618703882,
+        "duration" : 3730
+      }
+    }, {
       "uid" : "6275b66946e1296c",
       "status" : "passed",
       "time" : {
