@@ -55,11 +55,19 @@
       "failed" : 0,
       "broken" : 12,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 13
+      "total" : 14
     },
     "items" : [ {
+      "uid" : "5204bd10bc2edfa9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760622780529,
+        "stop" : 1760622783236,
+        "duration" : 2707
+      }
+    }, {
       "uid" : "cd78e0af277d8a52",
       "status" : "broken",
       "statusDetails" : "TypeError: 'NoneType' object is not iterable",
