@@ -1,77 +1,22 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "children" : [ {
-    "name" : "tests",
+    "name" : "tests.login_test",
     "children" : [ {
-      "name" : "contact_test",
-      "children" : [ {
-        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "4f70e68fd420b1d5",
-        "parentUid" : "d12589d8df0dcc6816fe92d7c35548a2",
-        "status" : "passed",
-        "time" : {
-          "start" : 1760619124929,
-          "stop" : 1760619133117,
-          "duration" : 8188
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "d12589d8df0dcc6816fe92d7c35548a2"
-    }, {
-      "name" : "dashboard_test",
-      "children" : [ {
-        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "87f537a155258c96",
-        "parentUid" : "762f440dba94479630f6cffcc30d4f11",
-        "status" : "passed",
-        "time" : {
-          "start" : 1760619133574,
-          "stop" : 1760619137570,
-          "duration" : 3996
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "762f440dba94479630f6cffcc30d4f11"
-    }, {
-      "name" : "deals_test",
-      "children" : [ {
-        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "219d1da7e10fa475",
-        "parentUid" : "b391d6861489be57bf39c6c9ce80fb90",
-        "status" : "passed",
-        "time" : {
-          "start" : 1760619138026,
-          "stop" : 1760619145281,
-          "duration" : 7255
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "b391d6861489be57bf39c6c9ce80fb90"
-    }, {
-      "name" : "login_test",
-      "children" : [ {
-        "name" : "Тестирование авторизации",
-        "uid" : "f8810aab9d46948d",
-        "parentUid" : "fa8380230272a9bb1a6d6e9ad8189b2e",
-        "status" : "broken",
-        "time" : {
-          "start" : 1760619145734,
-          "stop" : 1760619148713,
-          "duration" : 2979
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "fa8380230272a9bb1a6d6e9ad8189b2e"
+      "name" : "Тестирование авторизации",
+      "uid" : "6c8dd12ad8dae1de",
+      "parentUid" : "fa8380230272a9bb1a6d6e9ad8189b2e",
+      "status" : "broken",
+      "time" : {
+        "start" : 1760619487225,
+        "stop" : 1760619490189,
+        "duration" : 2964
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
     } ],
-    "uid" : "bf49149a3821e34f7608bb6885d52868"
+    "uid" : "tests.login_test"
   } ],
   "name" : "packages"
 }

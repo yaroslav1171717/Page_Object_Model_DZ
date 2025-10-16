@@ -53,13 +53,22 @@
   "4a2e7f781cbcf7e74a88a7626dcbde05" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 6,
+      "broken" : 7,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 6
+      "total" : 7
     },
     "items" : [ {
+      "uid" : "6c8dd12ad8dae1de",
+      "status" : "broken",
+      "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+      "time" : {
+        "start" : 1760619487225,
+        "stop" : 1760619490189,
+        "duration" : 2964
+      }
+    }, {
       "uid" : "f8810aab9d46948d",
       "status" : "broken",
       "statusDetails" : "TypeError: 'NoneType' object is not iterable",
