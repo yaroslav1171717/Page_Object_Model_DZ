@@ -1,26 +1,26 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "6c59b84afe82",
+    "name" : "8e7f3c907223",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
         "name" : "Тестирование авторизации",
-        "uid" : "a00dc1210a3c4c86",
-        "parentUid" : "e09bd9048a04fdd3c8a1b96171c652a4",
+        "uid" : "9f1ebebdf2a54a73",
+        "parentUid" : "4c2ef57a74d5aad5fab47d617b4f8aea",
         "status" : "broken",
         "time" : {
-          "start" : 1760619888776,
-          "stop" : 1760619891840,
-          "duration" : 3064
+          "start" : 1760620632942,
+          "stop" : 1760620635608,
+          "duration" : 2666
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "e09bd9048a04fdd3c8a1b96171c652a4"
+      "uid" : "4c2ef57a74d5aad5fab47d617b4f8aea"
     } ],
-    "uid" : "427ef4f541d5e4d634e9456ab2947b24"
+    "uid" : "04e8f319add2e012dc720e359ad16598"
   } ],
   "name" : "timeline"
 }

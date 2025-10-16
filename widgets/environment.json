@@ -2,12 +2,18 @@
   "values" : [ "master" ],
   "name" : "Branch"
 }, {
-  "values" : [ "9144542a9339321aa8f916f910627df4a5294a53" ],
+  "values" : [ "2d55283242cffda7d4a68330567ce1f9d9b7a210" ],
   "name" : "Commit"
 }, {
   "values" : [ "chrome" ],
   "name" : "Browser"
 }, {
-  "values" : [ "pass_rel" ],
+  "values" : [ "release" ],
   "name" : "Stage"
+}, {
+  "values" : [ "login_rel" ],
+  "name" : "LOGIN"
+}, {
+  "values" : [ "pass_rel" ],
+  "name" : "PASSWORD"
 } ]
