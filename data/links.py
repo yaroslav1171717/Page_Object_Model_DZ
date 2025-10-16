@@ -1,7 +1,7 @@
 import os
 
 class Links:
-    HOST = f"https://{os.environ['STAGE']}-crm.qa-playground.com"       # Ожидается запуск с переменной окружения $env:STAGE="release";
+    HOST = f"https://{os.environ['STAGE']}-crm.qa-playground.com"       # Ожидается запуск с переменной окружения $env:STAGE="release"; // dev
 
 
 

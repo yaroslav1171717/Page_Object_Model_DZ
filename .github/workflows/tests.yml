@@ -12,7 +12,7 @@ on:
         type: environment # Важно: это тип environment!
 
       STAGE:
-        description: "Choose microservice to test"        # Описание
+        description: "Choose Stage"        # Описание
         required: true                                  # Обязательность
         default: "release"
         type: choice
@@ -31,13 +31,9 @@ on:
 
       MARKER:
         description: "Choose marker"
-        required: true
+        required: false
         default: ""
-        type: choice
-        options:
-          - smoke
-          - regression
-          - ""       # Чтобы было пустое значение
+        type: string
 
       KEY:
         description: "Name search"
