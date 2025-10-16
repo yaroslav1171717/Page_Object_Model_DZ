@@ -8,13 +8,13 @@
         "name" : "TestLogin",
         "children" : [ {
           "name" : "Тестирование авторизации",
-          "uid" : "7b11c1d2f11e786",
+          "uid" : "d91e918b6f2bb4a6",
           "parentUid" : "2e52a80f63eff45fe4fabb2575edc341",
           "status" : "passed",
           "time" : {
-            "start" : 1760625111126,
-            "stop" : 1760625114033,
-            "duration" : 2907
+            "start" : 1760625420420,
+            "stop" : 1760625423873,
+            "duration" : 3453
           },
           "flaky" : false,
           "newFailed" : false,

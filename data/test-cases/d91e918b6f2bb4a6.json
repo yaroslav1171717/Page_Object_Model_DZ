@@ -1,0 +1,361 @@
+{
+  "uid" : "d91e918b6f2bb4a6",
+  "name" : "Тестирование авторизации",
+  "fullName" : "tests.login_test.TestLogin#test_authorization",
+  "historyId" : "4a2e7f781cbcf7e74a88a7626dcbde05",
+  "time" : {
+    "start" : 1760625420420,
+    "stop" : 1760625423873,
+    "duration" : 3453
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestLogin",
+    "time" : {
+      "start" : 1760625420420,
+      "stop" : 1760625420420,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1760625419966,
+      "stop" : 1760625420419,
+      "duration" : 453
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/contacts",
+      "time" : {
+        "start" : 1760625420420,
+        "stop" : 1760625423301,
+        "duration" : 2881
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Разлогиниваемся из пользователя",
+      "time" : {
+        "start" : 1760625423301,
+        "stop" : 1760625423536,
+        "duration" : 235
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Ввод логина и пароля на странице Авторизации",
+      "time" : {
+        "start" : 1760625423536,
+        "stop" : 1760625423869,
+        "duration" : 333
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "login",
+        "value" : "'login_rel'"
+      }, {
+        "name" : "password",
+        "value" : "'pass_rel'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1760625423869,
+        "stop" : 1760625423873,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestLogin::0",
+    "time" : {
+      "start" : 1760625423873,
+      "stop" : 1760625423874,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1760625423874,
+      "stop" : 1760625423936,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "suite",
+    "value" : "login_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "7d52ff773482"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.login_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 12,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 18
+      },
+      "items" : [ {
+        "uid" : "7b11c1d2f11e786",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760625111126,
+          "stop" : 1760625114033,
+          "duration" : 2907
+        }
+      }, {
+        "uid" : "65610cb45c5e37e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760624117449,
+          "stop" : 1760624120342,
+          "duration" : 2893
+        }
+      }, {
+        "uid" : "f0f47577a147555e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7f2f6ccae450>.check_url\n +      where <pages.login_page.LoginPage object at 0x7f2f6ccae450> = <tests.login_test.TestLogin object at 0x7f2f6cc98a50>.login_page",
+        "time" : {
+          "start" : 1760623812490,
+          "stop" : 1760623815117,
+          "duration" : 2627
+        }
+      }, {
+        "uid" : "5204bd10bc2edfa9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760622780529,
+          "stop" : 1760622783236,
+          "duration" : 2707
+        }
+      }, {
+        "uid" : "cd78e0af277d8a52",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760622022893,
+          "stop" : 1760622026252,
+          "duration" : 3359
+        }
+      }, {
+        "uid" : "2f58fe1179538050",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760621684278,
+          "stop" : 1760621687527,
+          "duration" : 3249
+        }
+      }, {
+        "uid" : "c2fa99f814dd95ca",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760621340126,
+          "stop" : 1760621343113,
+          "duration" : 2987
+        }
+      }, {
+        "uid" : "77293d400534577c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760621011099,
+          "stop" : 1760621014074,
+          "duration" : 2975
+        }
+      }, {
+        "uid" : "9f1ebebdf2a54a73",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760620632942,
+          "stop" : 1760620635608,
+          "duration" : 2666
+        }
+      }, {
+        "uid" : "a00dc1210a3c4c86",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760619888776,
+          "stop" : 1760619891840,
+          "duration" : 3064
+        }
+      }, {
+        "uid" : "6c8dd12ad8dae1de",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760619487225,
+          "stop" : 1760619490189,
+          "duration" : 2964
+        }
+      }, {
+        "uid" : "f8810aab9d46948d",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760619145734,
+          "stop" : 1760619148713,
+          "duration" : 2979
+        }
+      }, {
+        "uid" : "dc55d968ab6798cf",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760618712711,
+          "stop" : 1760618715538,
+          "duration" : 2827
+        }
+      }, {
+        "uid" : "d5ab00be9a8624b6",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760617785784,
+          "stop" : 1760617788968,
+          "duration" : 3184
+        }
+      }, {
+        "uid" : "c54ae3f02c1dc227",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760617293004,
+          "stop" : 1760617296127,
+          "duration" : 3123
+        }
+      }, {
+        "uid" : "60ef4385a01ded49",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760615813797,
+          "stop" : 1760615817819,
+          "duration" : 4022
+        }
+      }, {
+        "uid" : "ee864a33071ea963",
+        "status" : "broken",
+        "statusDetails" : "TypeError: 'NoneType' object is not iterable",
+        "time" : {
+          "start" : 1760615273816,
+          "stop" : 1760615276578,
+          "duration" : 2762
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "d91e918b6f2bb4a6.json",
+  "parameterValues" : [ ]
+}
