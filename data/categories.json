@@ -1,5 +1,77 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "children" : [ {
+        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+        "uid" : "3d8fce3634809e1b",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1760626660935,
+          "stop" : 1760626678034,
+          "duration" : 17099
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "e0cde383d6fa1bf8",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1760626715940,
+          "stop" : 1760626732324,
+          "duration" : 16384
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Неверный url страницы\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/contacts')\n +    where check_url = <pages.dashboard_page.DashboardPage object at 0x7fda7e381790>.check_url\n +      where <pages.dashboard_page.DashboardPage object at 0x7fda7e381790> = <tests.dashboard_test.TestDashboard object at 0x7fda7e4985d0>.dashboard_page",
+      "children" : [ {
+        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+        "uid" : "bfb129312f5937ba",
+        "parentUid" : "8efa1c705483fc93ead218046c892146",
+        "status" : "failed",
+        "time" : {
+          "start" : 1760626678480,
+          "stop" : 1760626681245,
+          "duration" : 2765
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8efa1c705483fc93ead218046c892146"
+    }, {
+      "name" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fda7e3ea8d0>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fda7e3ea8d0> = <tests.login_test.TestLogin object at 0x7fda7e514b90>.login_page",
+      "children" : [ {
+        "name" : "Тестирование авторизации",
+        "uid" : "5dbe6bb7603c5f68",
+        "parentUid" : "66b50e4091545a4d3863b4f122349868",
+        "status" : "failed",
+        "time" : {
+          "start" : 1760626732788,
+          "stop" : 1760626736110,
+          "duration" : 3322
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "66b50e4091545a4d3863b4f122349868"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
   "name" : "categories"
 }

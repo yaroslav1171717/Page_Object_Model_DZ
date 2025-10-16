@@ -2,13 +2,22 @@
   "7dc34a0dcf8cb5685c913ed3a260b9ff" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
       "passed" : 6,
       "unknown" : 0,
-      "total" : 6
+      "total" : 7
     },
     "items" : [ {
+      "uid" : "3d8fce3634809e1b",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1760626660935,
+        "stop" : 1760626678034,
+        "duration" : 17099
+      }
+    }, {
       "uid" : "d113679559566bda",
       "status" : "passed",
       "time" : {
@@ -60,14 +69,23 @@
   },
   "4a2e7f781cbcf7e74a88a7626dcbde05" : {
     "statistic" : {
-      "failed" : 1,
+      "failed" : 2,
       "broken" : 12,
       "skipped" : 0,
       "passed" : 6,
       "unknown" : 0,
-      "total" : 19
+      "total" : 20
     },
     "items" : [ {
+      "uid" : "5dbe6bb7603c5f68",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fda7e3ea8d0>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fda7e3ea8d0> = <tests.login_test.TestLogin object at 0x7fda7e514b90>.login_page",
+      "time" : {
+        "start" : 1760626732788,
+        "stop" : 1760626736110,
+        "duration" : 3322
+      }
+    }, {
       "uid" : "1d1b79ef8c3d7218",
       "status" : "passed",
       "time" : {
@@ -237,13 +255,22 @@
   "f0f5e3318dbe089f0c6ea48989269ded" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
       "passed" : 6,
       "unknown" : 0,
-      "total" : 6
+      "total" : 7
     },
     "items" : [ {
+      "uid" : "e0cde383d6fa1bf8",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1760626715940,
+        "stop" : 1760626732324,
+        "duration" : 16384
+      }
+    }, {
       "uid" : "d47dd34cfe86448c",
       "status" : "passed",
       "time" : {
@@ -295,14 +322,23 @@
   },
   "fdf659477fd6c733f5220db5e41affdd" : {
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
       "passed" : 6,
       "unknown" : 0,
-      "total" : 6
+      "total" : 7
     },
     "items" : [ {
+      "uid" : "bfb129312f5937ba",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: Неверный url страницы\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/contacts')\n +    where check_url = <pages.dashboard_page.DashboardPage object at 0x7fda7e381790>.check_url\n +      where <pages.dashboard_page.DashboardPage object at 0x7fda7e381790> = <tests.dashboard_test.TestDashboard object at 0x7fda7e4985d0>.dashboard_page",
+      "time" : {
+        "start" : 1760626678480,
+        "stop" : 1760626681245,
+        "duration" : 2765
+      }
+    }, {
       "uid" : "451e3af15513d175",
       "status" : "passed",
       "time" : {

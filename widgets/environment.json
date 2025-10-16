@@ -8,12 +8,12 @@
   "values" : [ "chrome" ],
   "name" : "Browser"
 }, {
-  "values" : [ "release" ],
+  "values" : [ "dev" ],
   "name" : "Stage"
 }, {
-  "values" : [ "login_rel" ],
+  "values" : [ "login_qa" ],
   "name" : "LOGIN"
 }, {
-  "values" : [ "pass_rel" ],
+  "values" : [ "pass_qa" ],
   "name" : "PASSWORD"
 } ]

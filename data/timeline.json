@@ -1,65 +1,117 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "f59a0f32ebad",
+    "name" : "3ee4d2b70e4b",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
-        "name" : "Тестирование авторизации",
-        "uid" : "1d1b79ef8c3d7218",
-        "parentUid" : "836c0bdccec1f26680ea15f4a3cbf012",
-        "status" : "passed",
-        "time" : {
-          "start" : 1760626332188,
-          "stop" : 1760626335007,
-          "duration" : 2819
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
         "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "d47dd34cfe86448c",
-        "parentUid" : "836c0bdccec1f26680ea15f4a3cbf012",
-        "status" : "passed",
+        "uid" : "e0cde383d6fa1bf8",
+        "parentUid" : "2ff521d61318cbb2c2222b3dddd9cded",
+        "status" : "broken",
         "time" : {
-          "start" : 1760626325180,
-          "stop" : 1760626331743,
-          "duration" : 6563
+          "start" : 1760626715940,
+          "stop" : 1760626732324,
+          "duration" : 16384
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "d113679559566bda",
-        "parentUid" : "836c0bdccec1f26680ea15f4a3cbf012",
-        "status" : "passed",
+        "uid" : "3d8fce3634809e1b",
+        "parentUid" : "2ff521d61318cbb2c2222b3dddd9cded",
+        "status" : "broken",
         "time" : {
-          "start" : 1760626313595,
-          "stop" : 1760626321043,
-          "duration" : 7448
+          "start" : 1760626660935,
+          "stop" : 1760626678034,
+          "duration" : 17099
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+        "uid" : "af932c6e3a239958",
+        "parentUid" : "2ff521d61318cbb2c2222b3dddd9cded",
+        "status" : "broken",
+        "time" : {
+          "start" : 1760626643175,
+          "stop" : 1760626660472,
+          "duration" : 17297
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Тестирование авторизации",
+        "uid" : "5dbe6bb7603c5f68",
+        "parentUid" : "2ff521d61318cbb2c2222b3dddd9cded",
+        "status" : "failed",
+        "time" : {
+          "start" : 1760626732788,
+          "stop" : 1760626736110,
+          "duration" : 3322
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "51a217839c6f729e",
+        "parentUid" : "2ff521d61318cbb2c2222b3dddd9cded",
+        "status" : "broken",
+        "time" : {
+          "start" : 1760626681696,
+          "stop" : 1760626698157,
+          "duration" : 16461
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "4f5d5b96ecf475d5",
+        "parentUid" : "2ff521d61318cbb2c2222b3dddd9cded",
+        "status" : "broken",
+        "time" : {
+          "start" : 1760626698617,
+          "stop" : 1760626715480,
+          "duration" : 16863
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "451e3af15513d175",
-        "parentUid" : "836c0bdccec1f26680ea15f4a3cbf012",
-        "status" : "passed",
+        "uid" : "bfb129312f5937ba",
+        "parentUid" : "2ff521d61318cbb2c2222b3dddd9cded",
+        "status" : "failed",
         "time" : {
-          "start" : 1760626321504,
-          "stop" : 1760626324720,
-          "duration" : 3216
+          "start" : 1760626678480,
+          "stop" : 1760626681245,
+          "duration" : 2765
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+        "uid" : "67ed7d339827550d",
+        "parentUid" : "2ff521d61318cbb2c2222b3dddd9cded",
+        "status" : "broken",
+        "time" : {
+          "start" : 1760626624997,
+          "stop" : 1760626642679,
+          "duration" : 17682
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "836c0bdccec1f26680ea15f4a3cbf012"
+      "uid" : "2ff521d61318cbb2c2222b3dddd9cded"
     } ],
-    "uid" : "1ff6faf337fd943298ae441362396c34"
+    "uid" : "2f43fce1886251eeefd91c79cfe7a1b1"
   } ],
   "name" : "timeline"
 }
