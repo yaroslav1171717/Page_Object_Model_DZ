@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Thu Oct 16 12:58:07 GMT 2025","Thu Oct 16 12:58:10 GMT 2025","2964","Тренировочный проект на https://release-crm.qa-playground.com","login_test","TestLogin","","","Тестирование авторизации",""
+"broken","Thu Oct 16 13:04:48 GMT 2025","Thu Oct 16 13:04:51 GMT 2025","3064","Тренировочный проект на https://release-crm.qa-playground.com","login_test","TestLogin","","","Тестирование авторизации",""
