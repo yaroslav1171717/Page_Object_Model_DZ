@@ -30,21 +30,20 @@ on:
           - firefox
 
       MARKER:
-        description: "Choose microservice to test"
+        description: "Choose marker"
         required: true
         default: ""
         type: choice
         options:
           - smoke
           - regression
+          - ""       # Чтобы было пустое значение
 
       KEY:
         description: "Name search"
         required: false
-        type: choice
+        type: string        # Чтобы вводить с клавиатуры знаечние, а не выбирать
         default: ""
-        options:
-          - test_open_from_hot
 
 jobs:
   ui-tests:
@@ -107,3 +106,5 @@ jobs:
           branch: gh-pages
           folder: allure-report
           clean: false
+
+# И дальше лучше командами в терминале git add .   git commit -m ""   git push
