@@ -1,0 +1,109 @@
+name: UI Tests
+run-name: Test ${{ github.event.inputs.STAGE }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
+# Это название в Actions увидим
+# Git hub ranner - это как некий контейнер, внутри него будет запускаться наша job, а внутри джобы уже будет работать наш контейнер docker-compose
+
+on:
+  workflow_dispatch:    # Это ручной вариант запуска, в лекции еще описан по расписанию/времени, при пуше в main/master, запуск на каждый PR
+    inputs:
+      ENV:   # GitHub Environment (dev/test/etc), это как бы окружение для переменных окружения для конкретного стенда (?)
+        description: "Choose environment"
+        required: true
+        type: environment # Важно: это тип environment!
+
+      STAGE:
+        description: "Choose microservice to test"        # Описание
+        required: true                                  # Обязательность
+        default: "release"
+        type: choice
+        options:
+          - release
+          - example
+
+      BROWSER:
+        description: "Select the browser"
+        required: true
+        default: "chrome"
+        type: choice
+        options:
+          - chrome
+          - firefox
+
+      MARKER:
+        description: "Choose microservice to test"
+        required: true
+        default: ""
+        type: choice
+        options:
+          - smoke
+          - regression
+
+      KEY:
+        description: "Name search"
+        required: false
+        type: choice
+        default: ""
+        options:
+          - test_open_from_hot
+
+jobs:
+  ui-tests:
+    runs-on: ubuntu-latest         # На базе чего будет работать раннер, на работе могут быть другие
+    environment: ${{ inputs.ENV }}  # ✅ Привязка джоба к выбранному environment, чтобы тянулись нужные переменные окружения для конкретного стенда
+                                                                    # (настройка environment в нашем проекте на github)
+    steps:
+      # Клонируем репозиторий в раннер (главную ветку или выбранную при запуске) (Checkout исходного кода)
+      - uses: actions/checkout@v2           # uses - использование специальных гитхабовских джоб
+
+      - uses: actions/checkout@v2         # Checkout ветки gh-pages для истории в allure
+        with:
+          ref: gh-pages                  # Клонируем ветку gh-pages (которую создали в git) в раннер в ветку также gh-pages
+          path: ./.github/gh-pages
+
+      # Подготовка environment.properties, для того чтобы подтягивать в allure отчет переменные окружения
+      # inputs - это параметры (переменные окружения), которые мы передаем при ручном запуске
+      # secrets - это переменные, которые скрыты,   # echo "Stage=${{ secrets.STAGE }}" >> allure-results/environment.properties
+      - name: Prepare Allure environment
+        run: |
+          mkdir -p allure-results
+          echo "Branch=${{ github.ref_name }}" > allure-results/environment.properties
+          echo "Commit=${{ github.sha }}" >> allure-results/environment.properties
+          echo "Browser=${{ inputs.BROWSER }}" >> allure-results/environment.properties          
+          echo "Stage=${{ inputs.STAGE }}" >> allure-results/environment.properties
+
+      # Запуск тестов
+      - name: Run tests via docker-compose
+        env:               # Должны быть те же переменные окружения, что и в docker-compose, хотя если они из inputs, то автоматом должны подтянутся, но ->
+          STAGE: ${{ inputs.STAGE }}            # здесь лишним не будет, а secrets обязательно писать  # STAGE: ${{ secrets.STAGE }}
+          BROWSER: ${{ inputs.BROWSER }}
+          MARKER: ${{ inputs.MARKER }}
+          KEY: ${{ inputs.KEY }}
+        run: |                      # | - означает многострочную команду
+          docker compose up pom_dz_smoke
+
+      # Шаг 4 - Копирование истории, создание папки history в allure-results если ее нет
+      - name: Copy Allure history
+        run: |
+          mkdir -p allure-results/history
+          if [ -d "./.github/gh-pages/history" ]; then
+            cp -R ./.github/gh-pages/history/* allure-results/history/
+          fi
+
+      # Шаг 5 - Генерация отчета
+      - name: Generate Allure-report
+        env:
+          BROWSER: ${{ inputs.BROWSER }}
+          STAGE: ${{ inputs.STAGE }}
+          CI_COMMIT_REF_NAME: ${{ github.ref_name }}
+          CI_COMMIT_SHORT_SHA: ${{ github.sha }}
+        run: |
+          docker compose up report
+
+      # Шаг 6 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          branch: gh-pages
+          folder: allure-report
+          clean: false
