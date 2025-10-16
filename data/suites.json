@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Тренировочный проект на https://release-crm.qa-playground.com",
+    "children" : [ {
+      "name" : "login_test",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "Тестирование авторизации",
+          "uid" : "ee864a33071ea963",
+          "parentUid" : "2e52a80f63eff45fe4fabb2575edc341",
+          "status" : "broken",
+          "time" : {
+            "start" : 1760615273816,
+            "stop" : 1760615276578,
+            "duration" : 2762
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "2e52a80f63eff45fe4fabb2575edc341"
+      } ],
+      "uid" : "df0d0a48d83e2329c668e7acb7204389"
+    } ],
+    "uid" : "c8d271cf21c30a7da842ff560bc37051"
+  } ],
+  "name" : "suites"
+}

@@ -1,0 +1,11 @@
+[ {
+  "uid" : "ee864a33071ea963",
+  "name" : "Тестирование авторизации",
+  "time" : {
+    "start" : 1760615273816,
+    "stop" : 1760615276578,
+    "duration" : 2762
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

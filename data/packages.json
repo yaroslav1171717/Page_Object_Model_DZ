@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "tests.login_test",
+    "children" : [ {
+      "name" : "Тестирование авторизации",
+      "uid" : "ee864a33071ea963",
+      "parentUid" : "fa8380230272a9bb1a6d6e9ad8189b2e",
+      "status" : "broken",
+      "time" : {
+        "start" : 1760615273816,
+        "stop" : 1760615276578,
+        "duration" : 2762
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "tests.login_test"
+  } ],
+  "name" : "packages"
+}

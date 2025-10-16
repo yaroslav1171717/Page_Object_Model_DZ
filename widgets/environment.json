@@ -1,0 +1,13 @@
+[ {
+  "values" : [ "master" ],
+  "name" : "Branch"
+}, {
+  "values" : [ "a4759109785314a6dbb0d285f6fc43104ef239a3" ],
+  "name" : "Commit"
+}, {
+  "values" : [ "chrome" ],
+  "name" : "Browser"
+}, {
+  "values" : [ "release" ],
+  "name" : "Stage"
+} ]
