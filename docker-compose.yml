@@ -34,8 +34,8 @@ services:
       MARKER: ${MARKER:-}
       # по умолчанию пустая строка
       KEY: ${KEY:-}
-      LOGIN: ${LOGIN}
-      PASSWORD: ${PASSWORD}
+      RELEASE_LOGIN: ${RELEASE_LOGIN}
+      RELEASE_PASSWORD: ${RELEASE_PASSWORD}
     tty: true
 
   # для генерации allure-report из папки allure-result
