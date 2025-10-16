@@ -1,26 +1,65 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "8c6b43fafc1c",
+    "name" : "7cc8a4dfb1f5",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
+        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+        "uid" : "f7a939f11b209c54",
+        "parentUid" : "51d8bcf22f3c809904aeb2f4997adf4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760615793437,
+          "stop" : 1760615801495,
+          "duration" : 8058
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "9a9061242e9d2ad3",
+        "parentUid" : "51d8bcf22f3c809904aeb2f4997adf4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760615805935,
+          "stop" : 1760615813363,
+          "duration" : 7428
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+        "uid" : "baae2e0549028a7f",
+        "parentUid" : "51d8bcf22f3c809904aeb2f4997adf4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760615801949,
+          "stop" : 1760615805481,
+          "duration" : 3532
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
         "name" : "Тестирование авторизации",
-        "uid" : "ee864a33071ea963",
-        "parentUid" : "253e4e07348dadd2148f3f012a42b6cb",
+        "uid" : "60ef4385a01ded49",
+        "parentUid" : "51d8bcf22f3c809904aeb2f4997adf4f",
         "status" : "broken",
         "time" : {
-          "start" : 1760615273816,
-          "stop" : 1760615276578,
-          "duration" : 2762
+          "start" : 1760615813797,
+          "stop" : 1760615817819,
+          "duration" : 4022
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "253e4e07348dadd2148f3f012a42b6cb"
+      "uid" : "51d8bcf22f3c809904aeb2f4997adf4f"
     } ],
-    "uid" : "0fd068b6c948b1e1d3d05306ab9af061"
+    "uid" : "1003c82b71c960f53612e809be0285e6"
   } ],
   "name" : "timeline"
 }

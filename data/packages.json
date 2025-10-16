@@ -1,22 +1,77 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "children" : [ {
-    "name" : "tests.login_test",
+    "name" : "tests",
     "children" : [ {
-      "name" : "Тестирование авторизации",
-      "uid" : "ee864a33071ea963",
-      "parentUid" : "fa8380230272a9bb1a6d6e9ad8189b2e",
-      "status" : "broken",
-      "time" : {
-        "start" : 1760615273816,
-        "stop" : 1760615276578,
-        "duration" : 2762
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
+      "name" : "contact_test",
+      "children" : [ {
+        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+        "uid" : "f7a939f11b209c54",
+        "parentUid" : "d12589d8df0dcc6816fe92d7c35548a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760615793437,
+          "stop" : 1760615801495,
+          "duration" : 8058
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d12589d8df0dcc6816fe92d7c35548a2"
+    }, {
+      "name" : "dashboard_test",
+      "children" : [ {
+        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+        "uid" : "baae2e0549028a7f",
+        "parentUid" : "762f440dba94479630f6cffcc30d4f11",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760615801949,
+          "stop" : 1760615805481,
+          "duration" : 3532
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "762f440dba94479630f6cffcc30d4f11"
+    }, {
+      "name" : "deals_test",
+      "children" : [ {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "9a9061242e9d2ad3",
+        "parentUid" : "b391d6861489be57bf39c6c9ce80fb90",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760615805935,
+          "stop" : 1760615813363,
+          "duration" : 7428
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b391d6861489be57bf39c6c9ce80fb90"
+    }, {
+      "name" : "login_test",
+      "children" : [ {
+        "name" : "Тестирование авторизации",
+        "uid" : "60ef4385a01ded49",
+        "parentUid" : "fa8380230272a9bb1a6d6e9ad8189b2e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1760615813797,
+          "stop" : 1760615817819,
+          "duration" : 4022
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fa8380230272a9bb1a6d6e9ad8189b2e"
     } ],
-    "uid" : "tests.login_test"
+    "uid" : "bf49149a3821e34f7608bb6885d52868"
   } ],
   "name" : "packages"
 }
