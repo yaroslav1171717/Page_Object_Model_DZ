@@ -1,0 +1,276 @@
+{
+  "uid" : "e4bd9e8a5e1741cd",
+  "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+  "fullName" : "tests.deals_test.TestDeals#test_open_deals_and_add_note_and_check",
+  "historyId" : "f0f5e3318dbe089f0c6ea48989269ded",
+  "time" : {
+    "start" : 1760617772755,
+    "stop" : 1760617785303,
+    "duration" : 12548
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1760617772359,
+      "stop" : 1760617772754,
+      "duration" : 395
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestDeals",
+    "time" : {
+      "start" : 1760617772754,
+      "stop" : 1760617772754,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/",
+      "time" : {
+        "start" : 1760617772755,
+        "stop" : 1760617780378,
+        "duration" : 7623
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Получаем имя сделки по ее номеру на странице Дашборда",
+      "time" : {
+        "start" : 1760617780378,
+        "stop" : 1760617781496,
+        "duration" : 1118
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "number",
+        "value" : "0"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Открываем сделку по ее номеру на странице Дашборда",
+      "time" : {
+        "start" : 1760617781496,
+        "stop" : 1760617781707,
+        "duration" : 211
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "number",
+        "value" : "0"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Ввод текста в выбранную сделку на странице Сделок",
+      "time" : {
+        "start" : 1760617781707,
+        "stop" : 1760617782992,
+        "duration" : 1285
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "text",
+        "value" : "'AutoTestDeals'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/deals",
+      "time" : {
+        "start" : 1760617782992,
+        "stop" : 1760617783052,
+        "duration" : 60
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Открываем сделку по ее имени на странице Сделок",
+      "time" : {
+        "start" : 1760617783052,
+        "stop" : 1760617783421,
+        "duration" : 369
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "name",
+        "value" : "'Quas alias sit'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Получаем введенный текст в сделке на странице Сделок",
+      "time" : {
+        "start" : 1760617783421,
+        "stop" : 1760617785303,
+        "duration" : 1882
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1760617785304,
+      "stop" : 1760617785372,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestDeals::0",
+    "time" : {
+      "start" : 1760617785303,
+      "stop" : 1760617785303,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "suite",
+    "value" : "deals_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDeals"
+  }, {
+    "name" : "host",
+    "value" : "6fc2b8652785"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.deals_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "502e8602f4f17923",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760617284965,
+          "stop" : 1760617292541,
+          "duration" : 7576
+        }
+      }, {
+        "uid" : "9a9061242e9d2ad3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760615805935,
+          "stop" : 1760615813363,
+          "duration" : 7428
+        }
+      } ]
+    },
+    "tags" : [ "regression" ]
+  },
+  "source" : "e4bd9e8a5e1741cd.json",
+  "parameterValues" : [ ]
+}
