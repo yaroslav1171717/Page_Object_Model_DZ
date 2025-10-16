@@ -29,3 +29,5 @@ class Auth:
         else:
             self.LOGIN = os.getenv("LOGIN")
             self.PASSWORD = os.getenv("PASSWORD")
+        print(f"Stage: {os.environ.get('STAGE')}")
+        print(f"LOGIN: {self.LOGIN}, PASSWORD: {self.PASSWORD}")
