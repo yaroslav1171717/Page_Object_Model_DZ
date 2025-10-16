@@ -86,6 +86,8 @@ jobs:
         env:
           BROWSER: ${{ inputs.BROWSER }}
           STAGE: ${{ secrets.STAGE }}
+          LOGIN: ${{ secrets.LOGIN }}
+          PASSWORD: ${{ secrets.PASSWORD }}
           CI_COMMIT_REF_NAME: ${{ github.ref_name }}
           CI_COMMIT_SHORT_SHA: ${{ github.sha }}
         run: |
