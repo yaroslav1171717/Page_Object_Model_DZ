@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7f2f6ccae450>.check_url\n +      where <pages.login_page.LoginPage object at 0x7f2f6ccae450> = <tests.login_test.TestLogin object at 0x7f2f6cc98a50>.login_page",
+      "children" : [ {
+        "name" : "Тестирование авторизации",
+        "uid" : "f0f47577a147555e",
+        "parentUid" : "b54c0c62409a070f79ae3313eeabd0f5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1760623812490,
+          "stop" : 1760623815117,
+          "duration" : 2627
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b54c0c62409a070f79ae3313eeabd0f5"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
   "name" : "categories"
 }
