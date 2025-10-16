@@ -58,8 +58,9 @@ jobs:
           echo "Commit=${{ github.sha }}" >> allure-results/environment.properties
           echo "Browser=${{ inputs.BROWSER }}" >> allure-results/environment.properties          
           echo "Stage=${{ secrets.STAGE }}" >> allure-results/environment.properties
-          echo "LOGIN=${{ secrets.LOGIN }}" >> allure-results/environment.properties
+          echo "LOGIN=${{ secrets.LOGIN }}" >> allure-results/environment.properties         
           echo "PASSWORD=${{ secrets.PASSWORD }}" >> allure-results/environment.properties
+      # Login и Password добавил на вывод для отладки, так не должно быть конечно
 
       # Запуск тестов
       - name: Run tests via docker-compose
@@ -86,8 +87,8 @@ jobs:
         env:
           BROWSER: ${{ inputs.BROWSER }}
           STAGE: ${{ secrets.STAGE }}
-          LOGIN: ${{ secrets.LOGIN }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          RELEASE_LOGIN: ${{ secrets.LOGIN }}
+          RELEASE_PASSWORD: ${{ secrets.PASSWORD }}
           CI_COMMIT_REF_NAME: ${{ github.ref_name }}
           CI_COMMIT_SHORT_SHA: ${{ github.sha }}
         run: |
