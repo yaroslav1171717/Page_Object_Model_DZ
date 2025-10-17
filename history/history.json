@@ -4,11 +4,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 13,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "48c51280a300816d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760730584481,
+        "stop" : 1760730592098,
+        "duration" : 7617
+      }
+    }, {
       "uid" : "208608f940ec5d10",
       "status" : "passed",
       "time" : {
@@ -129,11 +137,19 @@
       "failed" : 5,
       "broken" : 12,
       "skipped" : 0,
-      "passed" : 9,
+      "passed" : 10,
       "unknown" : 0,
-      "total" : 26
+      "total" : 27
     },
     "items" : [ {
+      "uid" : "a5ad85d23275cd6c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760730603627,
+        "stop" : 1760730607338,
+        "duration" : 3711
+      }
+    }, {
       "uid" : "12edb0db81045d29",
       "status" : "passed",
       "time" : {
@@ -295,15 +311,6 @@
         "stop" : 1760619891840,
         "duration" : 3064
       }
-    }, {
-      "uid" : "6c8dd12ad8dae1de",
-      "status" : "broken",
-      "statusDetails" : "TypeError: 'NoneType' object is not iterable",
-      "time" : {
-        "start" : 1760619487225,
-        "stop" : 1760619490189,
-        "duration" : 2964
-      }
     } ]
   },
   "f0f5e3318dbe089f0c6ea48989269ded" : {
@@ -311,11 +318,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 11,
+      "passed" : 12,
       "unknown" : 0,
-      "total" : 13
+      "total" : 14
     },
     "items" : [ {
+      "uid" : "9ebe1e6ed6ae2d4f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760730596437,
+        "stop" : 1760730603164,
+        "duration" : 6727
+      }
+    }, {
       "uid" : "909505cfa0f7d658",
       "status" : "passed",
       "time" : {
@@ -428,11 +443,19 @@
       "failed" : 2,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 12,
+      "passed" : 13,
       "unknown" : 0,
-      "total" : 14
+      "total" : 15
     },
     "items" : [ {
+      "uid" : "5cd4b1330a3d4ef1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760730592559,
+        "stop" : 1760730595983,
+        "duration" : 3424
+      }
+    }, {
       "uid" : "6bbdb4533b30eff9",
       "status" : "passed",
       "time" : {
