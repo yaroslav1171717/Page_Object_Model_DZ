@@ -1,0 +1,89 @@
+name: UI Tests
+run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
+
+on:
+  schedule:           # автозапуск, но может задерживаться из-за загрузки github
+    - cron: '0 6 * * *'   # 09:00 MSC = 06:00 UTC
+    - cron: '0 9 * * *'   # 12:00 MSC = 09:00 UTC
+    - cron: '0 12 * * *'  # 15:00 MSC = 12:00 UTC
+    - cron: '10 14 * * *' # 17:10 MSC = 14:10 UTC
+    - cron: '0 15 * * *'  # 18:00 MSC = 15:00 UTC
+    - cron: '0 18 * * *'  # 21:00 MSC = 18:00 UTC
+    - cron: '0 21 * * *'  # 24:00 MSC = 21:00 UTC
+
+
+jobs:
+  ui-tests:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.ENV }}
+
+    # Далее описываем переменные окружения и само окружение ENV для автоматического запуска:
+    env:
+      ENVIRONMENT: ${{ inputs.ENV || 'release' }}  # Передача значения переменной окружения по умолчанию
+      BROWSER: ${{ inputs.BROWSER || 'chrome' }}    # Используем выбранный браузер или по умолчанию Chrome
+      MARKER: ${{ inputs.MARKER || '' }}            # Маркеры тестов (если заданы вручную)
+      KEY: ${{ inputs.KEY || '' }}
+      LOGIN: ${{ secrets.LOGIN }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+
+    steps:
+      # Клонируем репозиторий в раннер (главную ветку или выбранную при запуске) (Checkout исходного кода)
+      - uses: actions/checkout@v2           # uses - использование специальных гитхабовских джоб
+
+      - uses: actions/checkout@v2         # Checkout ветки gh-pages для истории в allure
+        with:
+          ref: gh-pages                  # Клонируем ветку gh-pages (которую создали в git) в раннер в ветку также gh-pages
+          path: ./.github/gh-pages
+          
+      # Подготовка environment.properties, для того чтобы подтягивать в allure отчет переменные окружения
+      - name: Prepare Allure environment
+        run: |
+          mkdir -p allure-results
+          echo "Branch=${{ github.ref_name }}" > allure-results/environment.properties
+          echo "Commit=${{ github.sha }}" >> allure-results/environment.properties
+          echo "Browser=${BROWSER}" >> allure-results/environment.properties          
+          echo "Stage=${{ secrets.STAGE }}" >> allure-results/environment.properties
+          echo "LOGIN=${{ secrets.LOGIN }}" >> allure-results/environment.properties         
+          echo "PASSWORD=${{ secrets.PASSWORD }}" >> allure-results/environment.properties
+      # Login и Password добавил на вывод для отладки, так не должно быть конечно
+
+      # Запуск тестов
+      - name: Run tests via docker-compose
+        env:               # Должны быть те же переменные окружения, что и в docker-compose, хотя если они из inputs, то автоматом должны подтянутся, но ->
+          STAGE: ${{ secrets.STAGE }}            # здесь лишним не будет, а secrets обязательно писать  # STAGE: ${{ secrets.STAGE }}
+          LOGIN: ${{ secrets.LOGIN }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          BROWSER: ${{ inputs.BROWSER }}
+          MARKER: ${{ inputs.MARKER }}
+          KEY: ${{ inputs.KEY }}
+        run: |                      # | - означает многострочную команду
+          docker compose up pom_dz_smoke
+
+      # Шаг 4 - Копирование истории, создание папки history в allure-results если ее нет
+      - name: Copy Allure history
+        run: |
+          mkdir -p allure-results/history
+          if [ -d "./.github/gh-pages/history" ]; then
+            cp -R ./.github/gh-pages/history/* allure-results/history/
+          fi
+
+      # Шаг 5 - Генерация отчета
+      - name: Generate Allure-report
+        env:
+          BROWSER: ${{ inputs.BROWSER }}
+          STAGE: ${{ secrets.STAGE }}
+          LOGIN: ${{ secrets.LOGIN }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          CI_COMMIT_REF_NAME: ${{ github.ref_name }}
+          CI_COMMIT_SHORT_SHA: ${{ github.sha }}
+        run: |
+          docker compose up report
+
+      # Шаг 6 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          branch: gh-pages
+          folder: allure-report
+          clean: false
