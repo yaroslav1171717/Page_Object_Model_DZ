@@ -4,11 +4,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 10,
+      "passed" : 11,
       "unknown" : 0,
-      "total" : 12
+      "total" : 13
     },
     "items" : [ {
+      "uid" : "9c292ba088b5cdd3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760707243504,
+        "stop" : 1760707251481,
+        "duration" : 7977
+      }
+    }, {
       "uid" : "5ae18e0c651d35cc",
       "status" : "passed",
       "time" : {
@@ -110,14 +118,23 @@
   },
   "4a2e7f781cbcf7e74a88a7626dcbde05" : {
     "statistic" : {
-      "failed" : 4,
+      "failed" : 5,
       "broken" : 12,
       "skipped" : 0,
       "passed" : 8,
       "unknown" : 0,
-      "total" : 24
+      "total" : 25
     },
     "items" : [ {
+      "uid" : "d2b1aa799bd6df72",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fb665a15110>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fb665a15110> = <tests.login_test.TestLogin object at 0x7fb665bc92d0>.login_page",
+      "time" : {
+        "start" : 1760707263402,
+        "stop" : 1760707266462,
+        "duration" : 3060
+      }
+    }, {
       "uid" : "6dab040c9f9eddbd",
       "status" : "failed",
       "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7f48fb4ecdd0>.check_url\n +      where <pages.login_page.LoginPage object at 0x7f48fb4ecdd0> = <tests.login_test.TestLogin object at 0x7f48fb6a4550>.login_page",
@@ -280,15 +297,6 @@
         "stop" : 1760619148713,
         "duration" : 2979
       }
-    }, {
-      "uid" : "dc55d968ab6798cf",
-      "status" : "broken",
-      "statusDetails" : "TypeError: 'NoneType' object is not iterable",
-      "time" : {
-        "start" : 1760618712711,
-        "stop" : 1760618715538,
-        "duration" : 2827
-      }
     } ]
   },
   "f0f5e3318dbe089f0c6ea48989269ded" : {
@@ -296,11 +304,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 9,
+      "passed" : 10,
       "unknown" : 0,
-      "total" : 11
+      "total" : 12
     },
     "items" : [ {
+      "uid" : "61948967cc2908fa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760707255895,
+        "stop" : 1760707262950,
+        "duration" : 7055
+      }
+    }, {
       "uid" : "bf0a0668e108bf2d",
       "status" : "passed",
       "time" : {
@@ -397,11 +413,19 @@
       "failed" : 2,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 10,
+      "passed" : 11,
       "unknown" : 0,
-      "total" : 12
+      "total" : 13
     },
     "items" : [ {
+      "uid" : "50918d2b27fd2bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760707251939,
+        "stop" : 1760707255447,
+        "duration" : 3508
+      }
+    }, {
       "uid" : "7c193fd5f4811243",
       "status" : "passed",
       "time" : {
