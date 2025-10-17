@@ -4,11 +4,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 11,
+      "passed" : 12,
       "unknown" : 0,
-      "total" : 13
+      "total" : 14
     },
     "items" : [ {
+      "uid" : "208608f940ec5d10",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760711216839,
+        "stop" : 1760711225454,
+        "duration" : 8615
+      }
+    }, {
       "uid" : "9c292ba088b5cdd3",
       "status" : "passed",
       "time" : {
@@ -121,11 +129,19 @@
       "failed" : 5,
       "broken" : 12,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 9,
       "unknown" : 0,
-      "total" : 25
+      "total" : 26
     },
     "items" : [ {
+      "uid" : "12edb0db81045d29",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760711238413,
+        "stop" : 1760711242092,
+        "duration" : 3679
+      }
+    }, {
       "uid" : "d2b1aa799bd6df72",
       "status" : "failed",
       "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fb665a15110>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fb665a15110> = <tests.login_test.TestLogin object at 0x7fb665bc92d0>.login_page",
@@ -288,15 +304,6 @@
         "stop" : 1760619490189,
         "duration" : 2964
       }
-    }, {
-      "uid" : "f8810aab9d46948d",
-      "status" : "broken",
-      "statusDetails" : "TypeError: 'NoneType' object is not iterable",
-      "time" : {
-        "start" : 1760619145734,
-        "stop" : 1760619148713,
-        "duration" : 2979
-      }
     } ]
   },
   "f0f5e3318dbe089f0c6ea48989269ded" : {
@@ -304,11 +311,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 10,
+      "passed" : 11,
       "unknown" : 0,
-      "total" : 12
+      "total" : 13
     },
     "items" : [ {
+      "uid" : "909505cfa0f7d658",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760711230533,
+        "stop" : 1760711237948,
+        "duration" : 7415
+      }
+    }, {
       "uid" : "61948967cc2908fa",
       "status" : "passed",
       "time" : {
@@ -413,11 +428,19 @@
       "failed" : 2,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 11,
+      "passed" : 12,
       "unknown" : 0,
-      "total" : 13
+      "total" : 14
     },
     "items" : [ {
+      "uid" : "6bbdb4533b30eff9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760711225938,
+        "stop" : 1760711230056,
+        "duration" : 4118
+      }
+    }, {
       "uid" : "50918d2b27fd2bc",
       "status" : "passed",
       "time" : {
