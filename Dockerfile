@@ -21,7 +21,8 @@ WORKDIR /usr/workspace
 COPY ./requirements.txt /usr/workspace
 RUN pip3 install -r requirements.txt
 
-# CMD не пишем !!!, будем запускать код командой по типу docker run <IMAGE>:<TAG> sh -c "python code.py"
+# CMD не пишем !!!, будем запускать код командой по типу docker run <IMAGE>:<TAG> sh -c "python code.py" или в docker-compose пропишем команду и будем уже
+# его запускать через терминал или через CI/CD в пайплане
 
 #Опции для драйвера в Docker - прописать в conftest:  !!!!!!!!!!!!
 
