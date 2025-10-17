@@ -1,30 +1,16 @@
-name: UI Tests
+name: UI Tests Auto Run
 run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
 
 on:
   schedule:           # автозапуск, но может задерживаться из-за загрузки github
-    - cron: '0 6 * * *'   # 09:00 MSC = 06:00 UTC
-    - cron: '0 9 * * *'   # 12:00 MSC = 09:00 UTC
-    - cron: '0 12 * * *'  # 15:00 MSC = 12:00 UTC
-    - cron: '10 14 * * *' # 17:10 MSC = 14:10 UTC
-    - cron: '0 15 * * *'  # 18:00 MSC = 15:00 UTC
-    - cron: '0 18 * * *'  # 21:00 MSC = 18:00 UTC
-    - cron: '0 21 * * *'  # 24:00 MSC = 21:00 UTC
+     - cron: '*/30 6-23 * * *'
+
 
 
 jobs:
   ui-tests:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.ENV }}
-
-    # Далее описываем переменные окружения и само окружение ENV для автоматического запуска:
-    env:
-      ENVIRONMENT: ${{ inputs.ENV || 'release' }}  # Передача значения переменной окружения по умолчанию
-      BROWSER: ${{ inputs.BROWSER || 'chrome' }}    # Используем выбранный браузер или по умолчанию Chrome
-      MARKER: ${{ inputs.MARKER || '' }}            # Маркеры тестов (если заданы вручную)
-      KEY: ${{ inputs.KEY || '' }}
-      LOGIN: ${{ secrets.LOGIN }}
-      PASSWORD: ${{ secrets.PASSWORD }}
+    environment: release
 
     steps:
       # Клонируем репозиторий в раннер (главную ветку или выбранную при запуске) (Checkout исходного кода)
@@ -41,7 +27,8 @@ jobs:
           mkdir -p allure-results
           echo "Branch=${{ github.ref_name }}" > allure-results/environment.properties
           echo "Commit=${{ github.sha }}" >> allure-results/environment.properties
-          echo "Browser=${BROWSER}" >> allure-results/environment.properties          
+          echo "Browser=${{ 'chrome' }}" >> allure-results/environment.properties
+          echo "Env=${{ 'release' }}" >> allure-results/environment.properties   
           echo "Stage=${{ secrets.STAGE }}" >> allure-results/environment.properties
           echo "LOGIN=${{ secrets.LOGIN }}" >> allure-results/environment.properties         
           echo "PASSWORD=${{ secrets.PASSWORD }}" >> allure-results/environment.properties
@@ -53,9 +40,10 @@ jobs:
           STAGE: ${{ secrets.STAGE }}            # здесь лишним не будет, а secrets обязательно писать  # STAGE: ${{ secrets.STAGE }}
           LOGIN: ${{ secrets.LOGIN }}
           PASSWORD: ${{ secrets.PASSWORD }}
-          BROWSER: ${{ inputs.BROWSER }}
-          MARKER: ${{ inputs.MARKER }}
-          KEY: ${{ inputs.KEY }}
+          BROWSER: chrome
+          ENV: release
+          MARKER: ''
+          KEY: ''
         run: |                      # | - означает многострочную команду
           docker compose up pom_dz_smoke
 
@@ -70,7 +58,8 @@ jobs:
       # Шаг 5 - Генерация отчета
       - name: Generate Allure-report
         env:
-          BROWSER: ${{ inputs.BROWSER }}
+          BROWSER: ${{ 'chrome' }}
+          ENV: ${{ 'release' }}
           STAGE: ${{ secrets.STAGE }}
           LOGIN: ${{ secrets.LOGIN }}
           PASSWORD: ${{ secrets.PASSWORD }}
