@@ -1,40 +1,40 @@
 [ {
-  "uid" : "8523a94111612ea6",
+  "uid" : "bc508da61847e5f3",
   "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
   "time" : {
-    "start" : 1760733832349,
-    "stop" : 1760733839680,
-    "duration" : 7331
+    "start" : 1760736519814,
+    "stop" : 1760736527199,
+    "duration" : 7385
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e4f7a2d8f918b0e0",
-  "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-  "time" : {
-    "start" : 1760733828374,
-    "stop" : 1760733831884,
-    "duration" : 3510
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6688ad66947e5d6b",
-  "name" : "Тестирование авторизации",
-  "time" : {
-    "start" : 1760733840185,
-    "stop" : 1760733844073,
-    "duration" : 3888
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "65fd714f78b2fb0a",
+  "uid" : "7ad63eb0b6c45f69",
   "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
   "time" : {
-    "start" : 1760733820033,
-    "stop" : 1760733827897,
-    "duration" : 7864
+    "start" : 1760736507178,
+    "stop" : 1760736515040,
+    "duration" : 7862
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cbcc455ecfbf020a",
+  "name" : "Тестирование авторизации",
+  "time" : {
+    "start" : 1760736527718,
+    "stop" : 1760736530785,
+    "duration" : 3067
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a697dffd8a6a97b3",
+  "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+  "time" : {
+    "start" : 1760736515511,
+    "stop" : 1760736519354,
+    "duration" : 3843
   },
   "status" : "passed",
   "severity" : "normal"
