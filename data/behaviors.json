@@ -4,13 +4,13 @@
     "name" : "Тренировочный проект на https://release-crm.qa-playground.com",
     "children" : [ {
       "name" : "Тестирование авторизации",
-      "uid" : "c853c2b651124f3c",
+      "uid" : "7a9354a4643244df",
       "parentUid" : "fad6093aab492075ffe86dec253642a2",
       "status" : "passed",
       "time" : {
-        "start" : 1760782752574,
-        "stop" : 1760782756466,
-        "duration" : 3892
+        "start" : 1760783151694,
+        "stop" : 1760783155376,
+        "duration" : 3682
       },
       "flaky" : false,
       "newFailed" : false,
