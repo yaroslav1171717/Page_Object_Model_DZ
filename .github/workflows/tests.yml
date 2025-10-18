@@ -9,10 +9,10 @@ run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }
 on:
   workflow_dispatch:    # Это ручной вариант запуска, в лекции еще описан по расписанию/времени, при пуше в main/master, запуск на каждый PR
     inputs:
-      ENV:   # GitHub Environment (dev/test/etc), это как бы окружение для переменных окружения для конкретного стенда, т.е. в настройках проекта в github ->
-        # в разделе Environments добавил окружение release, а в нем уже environment secret, такие как хост стенда - release, логин и пароль, которые нужны в ->
-        # данном проекте RELEASE_LOGIN и RELEASE_PASSWORD, которые при локальном запуске, подтягиваются из .env, но .env мы не пушим в git, и далее в это файле ->
-        # мы их достаем из secrets - LOGIN=${{ secrets.LOGIN }}
+      ENV:   # GitHub Environment (dev/test/etc), это как бы переменная окружения для хранения переменных окружения (хост, логин, пароль)) для конкретного стенда, ->
+        # т.е. в настройках проекта в github в разделе Environments добавил окружение release, а в нем уже environment secret, такие как хост стенда - release, ->
+        # логин и пароль, которые нужны в данном проекте LOGIN и PASSWORD, которые при локальном запуске, подтягиваются из .env, но .env мы не пушим в git, и далее ->
+        # в это файле мы их достаем из secrets - LOGIN=${{ secrets.LOGIN }}
         description: "Choose environment"
         required: true
         type: environment # Важно: это тип environment!
@@ -35,7 +35,7 @@ on:
       KEY:
         description: "Name search"
         required: false
-        type: string        # Чтобы вводить с клавиатуры знаечние, а не выбирать
+        type: string        # Чтобы вводить с клавиатуры значение, а не выбирать
         default: ""
 
 jobs:
@@ -103,7 +103,7 @@ jobs:
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          token: ${{ secrets.CI_TOKEN }}
+          token: ${{ secrets.CI_TOKEN }}    # Передаем токен
           branch: gh-pages
           folder: allure-report
           clean: false
