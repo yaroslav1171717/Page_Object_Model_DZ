@@ -1,0 +1,377 @@
+{
+  "uid" : "b24268041bd8d440",
+  "name" : "Тестирование авторизации",
+  "fullName" : "tests.login_test.TestLogin#test_authorization",
+  "historyId" : "4a2e7f781cbcf7e74a88a7626dcbde05",
+  "time" : {
+    "start" : 1760772423332,
+    "stop" : 1760772426178,
+    "duration" : 2846
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestLogin",
+    "time" : {
+      "start" : 1760772423332,
+      "stop" : 1760772423332,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1760772422940,
+      "stop" : 1760772423331,
+      "duration" : 391
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/contacts",
+      "time" : {
+        "start" : 1760772423332,
+        "stop" : 1760772425604,
+        "duration" : 2272
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Разлогиниваемся из пользователя",
+      "time" : {
+        "start" : 1760772425604,
+        "stop" : 1760772425839,
+        "duration" : 235
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Ввод логина и пароля на странице Авторизации",
+      "time" : {
+        "start" : 1760772425839,
+        "stop" : 1760772426174,
+        "duration" : 335
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "login",
+        "value" : "'login_rel'"
+      }, {
+        "name" : "password",
+        "value" : "'pass_rel'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1760772426174,
+        "stop" : 1760772426178,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 4
+  },
+  "afterStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestLogin::0",
+    "time" : {
+      "start" : 1760772426179,
+      "stop" : 1760772426179,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1760772426179,
+      "stop" : 1760772426240,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "suite",
+    "value" : "login_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "818ba92d4986"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.login_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 12,
+        "skipped" : 0,
+        "passed" : 18,
+        "unknown" : 0,
+        "total" : 35
+      },
+      "items" : [ {
+        "uid" : "fdab8fc3c29c187b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760769913498,
+          "stop" : 1760769916806,
+          "duration" : 3308
+        }
+      }, {
+        "uid" : "5660d30659d245ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760744301410,
+          "stop" : 1760744304401,
+          "duration" : 2991
+        }
+      }, {
+        "uid" : "e87e66ba4bbd4804",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760743671288,
+          "stop" : 1760743674323,
+          "duration" : 3035
+        }
+      }, {
+        "uid" : "c41573677fb13edd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760740429894,
+          "stop" : 1760740433263,
+          "duration" : 3369
+        }
+      }, {
+        "uid" : "53b64bcc9026b8ef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760737089834,
+          "stop" : 1760737093978,
+          "duration" : 4144
+        }
+      }, {
+        "uid" : "cbcc455ecfbf020a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760736527718,
+          "stop" : 1760736530785,
+          "duration" : 3067
+        }
+      }, {
+        "uid" : "6688ad66947e5d6b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760733840185,
+          "stop" : 1760733844073,
+          "duration" : 3888
+        }
+      }, {
+        "uid" : "a5ad85d23275cd6c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760730603627,
+          "stop" : 1760730607338,
+          "duration" : 3711
+        }
+      }, {
+        "uid" : "12edb0db81045d29",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760711238413,
+          "stop" : 1760711242092,
+          "duration" : 3679
+        }
+      }, {
+        "uid" : "d2b1aa799bd6df72",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fb665a15110>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fb665a15110> = <tests.login_test.TestLogin object at 0x7fb665bc92d0>.login_page",
+        "time" : {
+          "start" : 1760707263402,
+          "stop" : 1760707266462,
+          "duration" : 3060
+        }
+      }, {
+        "uid" : "6dab040c9f9eddbd",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7f48fb4ecdd0>.check_url\n +      where <pages.login_page.LoginPage object at 0x7f48fb4ecdd0> = <tests.login_test.TestLogin object at 0x7f48fb6a4550>.login_page",
+        "time" : {
+          "start" : 1760693744077,
+          "stop" : 1760693747527,
+          "duration" : 3450
+        }
+      }, {
+        "uid" : "cd473a797596bcad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760639398286,
+          "stop" : 1760639401145,
+          "duration" : 2859
+        }
+      }, {
+        "uid" : "ed4dbe595928106b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760635078323,
+          "stop" : 1760635081140,
+          "duration" : 2817
+        }
+      }, {
+        "uid" : "484d0e1bb3758b67",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fa8c11a3250>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fa8c11a3250> = <tests.login_test.TestLogin object at 0x7fa8c136c590>.login_page",
+        "time" : {
+          "start" : 1760627160790,
+          "stop" : 1760627163589,
+          "duration" : 2799
+        }
+      }, {
+        "uid" : "5dbe6bb7603c5f68",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fda7e3ea8d0>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fda7e3ea8d0> = <tests.login_test.TestLogin object at 0x7fda7e514b90>.login_page",
+        "time" : {
+          "start" : 1760626732788,
+          "stop" : 1760626736110,
+          "duration" : 3322
+        }
+      }, {
+        "uid" : "1d1b79ef8c3d7218",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760626332188,
+          "stop" : 1760626335007,
+          "duration" : 2819
+        }
+      }, {
+        "uid" : "d91e918b6f2bb4a6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760625420420,
+          "stop" : 1760625423873,
+          "duration" : 3453
+        }
+      }, {
+        "uid" : "7b11c1d2f11e786",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760625111126,
+          "stop" : 1760625114033,
+          "duration" : 2907
+        }
+      }, {
+        "uid" : "65610cb45c5e37e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760624117449,
+          "stop" : 1760624120342,
+          "duration" : 2893
+        }
+      }, {
+        "uid" : "f0f47577a147555e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7f2f6ccae450>.check_url\n +      where <pages.login_page.LoginPage object at 0x7f2f6ccae450> = <tests.login_test.TestLogin object at 0x7f2f6cc98a50>.login_page",
+        "time" : {
+          "start" : 1760623812490,
+          "stop" : 1760623815117,
+          "duration" : 2627
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "b24268041bd8d440.json",
+  "parameterValues" : [ ]
+}
