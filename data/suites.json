@@ -8,13 +8,13 @@
         "name" : "TestContact",
         "children" : [ {
           "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-          "uid" : "43a4eaf0fc88909d",
+          "uid" : "279175f6320fe8c9",
           "parentUid" : "187bcf986f40953fc573c25ec323ebfd",
           "status" : "passed",
           "time" : {
-            "start" : 1760772403735,
-            "stop" : 1760772411404,
-            "duration" : 7669
+            "start" : 1760773008226,
+            "stop" : 1760773016398,
+            "duration" : 8172
           },
           "flaky" : false,
           "newFailed" : false,
@@ -29,13 +29,13 @@
         "name" : "TestDashboard",
         "children" : [ {
           "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-          "uid" : "c178e6ea17ee8c82",
+          "uid" : "1cf3b4c711b4744b",
           "parentUid" : "b922ff9dcf778f4ff150ac53840bfcda",
           "status" : "passed",
           "time" : {
-            "start" : 1760772411874,
-            "stop" : 1760772415263,
-            "duration" : 3389
+            "start" : 1760773016853,
+            "stop" : 1760773020793,
+            "duration" : 3940
           },
           "flaky" : false,
           "newFailed" : false,
@@ -50,13 +50,13 @@
         "name" : "TestDeals",
         "children" : [ {
           "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-          "uid" : "73862006c192cd0",
+          "uid" : "76ebd557799ca529",
           "parentUid" : "523c63783683eb2f860ba5c26fc248b2",
           "status" : "passed",
           "time" : {
-            "start" : 1760772415726,
-            "stop" : 1760772422875,
-            "duration" : 7149
+            "start" : 1760773021244,
+            "stop" : 1760773028388,
+            "duration" : 7144
           },
           "flaky" : false,
           "newFailed" : false,
@@ -71,13 +71,13 @@
         "name" : "TestLogin",
         "children" : [ {
           "name" : "Тестирование авторизации",
-          "uid" : "b24268041bd8d440",
+          "uid" : "1b9a060946cbdc91",
           "parentUid" : "2e52a80f63eff45fe4fabb2575edc341",
           "status" : "passed",
           "time" : {
-            "start" : 1760772423332,
-            "stop" : 1760772426178,
-            "duration" : 2846
+            "start" : 1760773028835,
+            "stop" : 1760773032373,
+            "duration" : 3538
           },
           "flaky" : false,
           "newFailed" : false,

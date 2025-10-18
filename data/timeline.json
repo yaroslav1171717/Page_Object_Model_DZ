@@ -1,65 +1,65 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "818ba92d4986",
+    "name" : "8a6b83942d47",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
-        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "c178e6ea17ee8c82",
-        "parentUid" : "fb11a440dab60077126b3b86464e2062",
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "76ebd557799ca529",
+        "parentUid" : "ae98792fc1ed2690d1495709d057ebd9",
         "status" : "passed",
         "time" : {
-          "start" : 1760772411874,
-          "stop" : 1760772415263,
-          "duration" : 3389
+          "start" : 1760773021244,
+          "stop" : 1760773028388,
+          "duration" : 7144
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+        "uid" : "1cf3b4c711b4744b",
+        "parentUid" : "ae98792fc1ed2690d1495709d057ebd9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760773016853,
+          "stop" : 1760773020793,
+          "duration" : 3940
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "43a4eaf0fc88909d",
-        "parentUid" : "fb11a440dab60077126b3b86464e2062",
+        "uid" : "279175f6320fe8c9",
+        "parentUid" : "ae98792fc1ed2690d1495709d057ebd9",
         "status" : "passed",
         "time" : {
-          "start" : 1760772403735,
-          "stop" : 1760772411404,
-          "duration" : 7669
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "73862006c192cd0",
-        "parentUid" : "fb11a440dab60077126b3b86464e2062",
-        "status" : "passed",
-        "time" : {
-          "start" : 1760772415726,
-          "stop" : 1760772422875,
-          "duration" : 7149
+          "start" : 1760773008226,
+          "stop" : 1760773016398,
+          "duration" : 8172
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Тестирование авторизации",
-        "uid" : "b24268041bd8d440",
-        "parentUid" : "fb11a440dab60077126b3b86464e2062",
+        "uid" : "1b9a060946cbdc91",
+        "parentUid" : "ae98792fc1ed2690d1495709d057ebd9",
         "status" : "passed",
         "time" : {
-          "start" : 1760772423332,
-          "stop" : 1760772426178,
-          "duration" : 2846
+          "start" : 1760773028835,
+          "stop" : 1760773032373,
+          "duration" : 3538
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "fb11a440dab60077126b3b86464e2062"
+      "uid" : "ae98792fc1ed2690d1495709d057ebd9"
     } ],
-    "uid" : "2742abdd0384dc624d4b1df104b5a29d"
+    "uid" : "b32ee73acc4ea907510aa120336d69b6"
   } ],
   "name" : "timeline"
 }
