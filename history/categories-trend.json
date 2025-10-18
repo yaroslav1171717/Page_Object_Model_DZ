@@ -27,6 +27,8 @@
 }, {
   "data" : { }
 }, {
+  "data" : { }
+}, {
   "data" : {
     "Product defects" : 1
   }
@@ -40,9 +42,4 @@
   "data" : { }
 }, {
   "data" : { }
-}, {
-  "data" : {
-    "Product defects" : 2,
-    "Test defects" : 2
-  }
 } ]

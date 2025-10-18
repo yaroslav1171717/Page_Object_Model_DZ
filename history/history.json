@@ -4,11 +4,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 25,
+      "passed" : 26,
       "unknown" : 0,
-      "total" : 27
+      "total" : 28
     },
     "items" : [ {
+      "uid" : "91a1d1c4549060a1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760782545468,
+        "stop" : 1760782553147,
+        "duration" : 7679
+      }
+    }, {
       "uid" : "fa277ef862cb1e20",
       "status" : "passed",
       "time" : {
@@ -160,15 +168,6 @@
         "stop" : 1760627469581,
         "duration" : 8452
       }
-    }, {
-      "uid" : "21ab89cf6d0fb3d0",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
-      "time" : {
-        "start" : 1760627090876,
-        "stop" : 1760627107875,
-        "duration" : 16999
-      }
     } ]
   },
   "4a2e7f781cbcf7e74a88a7626dcbde05" : {
@@ -176,11 +175,19 @@
       "failed" : 5,
       "broken" : 12,
       "skipped" : 0,
-      "passed" : 22,
+      "passed" : 23,
       "unknown" : 0,
-      "total" : 39
+      "total" : 40
     },
     "items" : [ {
+      "uid" : "4cafa825e71a6bbb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760782565197,
+        "stop" : 1760782568208,
+        "duration" : 3011
+      }
+    }, {
       "uid" : "cedec721a3d5c433",
       "status" : "passed",
       "time" : {
@@ -335,15 +342,6 @@
         "stop" : 1760627163589,
         "duration" : 2799
       }
-    }, {
-      "uid" : "5dbe6bb7603c5f68",
-      "status" : "failed",
-      "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fda7e3ea8d0>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fda7e3ea8d0> = <tests.login_test.TestLogin object at 0x7fda7e514b90>.login_page",
-      "time" : {
-        "start" : 1760626732788,
-        "stop" : 1760626736110,
-        "duration" : 3322
-      }
     } ]
   },
   "f0f5e3318dbe089f0c6ea48989269ded" : {
@@ -351,11 +349,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 24,
+      "passed" : 25,
       "unknown" : 0,
-      "total" : 26
+      "total" : 27
     },
     "items" : [ {
+      "uid" : "85008936d51d7ba6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760782557517,
+        "stop" : 1760782564699,
+        "duration" : 7182
+      }
+    }, {
       "uid" : "ad88979a51e4178e",
       "status" : "passed",
       "time" : {
@@ -508,15 +514,6 @@
         "stop" : 1760627160326,
         "duration" : 15974
       }
-    }, {
-      "uid" : "e0cde383d6fa1bf8",
-      "status" : "broken",
-      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
-      "time" : {
-        "start" : 1760626715940,
-        "stop" : 1760626732324,
-        "duration" : 16384
-      }
     } ]
   },
   "fdf659477fd6c733f5220db5e41affdd" : {
@@ -524,11 +521,19 @@
       "failed" : 2,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 25,
+      "passed" : 26,
       "unknown" : 0,
-      "total" : 27
+      "total" : 28
     },
     "items" : [ {
+      "uid" : "144139ff3882c4b1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760782553597,
+        "stop" : 1760782557012,
+        "duration" : 3415
+      }
+    }, {
       "uid" : "43a2a7825694b4b3",
       "status" : "passed",
       "time" : {
@@ -679,15 +684,6 @@
         "start" : 1760627470035,
         "stop" : 1760627474128,
         "duration" : 4093
-      }
-    }, {
-      "uid" : "863154b1f6e05c57",
-      "status" : "failed",
-      "statusDetails" : "AssertionError: Неверный url страницы\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/contacts')\n +    where check_url = <pages.dashboard_page.DashboardPage object at 0x7fa8c11ccb10>.check_url\n +      where <pages.dashboard_page.DashboardPage object at 0x7fa8c11ccb10> = <tests.dashboard_test.TestDashboard object at 0x7fa8c12f0d10>.dashboard_page",
-      "time" : {
-        "start" : 1760627108337,
-        "stop" : 1760627110564,
-        "duration" : 2227
       }
     } ]
   }
