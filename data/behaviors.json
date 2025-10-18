@@ -3,53 +3,14 @@
   "children" : [ {
     "name" : "Тренировочный проект на https://release-crm.qa-playground.com",
     "children" : [ {
-      "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-      "uid" : "91a1d1c4549060a1",
-      "parentUid" : "fad6093aab492075ffe86dec253642a2",
-      "status" : "passed",
-      "time" : {
-        "start" : 1760782545468,
-        "stop" : 1760782553147,
-        "duration" : 7679
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-      "uid" : "144139ff3882c4b1",
-      "parentUid" : "fad6093aab492075ffe86dec253642a2",
-      "status" : "passed",
-      "time" : {
-        "start" : 1760782553597,
-        "stop" : 1760782557012,
-        "duration" : 3415
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-      "uid" : "85008936d51d7ba6",
-      "parentUid" : "fad6093aab492075ffe86dec253642a2",
-      "status" : "passed",
-      "time" : {
-        "start" : 1760782557517,
-        "stop" : 1760782564699,
-        "duration" : 7182
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
       "name" : "Тестирование авторизации",
-      "uid" : "4cafa825e71a6bbb",
+      "uid" : "c853c2b651124f3c",
       "parentUid" : "fad6093aab492075ffe86dec253642a2",
       "status" : "passed",
       "time" : {
-        "start" : 1760782565197,
-        "stop" : 1760782568208,
-        "duration" : 3011
+        "start" : 1760782752574,
+        "stop" : 1760782756466,
+        "duration" : 3892
       },
       "flaky" : false,
       "newFailed" : false,

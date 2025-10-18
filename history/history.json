@@ -175,11 +175,19 @@
       "failed" : 5,
       "broken" : 12,
       "skipped" : 0,
-      "passed" : 23,
+      "passed" : 24,
       "unknown" : 0,
-      "total" : 40
+      "total" : 41
     },
     "items" : [ {
+      "uid" : "c853c2b651124f3c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1760782752574,
+        "stop" : 1760782756466,
+        "duration" : 3892
+      }
+    }, {
       "uid" : "4cafa825e71a6bbb",
       "status" : "passed",
       "time" : {
@@ -332,15 +340,6 @@
         "start" : 1760635078323,
         "stop" : 1760635081140,
         "duration" : 2817
-      }
-    }, {
-      "uid" : "484d0e1bb3758b67",
-      "status" : "failed",
-      "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7fa8c11a3250>.check_url\n +      where <pages.login_page.LoginPage object at 0x7fa8c11a3250> = <tests.login_test.TestLogin object at 0x7fa8c136c590>.login_page",
-      "time" : {
-        "start" : 1760627160790,
-        "stop" : 1760627163589,
-        "duration" : 2799
       }
     } ]
   },
