@@ -1,5 +1,5 @@
 name: UI Tests Auto Run
-run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
+run-name: ENV - ${{ 'release' }} | browser - chrome | marker -  | key -
 
 on:
   schedule:           # автозапуск, но может задерживаться из-за загрузки github
