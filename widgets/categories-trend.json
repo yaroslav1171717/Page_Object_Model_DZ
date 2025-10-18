@@ -23,6 +23,8 @@
 }, {
   "data" : { }
 }, {
+  "data" : { }
+}, {
   "data" : {
     "Product defects" : 1
   }
@@ -46,6 +48,4 @@
     "Product defects" : 2,
     "Test defects" : 2
   }
-}, {
-  "data" : { }
 } ]
