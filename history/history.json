@@ -4,11 +4,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 27,
+      "passed" : 28,
       "unknown" : 0,
-      "total" : 29
+      "total" : 30
     },
     "items" : [ {
+      "uid" : "38b5664b38a356a1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1761055635860,
+        "stop" : 1761055644132,
+        "duration" : 8272
+      }
+    }, {
       "uid" : "4916cccf2ba614be",
       "status" : "passed",
       "time" : {
@@ -160,14 +168,6 @@
         "stop" : 1760639386708,
         "duration" : 7674
       }
-    }, {
-      "uid" : "3357874a1343c3b5",
-      "status" : "passed",
-      "time" : {
-        "start" : 1760635058572,
-        "stop" : 1760635066304,
-        "duration" : 7732
-      }
     } ]
   },
   "4a2e7f781cbcf7e74a88a7626dcbde05" : {
@@ -175,11 +175,19 @@
       "failed" : 5,
       "broken" : 12,
       "skipped" : 0,
-      "passed" : 26,
+      "passed" : 27,
       "unknown" : 0,
-      "total" : 43
+      "total" : 44
     },
     "items" : [ {
+      "uid" : "ee52fea5c25faa11",
+      "status" : "passed",
+      "time" : {
+        "start" : 1761055656908,
+        "stop" : 1761055660264,
+        "duration" : 3356
+      }
+    }, {
       "uid" : "eebe563deaaf1f47",
       "status" : "passed",
       "time" : {
@@ -332,15 +340,6 @@
         "stop" : 1760707266462,
         "duration" : 3060
       }
-    }, {
-      "uid" : "6dab040c9f9eddbd",
-      "status" : "failed",
-      "statusDetails" : "AssertionError: Авторизация не выполнена\nassert False\n +  where False = check_url('https://release-crm.qa-playground.com/#/')\n +    where check_url = <pages.login_page.LoginPage object at 0x7f48fb4ecdd0>.check_url\n +      where <pages.login_page.LoginPage object at 0x7f48fb4ecdd0> = <tests.login_test.TestLogin object at 0x7f48fb6a4550>.login_page",
-      "time" : {
-        "start" : 1760693744077,
-        "stop" : 1760693747527,
-        "duration" : 3450
-      }
     } ]
   },
   "f0f5e3318dbe089f0c6ea48989269ded" : {
@@ -348,11 +347,19 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 26,
+      "passed" : 27,
       "unknown" : 0,
-      "total" : 28
+      "total" : 29
     },
     "items" : [ {
+      "uid" : "dfbd138a86129ab1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1761055648892,
+        "stop" : 1761055656445,
+        "duration" : 7553
+      }
+    }, {
       "uid" : "c63b85c498705715",
       "status" : "passed",
       "time" : {
@@ -504,14 +511,6 @@
         "stop" : 1760639397827,
         "duration" : 7028
       }
-    }, {
-      "uid" : "821f044d7974d2be",
-      "status" : "passed",
-      "time" : {
-        "start" : 1760635070842,
-        "stop" : 1760635077875,
-        "duration" : 7033
-      }
     } ]
   },
   "fdf659477fd6c733f5220db5e41affdd" : {
@@ -519,11 +518,19 @@
       "failed" : 2,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 27,
+      "passed" : 28,
       "unknown" : 0,
-      "total" : 29
+      "total" : 30
     },
     "items" : [ {
+      "uid" : "dd5c6874bef52a25",
+      "status" : "passed",
+      "time" : {
+        "start" : 1761055644576,
+        "stop" : 1761055648435,
+        "duration" : 3859
+      }
+    }, {
       "uid" : "3462028482f97daf",
       "status" : "passed",
       "time" : {
@@ -674,14 +681,6 @@
         "start" : 1760639387175,
         "stop" : 1760639390332,
         "duration" : 3157
-      }
-    }, {
-      "uid" : "adc52bf16b719aef",
-      "status" : "passed",
-      "time" : {
-        "start" : 1760635066764,
-        "stop" : 1760635070394,
-        "duration" : 3630
       }
     } ]
   }

@@ -1,0 +1,483 @@
+{
+  "uid" : "dd5c6874bef52a25",
+  "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+  "fullName" : "tests.dashboard_test.TestDashboard#test_open_menus_by_name",
+  "historyId" : "fdf659477fd6c733f5220db5e41affdd",
+  "time" : {
+    "start" : 1761055644576,
+    "stop" : 1761055648435,
+    "duration" : 3859
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestDashboard",
+    "time" : {
+      "start" : 1761055644575,
+      "stop" : 1761055644576,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1761055644197,
+      "stop" : 1761055644575,
+      "duration" : 378
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/",
+      "time" : {
+        "start" : 1761055644576,
+        "stop" : 1761055647281,
+        "duration" : 2705
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Открываем меню contacts в шапке",
+      "time" : {
+        "start" : 1761055647281,
+        "stop" : 1761055647458,
+        "duration" : 177
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1761055647459,
+        "stop" : 1761055647463,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/contacts'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем меню dashboard в шапке",
+      "time" : {
+        "start" : 1761055647463,
+        "stop" : 1761055647619,
+        "duration" : 156
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1761055647619,
+        "stop" : 1761055647702,
+        "duration" : 83
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем меню companies в шапке",
+      "time" : {
+        "start" : 1761055647702,
+        "stop" : 1761055647846,
+        "duration" : 144
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1761055647846,
+        "stop" : 1761055647850,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/companies'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем меню deals в шапке",
+      "time" : {
+        "start" : 1761055647850,
+        "stop" : 1761055647968,
+        "duration" : 118
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1761055647968,
+        "stop" : 1761055647974,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/deals'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем меню crm в шапке",
+      "time" : {
+        "start" : 1761055647974,
+        "stop" : 1761055648429,
+        "duration" : 455
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1761055648429,
+        "stop" : 1761055648435,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 11,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestDashboard::0",
+    "time" : {
+      "start" : 1761055648436,
+      "stop" : 1761055648436,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1761055648436,
+      "stop" : 1761055648498,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "suite",
+    "value" : "dashboard_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDashboard"
+  }, {
+    "name" : "host",
+    "value" : "1ccba54c1003"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.dashboard_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 28,
+        "unknown" : 0,
+        "total" : 30
+      },
+      "items" : [ {
+        "uid" : "3462028482f97daf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761055178620,
+          "stop" : 1761055181983,
+          "duration" : 3363
+        }
+      }, {
+        "uid" : "144139ff3882c4b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760782553597,
+          "stop" : 1760782557012,
+          "duration" : 3415
+        }
+      }, {
+        "uid" : "43a2a7825694b4b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760780461480,
+          "stop" : 1760780465674,
+          "duration" : 4194
+        }
+      }, {
+        "uid" : "45ebdfb1943a5697",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760779756871,
+          "stop" : 1760779760661,
+          "duration" : 3790
+        }
+      }, {
+        "uid" : "16cf3a5b28353173",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760776836973,
+          "stop" : 1760776840373,
+          "duration" : 3400
+        }
+      }, {
+        "uid" : "1cf3b4c711b4744b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760773016853,
+          "stop" : 1760773020793,
+          "duration" : 3940
+        }
+      }, {
+        "uid" : "c178e6ea17ee8c82",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760772411874,
+          "stop" : 1760772415263,
+          "duration" : 3389
+        }
+      }, {
+        "uid" : "88ea76fda1ebcfba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760769900881,
+          "stop" : 1760769904984,
+          "duration" : 4103
+        }
+      }, {
+        "uid" : "b15ea82e2c33c496",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760744288584,
+          "stop" : 1760744293087,
+          "duration" : 4503
+        }
+      }, {
+        "uid" : "9eaad411826b5b90",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760743659478,
+          "stop" : 1760743663137,
+          "duration" : 3659
+        }
+      }, {
+        "uid" : "fca7865c7f2c912c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760740417760,
+          "stop" : 1760740421409,
+          "duration" : 3649
+        }
+      }, {
+        "uid" : "ffc28479184e3fa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760737077274,
+          "stop" : 1760737081454,
+          "duration" : 4180
+        }
+      }, {
+        "uid" : "a697dffd8a6a97b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760736515511,
+          "stop" : 1760736519354,
+          "duration" : 3843
+        }
+      }, {
+        "uid" : "e4f7a2d8f918b0e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760733828374,
+          "stop" : 1760733831884,
+          "duration" : 3510
+        }
+      }, {
+        "uid" : "5cd4b1330a3d4ef1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760730592559,
+          "stop" : 1760730595983,
+          "duration" : 3424
+        }
+      }, {
+        "uid" : "6bbdb4533b30eff9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760711225938,
+          "stop" : 1760711230056,
+          "duration" : 4118
+        }
+      }, {
+        "uid" : "50918d2b27fd2bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760707251939,
+          "stop" : 1760707255447,
+          "duration" : 3508
+        }
+      }, {
+        "uid" : "7c193fd5f4811243",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760693731504,
+          "stop" : 1760693735692,
+          "duration" : 4188
+        }
+      }, {
+        "uid" : "571d07d93626e92e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760639387175,
+          "stop" : 1760639390332,
+          "duration" : 3157
+        }
+      }, {
+        "uid" : "adc52bf16b719aef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1760635066764,
+          "stop" : 1760635070394,
+          "duration" : 3630
+        }
+      } ]
+    },
+    "tags" : [ "regression" ]
+  },
+  "source" : "dd5c6874bef52a25.json",
+  "parameterValues" : [ ]
+}
