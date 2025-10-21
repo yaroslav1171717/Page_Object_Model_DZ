@@ -31,7 +31,7 @@ on:
         default: ""
 
 jobs:
-  ui-tests:
+  ui-tests_test_ops:
     runs-on: ubuntu-latest         # На базе чего будет работать раннер, на работе могут быть другие
     environment: ${{ inputs.ENV }}  # ✅ Привязка джоба к выбранному environment
 
@@ -91,7 +91,7 @@ jobs:
       - name: Send results to Allure TestOps using allurectl
         run: |
           # Скачиваем и устанавливаем allurectl
-          curl -L https://github.com/allure-framework/allurectl/releases/download/vX.Y.Z/allurectl_linux_amd64.tar.gz | tar xzf -
+          - curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
           chmod +x allurectl
 
           # Передача переменных в allurectl
@@ -102,7 +102,7 @@ jobs:
           # Отправляем результаты тестов
           ./allurectl watch -- pytest -sv --alluredir=./allure-results || true
 
-      # Шаг 6 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
+      # Шаг 7 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:

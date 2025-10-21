@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-  ui-tests:
+  ui-tests_auto_run:
     runs-on: ubuntu-latest
     environment: release
 
