@@ -87,7 +87,6 @@ jobs:
         run: |
           docker compose up report
 
-      # Шаг 6 - передача отчета в Allure TestOps
       - name: Send results to Allure TestOps using allurectl
         run: |      
         # Скачиваем бинарный файл allurectl последней версии
