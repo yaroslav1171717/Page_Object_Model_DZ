@@ -87,17 +87,24 @@ jobs:
         run: |
           docker compose up report
 
+      # передаем отчет в Allure TestOps
       - name: Send results to Allure TestOps using allurectl
         run: |      
+        # Скачиваем бинарный файл allurectl последней версии
           curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
           chmod +x allurectl
-      
+               
+        # Проверяем наличие скачаного файла allurectl
           if [[ ! -f allurectl ]]; then
             echo "Failed to download allurectl binary."
             exit 1
           fi      
-      
-          ./allurectl upload --endpoint="${{ secrets.ALLURE_TESTOPS_URL }}" --project-id="${{ secrets.ALLURE_PROJECT_ID }}" --token="${{ secrets.ALLURE_API_KEY }}" "./allure-results" 
+        # Загружаем результаты тестов в Allure TestOps, предварительно создали секретные переменные в настройках проекта на GitHub
+          ./allurectl upload \\ 
+             --endpoint="${{ secrets.ALLURE_TESTOPS_URL }}" \\
+             --project-id="${{ secrets.ALLURE_PROJECT_ID }}" \\
+             --token="${{ secrets.ALLURE_API_KEY }}" \\
+             "./allure-results"
 
       # Шаг 7 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
       - name: Deploy to Github Pages
