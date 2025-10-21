@@ -98,7 +98,7 @@ jobs:
           fi               
       
           ./allurectl send \\
-          --url="${{ 'https://yaroslav1171717.testops.cloud/' }}" \\
+          --url="${{ 'https://yaroslav1171717.testops.cloud' }}" \\
           --project-id="${{ 1 }}" \\
           --api-key="${{ 'bcecf323-c829-45d6-8a51-79575978157d' }}" \\
           --directory="./allure-results" --log
