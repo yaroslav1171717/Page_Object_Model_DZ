@@ -92,8 +92,7 @@ jobs:
         run: |              
           curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
           chmod +x allurectl
-      # Выше скачали бинарный файл allurectl последней версси и установили права на выполнение файла allurectl
-      # Проверяем наличие скачанного файла allurectl
+     
           if [[ ! -f allurectl ]]; then
             echo "Failed to download allurectl binary."
             exit 1
