@@ -1,18 +1,10 @@
-# Перед этим файлом необходимо выполнить создание проекта по инструкции с добавлением файла README.MD и создание ветки gh-pages и добавление в секретные ->
-# переменные CI_TOKEN, подробная инструкция в лекции и видео в каталоге AQA PROKA4/Модуль 09 - CI_CD, ну и конечно Dockerfile и docker-compose сделать
-# Пайплайн — это набор инструкций, которые CircleCI выполняет автоматически, когда ты загружаешь код в репозиторий
-name: UI Tests
+name: UI Tests with Allure Test Ops
 run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
-# Это название в Actions увидим, секретные переменные сюда нельзя выводить
-# Git hub ranner - это как некий контейнер, внутри него будет запускаться наша job, а внутри джобы уже будет работать наш контейнер docker-compose
 
 on:
-  workflow_dispatch:    # Это ручной вариант запуска, в лекции еще описан по расписанию/времени, при пуше в main/master, запуск на каждый PR
+  workflow_dispatch:
     inputs:
-      ENV:   # GitHub Environment (dev/test/etc), это как бы переменная окружения для хранения переменных окружения (хост, логин, пароль)) для конкретного стенда, ->
-        # т.е. в настройках проекта в github в разделе Environments добавил окружение release, а в нем уже environment secret, такие как хост стенда - release, ->
-        # логин и пароль, которые нужны в данном проекте LOGIN и PASSWORD, которые при локальном запуске, подтягиваются из .env, но .env мы не пушим в git, и далее ->
-        # в это файле мы их достаем из secrets - LOGIN=${{ secrets.LOGIN }}
+      ENV:
         description: "Choose environment"
         required: true
         type: environment # Важно: это тип environment!
@@ -35,14 +27,13 @@ on:
       KEY:
         description: "Name search"
         required: false
-        type: string        # Чтобы вводить с клавиатуры значение, а не выбирать
+        type: string
         default: ""
 
 jobs:
   ui-tests:
     runs-on: ubuntu-latest         # На базе чего будет работать раннер, на работе могут быть другие
-    environment: ${{ inputs.ENV }}  # ✅ Привязка джоба к выбранному environment, чтобы тянулись нужные переменные окружения для конкретного стенда
-                                                                    # (настройка environment в нашем проекте на github)
+    environment: ${{ inputs.ENV }}  # ✅ Привязка джоба к выбранному environment
 
     steps:
       # Клонируем репозиторий в раннер (главную ветку или выбранную при запуске) (Checkout исходного кода)
@@ -54,8 +45,6 @@ jobs:
           path: ./.github/gh-pages
 
       # Подготовка environment.properties, для того чтобы подтягивать в allure отчет переменные окружения
-      # inputs - это параметры (переменные окружения), которые мы передаем при ручном запуске
-      # secrets - это переменные, которые скрыты
       - name: Prepare Allure environment
         run: |
           mkdir -p allure-results
@@ -65,12 +54,11 @@ jobs:
           echo "Stage=${{ secrets.STAGE }}" >> allure-results/environment.properties
           echo "LOGIN=${{ secrets.LOGIN }}" >> allure-results/environment.properties         
           echo "PASSWORD=${{ secrets.PASSWORD }}" >> allure-results/environment.properties
-      # Login и Password добавил на вывод для отладки, так не должно быть конечно
 
       # Запуск тестов
       - name: Run tests via docker-compose
-        env:               # Должны быть те же переменные окружения, что и в docker-compose, хотя если они из inputs, то автоматом должны подтянутся, но ->
-          STAGE: ${{ secrets.STAGE }}            # здесь лишним не будет, а secrets обязательно писать  # STAGE: ${{ secrets.STAGE }}
+        env:
+          STAGE: ${{ secrets.STAGE }}
           LOGIN: ${{ secrets.LOGIN }}
           PASSWORD: ${{ secrets.PASSWORD }}
           BROWSER: ${{ inputs.BROWSER }}
@@ -99,6 +87,15 @@ jobs:
         run: |
           docker compose up report
 
+      - name: Send results to Allure TestOps
+        uses: alluraframework/allure-testops-gitlab-action@master
+        with:
+          server-url: ${{ secrets.ALLURE_TESTOPS_URL }}
+          project-id: ${{ secrets.ALLURE_PROJECT_ID }}
+          api-key: ${{ secrets.ALLURE_API_KEY }}
+          results-path: ./allure-results
+          launch-name: "UI Tests on ${{ inputs.ENV }}"
+
       # Шаг 6 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
@@ -107,7 +104,3 @@ jobs:
           branch: gh-pages
           folder: allure-report
           clean: false
-
-# И дальше лучше командами в терминале git add .   git commit -m ""   git push
-# Далее заходим в git hub на вкладку Actions видим наш workflows, выбираем его и запускаем Run workflow, а pages-build-deployment запуститься автоматически после ->
-# выполнения тестов
