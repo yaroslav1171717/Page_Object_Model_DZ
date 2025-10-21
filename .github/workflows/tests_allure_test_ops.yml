@@ -97,7 +97,7 @@ jobs:
             exit 1
           fi               
       
-          ./allurectl send --server-url="${{ secrets.ALLURE_TESTOPS_URL }}" --project-id="${{ secrets.ALLURE_PROJECT_ID }}" --api-key="${{ secrets.ALLURE_API_KEY }}" --directory="./allure-results"
+          ./allurectl watch --url="${{ secrets.ALLURE_TESTOPS_URL }}" --project-id="${{ secrets.ALLURE_PROJECT_ID }}" --api-key="${{ secrets.ALLURE_API_KEY }}" --directory="./allure-results"
 
       # Шаг 7 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
       - name: Deploy to Github Pages
