@@ -90,17 +90,18 @@ jobs:
       # Шаг 6 - передача отчета в Allure TestOps
       - name: Send results to Allure TestOps using allurectl
         run: |
-          # Скачиваем и устанавливаем allurectl
-          - curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
+      # Скачиваем и устанавливаем allurectl
+          curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
           chmod +x allurectl
 
-          # Передача переменных в allurectl
-          export ALLURE_SERVER_URL=${{ secrets.ALLURE_TESTOPS_URL }}
-          export ALLURE_PROJECT_ID=${{ secrets.ALLURE_PROJECT_ID }}
-          export ALLURE_API_KEY=${{ secrets.ALLURE_API_KEY }}
-
-          # Отправляем результаты тестов
-          ./allurectl watch -- pytest -sv --alluredir=./allure-results || true
+      # Проверяем успешность загрузки
+          if [[ ! -f allurectl ]]; then
+            echo "Failed to download allurectl binary."
+            exit 1
+          fi
+               
+      # Явная передача переменных окружения в команду allurectl
+          ./allurectl send --server-url="${{ secrets.ALLURE_TESTOPS_URL }}" --project-id="${{ secrets.ALLURE_PROJECT_ID }}" --api-key="${{ secrets.ALLURE_API_KEY }}" --directory="./allure-results"
 
       # Шаг 7 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
       - name: Deploy to Github Pages
