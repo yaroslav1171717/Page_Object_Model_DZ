@@ -8,6 +8,7 @@ class TestDeals(BaseTest):
 
     @pytest.mark.regression
     @allure.title("Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок")
+    @allure.id("3")
     def test_open_deals_and_add_note_and_check(self):
         self.dashboard_page.open_page()           # Открываем страницу dashboard
         name = self.dashboard_page.return_name_from_deals_pipeline_by_number(0)      # Получаем имя первой сделки

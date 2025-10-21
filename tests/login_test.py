@@ -8,6 +8,7 @@ class TestLogin(BaseTest):
 
     @pytest.mark.smoke
     @allure.title("Тестирование авторизации")
+    @allure.id("4")
     def test_authorization(self):
         self.contact_page.open_page()          # Открываем страницу контактов
         self.contact_page.exit_user()          # выходим из пользователя

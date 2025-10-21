@@ -8,6 +8,7 @@ class TestContact(BaseTest):
 
     @pytest.mark.regression
     @allure.title("Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты")
+    @allure.id("1")
     def test_open_from_hot_contacts_and_enter_text_and_check(self):
         self.dashboard_page.open_page()                 # Открываем страницу dashboard
         name = self.dashboard_page.return_name_from_hot_list_by_number(0)   # Получаем имя первого контакта из топ-листа
