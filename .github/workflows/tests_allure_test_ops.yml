@@ -97,12 +97,7 @@ jobs:
             exit 1
           fi               
       
-          ./allurectl upload \\
-          --endpoint="https://your-allure-testops-url/api/v1/" \\
-          --url="https://yaroslav1171717.testops.cloud/" \\
-          --project-id="1" \\
-          --api-key="bcecf323-c829-45d6-8a51-79575978157d" \\
-          --directory="./allure-results" --log
+          ./allurectl upload --endpoint="https://yaroslav1171717.testops.cloud/api/v1/" --url="https://yaroslav1171717.testops.cloud/" --project-id="1" --api-key="$ALLURE_API_KEY" --directory="./allure-results" --log
 
       # Шаг 7 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
       - name: Deploy to Github Pages
