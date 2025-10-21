@@ -98,9 +98,9 @@ jobs:
           fi               
       
           ./allurectl send \\
-          --url="${{ secrets.ALLURE_TESTOPS_URL }}" \\
-          --project-id="${{ secrets.ALLURE_PROJECT_ID }}" \\
-          --api-key="${{ secrets.ALLURE_API_KEY }}" \\
+          --url="${{ 'https://yaroslav1171717.testops.cloud/' }}" \\
+          --project-id="${{ 1 }}" \\
+          --api-key="${{ 'bcecf323-c829-45d6-8a51-79575978157d' }}" \\
           --directory="./allure-results" --log
 
       # Шаг 7 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
