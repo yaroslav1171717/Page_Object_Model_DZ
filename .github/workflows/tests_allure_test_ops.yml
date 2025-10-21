@@ -87,10 +87,11 @@ jobs:
         run: |
           docker compose up report
 
+      # Шаг 6 - передача отчета в Allure TestOps
       - name: Send results to Allure TestOps
-        uses: alluraframework/allure-testops-gitlab-action@master
+        uses: qameta/action-send-report@master
         with:
-          server-url: ${{ secrets.ALLURE_TESTOPS_URL }}
+          endpoint-url: ${{ secrets.ALLURE_TESTOPS_URL }}
           project-id: ${{ secrets.ALLURE_PROJECT_ID }}
           api-key: ${{ secrets.ALLURE_API_KEY }}
           results-path: ./allure-results
