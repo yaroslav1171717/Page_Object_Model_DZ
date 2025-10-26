@@ -84,6 +84,9 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           CI_COMMIT_REF_NAME: ${{ github.ref_name }}
           CI_COMMIT_SHORT_SHA: ${{ github.sha }}
+          ALLURE_TESTOPS_URL: ${{ secrets.ALLURE_TESTOPS_URL }}
+          ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
+          ALLURE_API_KEY: ${{ secrets.ALLURE_API_KEY }}
         run: |
           docker compose up report
 
