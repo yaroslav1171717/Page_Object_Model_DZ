@@ -1,65 +1,65 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "a85089cb0b89",
+    "name" : "12828445ee93",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
-        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "4249dea2f5b15979",
-        "parentUid" : "152673222eba177e27193f44f1b4dd8e",
+        "name" : "Тестирование авторизации",
+        "uid" : "980a2f5de614785",
+        "parentUid" : "a7e0f00c65b7f290c2276844649ad369",
         "status" : "passed",
         "time" : {
-          "start" : 1761479885079,
-          "stop" : 1761479892166,
-          "duration" : 7087
+          "start" : 1761480768282,
+          "stop" : 1761480772810,
+          "duration" : 4528
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "b2e6d547592f6613",
+        "parentUid" : "a7e0f00c65b7f290c2276844649ad369",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761480759946,
+          "stop" : 1761480767836,
+          "duration" : 7890
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "ba3147e13e8dcaff",
-        "parentUid" : "152673222eba177e27193f44f1b4dd8e",
+        "uid" : "c640cc48128d42ce",
+        "parentUid" : "a7e0f00c65b7f290c2276844649ad369",
         "status" : "passed",
         "time" : {
-          "start" : 1761479880900,
-          "stop" : 1761479884618,
-          "duration" : 3718
+          "start" : 1761480755796,
+          "stop" : 1761480759506,
+          "duration" : 3710
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "eb7ff963d68b23a3",
-        "parentUid" : "152673222eba177e27193f44f1b4dd8e",
+        "uid" : "8a9d06ae1c489267",
+        "parentUid" : "a7e0f00c65b7f290c2276844649ad369",
         "status" : "passed",
         "time" : {
-          "start" : 1761479872634,
-          "stop" : 1761479880447,
-          "duration" : 7813
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Тестирование авторизации",
-        "uid" : "a3ae015942442f0b",
-        "parentUid" : "152673222eba177e27193f44f1b4dd8e",
-        "status" : "passed",
-        "time" : {
-          "start" : 1761479892628,
-          "stop" : 1761479895553,
-          "duration" : 2925
+          "start" : 1761480746924,
+          "stop" : 1761480755334,
+          "duration" : 8410
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "152673222eba177e27193f44f1b4dd8e"
+      "uid" : "a7e0f00c65b7f290c2276844649ad369"
     } ],
-    "uid" : "7afb8c06ce70b54c872d626f07696e10"
+    "uid" : "a59f0d72020464413dfeb9868c819ec2"
   } ],
   "name" : "timeline"
 }
