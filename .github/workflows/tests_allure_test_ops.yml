@@ -64,6 +64,9 @@ jobs:
           BROWSER: ${{ inputs.BROWSER }}
           MARKER: ${{ inputs.MARKER }}
           KEY: ${{ inputs.KEY }}
+          ALLURE_TESTOPS_URL: ${{ secrets.ALLURE_TESTOPS_URL }}
+          ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
+          ALLURE_API_KEY: ${{ secrets.ALLURE_API_KEY }}
         run: |                      # | - означает многострочную команду
           docker compose up pom_dz_smoke
 
