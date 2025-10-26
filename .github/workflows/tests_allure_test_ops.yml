@@ -76,7 +76,7 @@ jobs:
           ALLURE_JOB_UID: ${{ github.run_number }}
           ALLURE_JOB_RUN_UID: ${{ github.run_id }}
         run: |                      # | - означает многострочную команду
-          docker compose up pom_dz_smoke
+          docker compose up pom_dz_allure
 
       # Шаг 4 - Копирование истории, создание папки history в allure-results если ее нет
       - name: Copy Allure history
