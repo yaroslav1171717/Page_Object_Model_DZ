@@ -24,7 +24,9 @@ services:
     volumes:
       - ./:/usr/workspace
       - /dev/shm:/dev/shm
-    command: /bin/sh -c 'echo "STAGE=$STAGE BROWSER=$BROWSER MARKER=$MARKER KEY=$KEY"; pytest -sv $${KEY:+-k "$$KEY"} $${MARKER:+-m "$$MARKER"} -o log_cli=true --alluredir=allure-results'
+    command: |
+      /bin/sh -c 'echo "STAGE=$STAGE BROWSER=$BROWSER MARKER=$MARKER KEY=$KEY"; \
+      pytest -sv $${KEY:+-k "$$KEY"} $${MARKER:+-m "$$MARKER"} -o log_cli=true --alluredir=allure-results'
     # echo.. - таким образом выведем еще принтом в лог текущие значения переменных окружения, $${KEY:+-k "$$KEY"} добавит -k "..." только если KEY непустой.
     # Аналогично для MARKER, т.е. здесь сделал поиск и по маркеру и ключу, если они переданы, если не переданы, то искать по ним не будет
     shm_size: 2gb
@@ -33,7 +35,7 @@ services:
       BROWSER: ${BROWSER:-chrome}
       MARKER: ${MARKER:-}
       # по умолчанию пустая строка
-      KEY: ${KEY:-}
+      KEY: ${KEY}
       LOGIN: ${LOGIN}         # просто прокидываем, чтобы при запуске через github в allure отображались
       PASSWORD: ${PASSWORD}
     tty: true
