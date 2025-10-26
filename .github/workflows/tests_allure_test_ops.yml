@@ -103,7 +103,7 @@ jobs:
           {
             "name": "UI Tests with Allure Test Ops",
             "type": "github",
-            "url": "https://github.com/yaroslav1171717/Page_Object_Model_DZ/actions/workflows/tests_auto_run.yml/runs/${GITHUB_RUN_ID}",
+            "url": "https://github.com/yaroslav1171717/Page_Object_Model_DZ/actions/runs/${GITHUB_RUN_ID}",
             "buildOrder": ${GITHUB_RUN_NUMBER},
             "job": "ui-tests_test_ops"
           }
