@@ -56,6 +56,7 @@ jobs:
           echo "PASSWORD=${{ secrets.PASSWORD }}" >> allure-results/environment.properties
           echo "ALLURE_TESTOPS_URL=${{ secrets.ALLURE_TESTOPS_URL }}" >> allure-results/environment.properties 
           echo "ALLURE_JOB_UID=${{ github.run_number }}" >> allure-results/environment.properties
+          echo "ALLURE_JOB_RUN_UID=${{ env.ALLURE_JOB_RUN_UID }}" >> allure-results/environment.properties
 
       # Запуск тестов
       - name: Run tests via docker-compose
@@ -69,7 +70,8 @@ jobs:
           ALLURE_TESTOPS_URL: ${{ secrets.ALLURE_TESTOPS_URL }}   # Три переменные ниже передаем в Docker-compose для Allure Test Ops
           ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
           ALLURE_API_KEY: ${{ secrets.ALLURE_API_KEY }}
-          ALLURE_JOB_UID: ${ALLURE_JOB_UID}
+          ALLURE_JOB_UID: ${{ github.run_number }}
+          ALLURE_JOB_RUN_UID: ${{ env.ALLURE_JOB_RUN_UID }}
         run: |                      # | - означает многострочную команду
           docker compose up pom_dz_smoke
 
@@ -94,6 +96,7 @@ jobs:
           ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
           ALLURE_API_KEY: ${{ secrets.ALLURE_API_KEY }}
           ALLURE_JOB_UID: ${{ github.run_number }}
+          ALLURE_JOB_RUN_UID: ${{ env.ALLURE_JOB_RUN_UID }}
         run: |
           docker compose up report
 
