@@ -54,10 +54,26 @@ services:
     volumes:
       - ./:/usr/workspace
       - /dev/shm:/dev/shm
-    command: |
-      /bin/sh -c 'echo "STAGE=$STAGE BROWSER=$BROWSER MARKER=$MARKER KEY=$KEY \
-      ALLURE_TESTOPS_URL=$ALLURE_TESTOPS_URL ALLURE_PROJECT_ID=$ALLURE_PROJECT_ID ALLURE_API_KEY=$ALLURE_API_KEY"; \
-      pytest -sv $${KEY:+-k "$$KEY"} $${MARKER:+-m "$$MARKER"} -o log_cli=true --alluredir=allure-results'
+    command: >
+      /bin/sh -c '
+        echo "STAGE=$STAGE BROWSER=$BROWSER MARKER=$MARKER KEY=$KEY \\
+        ALLURE_TESTOPS_URL=$ALLURE_TESTOPS_URL ALLURE_PROJECT_ID=$ALLURE_PROJECT_ID ALLURE_API_KEY=$ALLURE_API_KEY";
+      
+        pytest -sv $${KEY:+-k "$$KEY"} $${MARKER:+-m "$$MARKER"} -o log_cli=true --alluredir=allure-results && {
+      
+          curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl &&
+          chmod +x allurectl &&
+          if [[ ! -f allurectl ]]; then
+            echo "Failed to download allurectl binary."
+            exit 1
+          fi &&
+          ./allurectl upload \\
+            --endpoint="$ALLURE_TESTOPS_URL" \\
+            --project-id="$ALLURE_PROJECT_ID" \\
+            --token="$ALLURE_API_KEY" \\
+            "./allure-results"
+        }
+      '
     # echo.. - таким образом выведем еще принтом в лог текущие значения переменных окружения, $${KEY:+-k "$$KEY"} добавит -k "..." только если KEY непустой.
     # Аналогично для MARKER, т.е. здесь сделал поиск и по маркеру и ключу, если они переданы, если не переданы, то искать по ним не будет
     shm_size: 2gb
