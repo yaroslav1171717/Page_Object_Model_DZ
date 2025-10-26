@@ -96,7 +96,19 @@ jobs:
 
       # Шаг 6 - передача отчета в Allure TestOps
       - name: Send results to Allure TestOps using allurectl
-        run: |              
+        run: |     
+          mkdir -p allure-results
+
+          cat > allure-results/executor.json <<EOF
+          {
+            "name": "UI Tests with Allure Test Ops",
+            "type": "github",
+            "url": "https://github.com/yaroslav1171717/Page_Object_Model_DZ/blob/master/.github/workflows/tests_allure_test_ops.yml",
+            "buildOrder": ${GITHUB_RUN_NUMBER},
+            "job": "ui-tests_test_ops"
+          }
+          EOF
+          
           curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
           chmod +x allurectl
      
