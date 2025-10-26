@@ -39,7 +39,7 @@ services:
       KEY: ${KEY}
       LOGIN: ${LOGIN}         # просто прокидываем, чтобы при запуске через github в allure отображались
       PASSWORD: ${PASSWORD}
-      ALLURE_TESTOPS_URL: ${ALLURE_TESTOPS_URL}
+      ALLURE_TESTOPS_URL: ${ALLURE_TESTOPS_URL}   # Три переменные ниже передаем для Allure Test Ops
       ALLURE_PROJECT_ID: ${ALLURE_PROJECT_ID}
       ALLURE_API_KEY: ${ALLURE_API_KEY}
     tty: true
