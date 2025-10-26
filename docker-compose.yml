@@ -54,22 +54,8 @@ services:
     volumes:
       - ./:/usr/workspace
       - /dev/shm:/dev/shm
-    command: |
-      curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl \
-      chmod +x allurectl
-     
-      if [[ ! -f allurectl ]]; then
-        echo "Failed to download allurectl binary."
-        exit 1
-      fi 
-      
-      pytest -sv $${KEY:+-k "$$KEY"} $${MARKER:+-m "$$MARKER"} -o log_cli=true --alluredir=allure-results \
-      ./allurectl upload \
-          --endpoint=$ALLURE_TESTOPS_URL \
-          --project-id=$ALLURE_PROJECT_ID \
-          --token=$ALLURE_API_KEY \
-          "./allure-results"      
-
+    command: |      
+      pytest -sv $${KEY:+-k "$$KEY"} $${MARKER:+-m "$$MARKER"} -o log_cli=true --alluredir=allure-results
     shm_size: 2gb
     environment:
       STAGE: ${STAGE:-release}
