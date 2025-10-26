@@ -1,7 +1,4 @@
-# Здесь пытался чтобы в пайплане передавать отчет в Allure TestOps, он передался, но job создавался неправильно с какой-то как будто кривой ссылкой
-# но может и ошибаюсь в причине, и тесты не запускались из Allure TestOps, который создал руками job было зеленое соединение, но не видел тесты, может проблема
-# в бесплатной версии ??? В данном пайплане Шаг 6 для передачи отчета в Allure TestOps, и много переменных, начинающихся на ALLURE
-name: UI Tests with Allure Test Ops
+name: Allure Test Ops in compose
 run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
 
 on:
@@ -76,7 +73,7 @@ jobs:
           ALLURE_JOB_UID: ${{ github.run_number }}
           ALLURE_JOB_RUN_UID: ${{ github.run_id }}
         run: |                      # | - означает многострочную команду
-          docker compose up pom_dz_smoke
+          docker compose up pom_dz_allure
 
       # Шаг 4 - Копирование истории, создание папки history в allure-results если ее нет
       - name: Copy Allure history
@@ -101,24 +98,7 @@ jobs:
           ALLURE_JOB_UID: ${{ github.run_number }}
           ALLURE_JOB_RUN_UID: ${{ github.run_id }}
         run: |
-          docker compose up report
-
-      # Шаг 6 - передача отчета в Allure TestOps
-      - name: Send results to Allure TestOps using allurectl
-        run: |               
-          curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
-          chmod +x allurectl
-     
-          if [[ ! -f allurectl ]]; then
-            echo "Failed to download allurectl binary."
-            exit 1
-          fi             
-      
-          ./allurectl upload \
-          --endpoint="${{ secrets.ALLURE_TESTOPS_URL }}" \
-          --project-id="${{ secrets.ALLURE_PROJECT_ID }}" \
-          --token="${{ secrets.ALLURE_API_KEY }}" \
-          "./allure-results"
+          docker compose up report      
 
       # Шаг 7 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
       - name: Deploy to Github Pages
