@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Oct 26 18:17:26 GMT 2025","Sun Oct 26 18:17:34 GMT 2025","7705","Тренировочный проект на https://release-crm.qa-playground.com","deals_test","TestDeals","","","Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",""
+"passed","Sun Oct 26 18:17:13 GMT 2025","Sun Oct 26 18:17:21 GMT 2025","8266","Тренировочный проект на https://release-crm.qa-playground.com","contact_test","TestContact","","","Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",""
+"passed","Sun Oct 26 18:17:35 GMT 2025","Sun Oct 26 18:17:39 GMT 2025","3588","Тренировочный проект на https://release-crm.qa-playground.com","login_test","TestLogin","","","Тестирование авторизации",""
+"passed","Sun Oct 26 18:17:21 GMT 2025","Sun Oct 26 18:17:25 GMT 2025","4154","Тренировочный проект на https://release-crm.qa-playground.com","dashboard_test","TestDashboard","","","Проверка кнопок меню в шапке со страницы Дашборды",""

@@ -1,5 +1,77 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "contact_test",
+      "children" : [ {
+        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+        "uid" : "5d41c9641fe67e72",
+        "parentUid" : "d12589d8df0dcc6816fe92d7c35548a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502633007,
+          "stop" : 1761502641273,
+          "duration" : 8266
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d12589d8df0dcc6816fe92d7c35548a2"
+    }, {
+      "name" : "dashboard_test",
+      "children" : [ {
+        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+        "uid" : "1b4cd2dd926981d1",
+        "parentUid" : "762f440dba94479630f6cffcc30d4f11",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502641725,
+          "stop" : 1761502645879,
+          "duration" : 4154
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "762f440dba94479630f6cffcc30d4f11"
+    }, {
+      "name" : "deals_test",
+      "children" : [ {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "47230442815d630f",
+        "parentUid" : "b391d6861489be57bf39c6c9ce80fb90",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502646323,
+          "stop" : 1761502654028,
+          "duration" : 7705
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b391d6861489be57bf39c6c9ce80fb90"
+    }, {
+      "name" : "login_test",
+      "children" : [ {
+        "name" : "Тестирование авторизации",
+        "uid" : "8eee736d13a7e31d",
+        "parentUid" : "fa8380230272a9bb1a6d6e9ad8189b2e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502655492,
+          "stop" : 1761502659080,
+          "duration" : 3588
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fa8380230272a9bb1a6d6e9ad8189b2e"
+    } ],
+    "uid" : "bf49149a3821e34f7608bb6885d52868"
+  } ],
   "name" : "packages"
 }

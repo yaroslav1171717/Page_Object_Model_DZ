@@ -1,5 +1,65 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "d4b955c81c45",
+    "children" : [ {
+      "name" : "1-MainThread",
+      "children" : [ {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "47230442815d630f",
+        "parentUid" : "e5fcc2c9f67239eeb9cbd54d6fdf0349",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502646323,
+          "stop" : 1761502654028,
+          "duration" : 7705
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
+        "uid" : "5d41c9641fe67e72",
+        "parentUid" : "e5fcc2c9f67239eeb9cbd54d6fdf0349",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502633007,
+          "stop" : 1761502641273,
+          "duration" : 8266
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Тестирование авторизации",
+        "uid" : "8eee736d13a7e31d",
+        "parentUid" : "e5fcc2c9f67239eeb9cbd54d6fdf0349",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502655492,
+          "stop" : 1761502659080,
+          "duration" : 3588
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+        "uid" : "1b4cd2dd926981d1",
+        "parentUid" : "e5fcc2c9f67239eeb9cbd54d6fdf0349",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502641725,
+          "stop" : 1761502645879,
+          "duration" : 4154
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e5fcc2c9f67239eeb9cbd54d6fdf0349"
+    } ],
+    "uid" : "53e6c6139a4cba8faf2a2fa408508cdb"
+  } ],
   "name" : "timeline"
 }

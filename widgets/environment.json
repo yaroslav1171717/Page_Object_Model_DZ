@@ -20,9 +20,9 @@
   "values" : [ "https://yaroslav1171717.testops.cloud/" ],
   "name" : "ALLURE_TESTOPS_URL"
 }, {
-  "values" : [ "4" ],
+  "values" : [ "53" ],
   "name" : "ALLURE_JOB_UID"
 }, {
-  "values" : [ "18820336705" ],
+  "values" : [ "18821869134" ],
   "name" : "ALLURE_JOB_RUN_UID"
 } ]
