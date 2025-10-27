@@ -1,6 +1,3 @@
-# Здесь пытался чтобы в пайплане передавать отчет в Allure TestOps, он передался, но job создавался неправильно с какой-то как будто кривой ссылкой
-# но может и ошибаюсь в причине, и тесты не запускались из Allure TestOps, который создал руками job было зеленое соединение, но не видел тесты, может проблема
-# в бесплатной версии ??? В данном пайплане Шаг 6 для передачи отчета в Allure TestOps, и много переменных, начинающихся на ALLURE
 name: UI Tests with Allure Test Ops
 run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
 
@@ -103,7 +100,10 @@ jobs:
         run: |
           docker compose up report
 
-#      # Шаг 6 - передача отчета в Allure TestOps
+#        Шаг 6 - передача отчета в Allure TestOps - Здесь пытался чтобы в пайплане передавать отчет в Allure TestOps, он передался, но job создавался неправильно с
+#        какой-то как будто кривой ссылкой, но может и ошибаюсь в причине. И тесты не запускались из Allure TestOps, на job, который создавался автоматом была ошибка
+#        соединения, а на job, который создал руками было зеленое соединение, но не видел тесты, может проблема в бесплатной версии ??? В данном пайплане Шаг 6 для
+#        передачи отчета в Allure TestOps, и много переменных, начинающихся на ALLURE
 #      - name: Send results to Allure TestOps using allurectl
 #        run: |
 #          curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl

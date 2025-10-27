@@ -57,7 +57,8 @@ services:
     command: >
       /bin/sh -c '
         echo "STAGE=$STAGE BROWSER=$BROWSER MARKER=$MARKER KEY=$KEY \
-        ALLURE_TESTOPS_URL=$ALLURE_TESTOPS_URL ALLURE_PROJECT_ID=$ALLURE_PROJECT_ID ALLURE_API_KEY=$ALLURE_API_KEY";
+        ALLURE_TESTOPS_URL=$ALLURE_TESTOPS_URL ALLURE_PROJECT_ID=$ALLURE_PROJECT_ID ALLURE_API_KEY=$ALLURE_API_KEY" \
+        ALLURE_JOB_RUN_UID=$ALLURE_JOB_RUN_UID ALLURE_JOB_UID=$ALLURE_JOB_UID;
       
         pytest -sv $${KEY:+-k "$$KEY"} $${MARKER:+-m "$$MARKER"} -o log_cli=true --alluredir=allure-results && {
       
@@ -71,6 +72,8 @@ services:
             --endpoint=$ALLURE_TESTOPS_URL \
             --project-id=$ALLURE_PROJECT_ID \
             --token=$ALLURE_API_KEY \
+            --job-run-uid=$ALLURE_JOB_RUN_UID \
+            --job-uid=$ALLURE_JOB_UID \
             "./allure-results"
         }
       '
@@ -86,8 +89,8 @@ services:
       ALLURE_TESTOPS_URL: ${ALLURE_TESTOPS_URL}   # Пять переменных ниже передаем для Allure Test Ops
       ALLURE_PROJECT_ID: ${ALLURE_PROJECT_ID}
       ALLURE_API_KEY: ${ALLURE_API_KEY}
-      ALLURE_JOB_UID: ${ALLURE_JOB_UID}
       ALLURE_JOB_RUN_UID: ${ALLURE_JOB_RUN_UID}
+      ALLURE_JOB_UID: ${ALLURE_JOB_UID}
     tty: true
 
   # для генерации allure-report из папки allure-result
