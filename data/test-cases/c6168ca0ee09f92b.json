@@ -1,0 +1,375 @@
+{
+  "uid" : "c6168ca0ee09f92b",
+  "name" : "Тестирование авторизации",
+  "fullName" : "tests.login_test.TestLogin#test_authorization",
+  "historyId" : "4a2e7f781cbcf7e74a88a7626dcbde05",
+  "time" : {
+    "start" : 1761578891965,
+    "stop" : 1761578895341,
+    "duration" : 3376
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1761578891586,
+      "stop" : 1761578891964,
+      "duration" : 378
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestLogin",
+    "time" : {
+      "start" : 1761578891964,
+      "stop" : 1761578891964,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/contacts",
+      "time" : {
+        "start" : 1761578891965,
+        "stop" : 1761578894776,
+        "duration" : 2811
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Разлогиниваемся из пользователя",
+      "time" : {
+        "start" : 1761578894776,
+        "stop" : 1761578895005,
+        "duration" : 229
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Ввод логина и пароля на странице Авторизации",
+      "time" : {
+        "start" : 1761578895005,
+        "stop" : 1761578895336,
+        "duration" : 331
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "login",
+        "value" : "'login_rel'"
+      }, {
+        "name" : "password",
+        "value" : "'pass_rel'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Проверяем url",
+      "time" : {
+        "start" : 1761578895336,
+        "stop" : 1761578895341,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "'https://release-crm.qa-playground.com/#/'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1761578895342,
+      "stop" : 1761578895403,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestLogin::0",
+    "time" : {
+      "start" : 1761578895341,
+      "stop" : 1761578895341,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "as_id",
+    "value" : "4"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "suite",
+    "value" : "login_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "9460dc15e735"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.login_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 12,
+        "skipped" : 0,
+        "passed" : 67,
+        "unknown" : 0,
+        "total" : 84
+      },
+      "items" : [ {
+        "uid" : "a92e32eff52e5d3e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761577251085,
+          "stop" : 1761577253766,
+          "duration" : 2681
+        }
+      }, {
+        "uid" : "8f81ff3872a8e5e9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576915617,
+          "stop" : 1761576918289,
+          "duration" : 2672
+        }
+      }, {
+        "uid" : "42680cee32cfe36f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576737669,
+          "stop" : 1761576740586,
+          "duration" : 2917
+        }
+      }, {
+        "uid" : "e17302b9fd7a9adc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576211689,
+          "stop" : 1761576214317,
+          "duration" : 2628
+        }
+      }, {
+        "uid" : "1d12688a66bf540a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761575960492,
+          "stop" : 1761575963063,
+          "duration" : 2571
+        }
+      }, {
+        "uid" : "5d310ed6bed36d03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761574644639,
+          "stop" : 1761574647983,
+          "duration" : 3344
+        }
+      }, {
+        "uid" : "b8c0c50aba01bb86",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761573834011,
+          "stop" : 1761573838028,
+          "duration" : 4017
+        }
+      }, {
+        "uid" : "a90bce587477e452",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761573331533,
+          "stop" : 1761573334259,
+          "duration" : 2726
+        }
+      }, {
+        "uid" : "9fd1bb80d4567bfb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761572337141,
+          "stop" : 1761572339964,
+          "duration" : 2823
+        }
+      }, {
+        "uid" : "8d04563ebe1d1cdd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761506263498,
+          "stop" : 1761506266420,
+          "duration" : 2922
+        }
+      }, {
+        "uid" : "b5516ca9e1cf98a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761505894574,
+          "stop" : 1761505897551,
+          "duration" : 2977
+        }
+      }, {
+        "uid" : "33c09fb438840508",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761505102134,
+          "stop" : 1761505106019,
+          "duration" : 3885
+        }
+      }, {
+        "uid" : "cd8653cf32f764e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761503652082,
+          "stop" : 1761503654843,
+          "duration" : 2761
+        }
+      }, {
+        "uid" : "eb3d408d0e7bd8e8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761503222181,
+          "stop" : 1761503225117,
+          "duration" : 2936
+        }
+      }, {
+        "uid" : "8eee736d13a7e31d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761502655492,
+          "stop" : 1761502659080,
+          "duration" : 3588
+        }
+      }, {
+        "uid" : "4bdb2af6058bec42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761482660018,
+          "stop" : 1761482663067,
+          "duration" : 3049
+        }
+      }, {
+        "uid" : "d3b95a1dba82ba6c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761482306005,
+          "stop" : 1761482308991,
+          "duration" : 2986
+        }
+      }, {
+        "uid" : "46f60a7080b8e7db",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761482092286,
+          "stop" : 1761482094969,
+          "duration" : 2683
+        }
+      }, {
+        "uid" : "920f103c7cc48572",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761481588207,
+          "stop" : 1761481591079,
+          "duration" : 2872
+        }
+      }, {
+        "uid" : "ab4798469783467d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761481055243,
+          "stop" : 1761481058472,
+          "duration" : 3229
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "c6168ca0ee09f92b.json",
+  "parameterValues" : [ ]
+}
