@@ -69,12 +69,12 @@ services:
             exit 1
           fi &&
           ./allurectl upload \
-            --endpoint=$ALLURE_TESTOPS_URL \
-            --project-id=$ALLURE_PROJECT_ID \
-            --token=$ALLURE_API_KEY \
-            --job-name=$ALLURE_JOB_NAME \
-            --job-run-uid=$ALLURE_JOB_RUN_UID \
-            --job-uid=$ALLURE_JOB_UID \
+            --endpoint=$$ALLURE_TESTOPS_URL \
+            --project-id=$$ALLURE_PROJECT_ID \
+            --token=$$ALLURE_API_KEY \
+            --job-name=$$ALLURE_JOB_NAME \
+            --job-run-uid=$$ALLURE_JOB_RUN_UID \
+            --job-uid=$$ALLURE_JOB_UID \
             "./allure-results"
         }
       '
