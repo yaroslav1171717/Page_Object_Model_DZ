@@ -72,7 +72,6 @@ jobs:
           ALLURE_API_KEY: ${{ secrets.ALLURE_API_KEY }}
           ALLURE_JOB_NAME: ${{ github.job }}
           ALLURE_JOB_RUN_UID: ${{ github.run_id }}
-          ALLURE_JOB_UID: ${{ github.run_number }}
         run: |                      # | - означает многострочную команду   # pom_dz_smoke
           docker compose up pom_dz_allure
 
@@ -96,7 +95,6 @@ jobs:
           ALLURE_TESTOPS_URL: ${{ secrets.ALLURE_TESTOPS_URL }}
           ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
           ALLURE_API_KEY: ${{ secrets.ALLURE_API_KEY }}
-          ALLURE_JOB_UID: ${{ github.run_number }}
           ALLURE_JOB_RUN_UID: ${{ github.run_id }}
         run: |
           docker compose up report
@@ -120,8 +118,7 @@ jobs:
           --project-id="${{ secrets.ALLURE_PROJECT_ID }}" \
           --token="${{ secrets.ALLURE_API_KEY }}" \
           --job-name="${{ github.job }}" \
-          --job-run-uid="${{ github.run_id }}" \
-          --job-uid="${{ github.run_number }}" \
+          --job-run-uid="${{ github.run_id }}" \          
           "./allure-results"
 
       # Шаг 7 - Деплой на gh-pages, спецальная гитхабовская джоба просто заполняем вот так, заливаем allure-report на ветку gh-pages
