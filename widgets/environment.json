@@ -2,7 +2,7 @@
   "values" : [ "master" ],
   "name" : "Branch"
 }, {
-  "values" : [ "d7898a5a7261190269c2d0b3c95a3585b84b90de" ],
+  "values" : [ "97b3dc7c1e145f6a6c7da3c2a2ae8d59ff2af780" ],
   "name" : "Commit"
 }, {
   "values" : [ "chrome" ],
@@ -20,9 +20,9 @@
   "values" : [ "https://yaroslav1171717.testops.cloud/" ],
   "name" : "ALLURE_TESTOPS_URL"
 }, {
-  "values" : [ "64" ],
+  "values" : [ "65" ],
   "name" : "ALLURE_JOB_UID"
 }, {
-  "values" : [ "18844835633" ],
+  "values" : [ "18844974429" ],
   "name" : "ALLURE_JOB_RUN_UID"
 } ]
