@@ -119,7 +119,7 @@ jobs:
           --endpoint="${{ secrets.ALLURE_TESTOPS_URL }}" \
           --project-id="${{ secrets.ALLURE_PROJECT_ID }}" \
           --token="${{ secrets.ALLURE_API_KEY }}" \
-          -job-name="${{ github.job }}" \
+          --job-name="${{ github.job }}" \
           --job-run-uid="${{ github.run_id }}" \
           --job-uid="${{ github.run_number }}" \
           "./allure-results"
