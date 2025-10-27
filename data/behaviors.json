@@ -4,52 +4,52 @@
     "name" : "Тренировочный проект на https://release-crm.qa-playground.com",
     "children" : [ {
       "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-      "uid" : "3cdc568b54d1076",
+      "uid" : "5f5e789623111c88",
       "parentUid" : "fad6093aab492075ffe86dec253642a2",
       "status" : "passed",
       "time" : {
-        "start" : 1761573311847,
-        "stop" : 1761573319637,
-        "duration" : 7790
+        "start" : 1761573814088,
+        "stop" : 1761573821984,
+        "duration" : 7896
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-      "uid" : "b9c5239a2a73ce3d",
+      "uid" : "8853d1499e189a39",
       "parentUid" : "fad6093aab492075ffe86dec253642a2",
       "status" : "passed",
       "time" : {
-        "start" : 1761573320090,
-        "stop" : 1761573323779,
-        "duration" : 3689
+        "start" : 1761573822466,
+        "stop" : 1761573825921,
+        "duration" : 3455
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-      "uid" : "1c47bfd19fdde47c",
+      "uid" : "fc6275258dd4fb47",
       "parentUid" : "fad6093aab492075ffe86dec253642a2",
       "status" : "passed",
       "time" : {
-        "start" : 1761573324238,
-        "stop" : 1761573331080,
-        "duration" : 6842
+        "start" : 1761573826400,
+        "stop" : 1761573833528,
+        "duration" : 7128
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Тестирование авторизации",
-      "uid" : "a90bce587477e452",
+      "uid" : "b8c0c50aba01bb86",
       "parentUid" : "fad6093aab492075ffe86dec253642a2",
       "status" : "passed",
       "time" : {
-        "start" : 1761573331533,
-        "stop" : 1761573334259,
-        "duration" : 2726
+        "start" : 1761573834011,
+        "stop" : 1761573838028,
+        "duration" : 4017
       },
       "flaky" : false,
       "newFailed" : false,
