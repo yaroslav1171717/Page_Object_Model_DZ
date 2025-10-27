@@ -70,8 +70,9 @@ jobs:
           ALLURE_TESTOPS_URL: ${{ secrets.ALLURE_TESTOPS_URL }}   # Пять переменных ниже передаем в Docker-compose для Allure Test Ops
           ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
           ALLURE_API_KEY: ${{ secrets.ALLURE_API_KEY }}
-          ALLURE_JOB_UID: ${{ github.run_number }}
+          ALLURE_JOB_NAME: ${{ github.job }}
           ALLURE_JOB_RUN_UID: ${{ github.run_id }}
+          ALLURE_JOB_UID: ${{ github.run_number }}
         run: |                      # | - означает многострочную команду   # pom_dz_smoke
           docker compose up pom_dz_allure
 
