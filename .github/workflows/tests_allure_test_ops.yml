@@ -3,11 +3,37 @@ run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }
 
 on:
   workflow_dispatch:
+    inputs:
+      ENV:
+        description: "Choose environment"
+        required: true
+        type: environment # Важно: это тип environment!
+
+      BROWSER:
+        description: "Select the browser"
+        required: true
+        default: "chrome"
+        type: choice
+        options:
+          - chrome
+          - firefox
+
+      MARKER:
+        description: "Choose marker"
+        required: false
+        default: ""
+        type: string
+
+      KEY:
+        description: "Name search"
+        required: false
+        type: string
+        default: ""
 
 jobs:
   ui-tests_test_ops:
     runs-on: ubuntu-latest         # На базе чего будет работать раннер, на работе могут быть другие
-    environment: release  # ✅ Привязка джоба к выбранному environment
+    environment: ${{ inputs.ENV }}  # ✅ Привязка джоба к выбранному environment
 
     steps:
       # Клонируем репозиторий в раннер (главную ветку или выбранную при запуске) (Checkout исходного кода)
@@ -38,10 +64,9 @@ jobs:
           STAGE: ${{ secrets.STAGE }}
           LOGIN: ${{ secrets.LOGIN }}
           PASSWORD: ${{ secrets.PASSWORD }}
-          BROWSER: chrome
-          ENV: release
-          MARKER: ''
-          KEY: ''
+          BROWSER: ${{ inputs.BROWSER }}
+          MARKER: ${{ inputs.MARKER }}
+          KEY: ${{ inputs.KEY }}
           ALLURE_TESTOPS_URL: ${{ secrets.ALLURE_TESTOPS_URL }}   # Пять переменных ниже передаем в Docker-compose для Allure Test Ops
           ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
           ALLURE_API_KEY: ${{ secrets.ALLURE_API_KEY }}
@@ -62,7 +87,7 @@ jobs:
       # Шаг 5 - Генерация отчета
       - name: Generate Allure-report
         env:
-          BROWSER: chrome
+          BROWSER: ${{ inputs.BROWSER }}
           STAGE: ${{ secrets.STAGE }}
           LOGIN: ${{ secrets.LOGIN }}
           PASSWORD: ${{ secrets.PASSWORD }}
