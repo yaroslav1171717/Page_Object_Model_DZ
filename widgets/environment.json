@@ -9,6 +9,9 @@
   "name" : "Browser"
 }, {
   "values" : [ "release" ],
+  "name" : "Env"
+}, {
+  "values" : [ "release" ],
   "name" : "Stage"
 }, {
   "values" : [ "login_rel" ],
@@ -16,13 +19,4 @@
 }, {
   "values" : [ "pass_rel" ],
   "name" : "PASSWORD"
-}, {
-  "values" : [ "https://yaroslav1171717.testops.cloud/" ],
-  "name" : "ALLURE_TESTOPS_URL"
-}, {
-  "values" : [ "75" ],
-  "name" : "ALLURE_JOB_UID"
-}, {
-  "values" : [ "18847846839" ],
-  "name" : "ALLURE_JOB_RUN_UID"
 } ]
