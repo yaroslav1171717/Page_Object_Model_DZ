@@ -78,7 +78,7 @@ services:
 #            --job-uid=$$ALLURE_JOB_UID \
 #            "./allure-results"
 #        }
-#      '
+#      ' про ковычку не забыть, если разкомментировать здесь, то после allure-results убрать '
     shm_size: 2gb
     environment:
       STAGE: ${STAGE:-release}
