@@ -1,3 +1,4 @@
+# Сейчас будет падать сборка, т.к. бесплатный период на Allure TestOps закончился
 name: UI Tests with Allure Test Ops
 run-name: ENV ${{ github.event.inputs.ENV }} | ${{ github.event.inputs.BROWSER }} browser | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.KEY }} key
 
