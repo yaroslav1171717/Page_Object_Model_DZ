@@ -104,7 +104,8 @@ jobs:
 #        Шаг 6 - передача отчета в Allure TestOps - Здесь пытался чтобы в пайплане передавать отчет в Allure TestOps, он передался, но job создавался неправильно с
 #        какой-то как будто кривой ссылкой, но может и ошибаюсь в причине. И тесты не запускались из Allure TestOps, на job, который создавался автоматом была ошибка
 #        соединения, а на job, который создал руками было зеленое соединение, но не видел тесты, может проблема в бесплатной версии ??? В данном пайплане Шаг 6 для
-#        передачи отчета в Allure TestOps, и много переменных, начинающихся на ALLURE
+#        передачи отчета в Allure TestOps, и много переменных, начинающихся на ALLURE. Для передачи в Allure TestOps, если этот шаг закоментирую, то надо будет
+#        раскоментировать часть команды для allurectl в docker-compose в контейнере pom_dz_allure
       - name: Send results to Allure TestOps using allurectl
         run: |
           curl -fsSL https://github.com/allure-framework/allurectl/releases/latest/download/allurectl_linux_amd64 -o allurectl
