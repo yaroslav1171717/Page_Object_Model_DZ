@@ -2,14 +2,11 @@
   "values" : [ "master" ],
   "name" : "Branch"
 }, {
-  "values" : [ "21c1e3822b70d0cc8b191c20eaa44f1cb60abbd4" ],
+  "values" : [ "dd7c360b42f23433d6ce2544f25961220ab4ef33" ],
   "name" : "Commit"
 }, {
   "values" : [ "chrome" ],
   "name" : "Browser"
-}, {
-  "values" : [ "release" ],
-  "name" : "Env"
 }, {
   "values" : [ "release" ],
   "name" : "Stage"
