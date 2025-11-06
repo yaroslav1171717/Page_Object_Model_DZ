@@ -98,7 +98,7 @@ services:
 
   # для генерации allure-report из папки allure-result
   report:
-    image: ui:v1
+    image: pom_dz:v1
     build:
       context: .
       dockerfile: Dockerfile
