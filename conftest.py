@@ -40,7 +40,8 @@ TOKEN = "8350224918:AAE8PTGknxskZOwG6LESrS424fIf_sVbxA0"
 # Идентификатор чата в Telegram, куда отправлять результаты
 CHAT_ID = "1778765155"
 # Базовый URL для ссылки на файлы репозитория на GitLab
-GITLAB_PAGE_URL = "https://gitlab.com/api/v4/projects/qa-playground%2Fqa-playground-api/repository/files/"
+GITHUB_PAGE_URL = ("https://github.com/yaroslav1171717/Page_Object_Model_DZ/actions/workflows/pages/"
+                   "pages-build-deployment")
 
 def pytest_terminal_summary(terminalreporter):
     """
@@ -65,11 +66,6 @@ def pytest_terminal_summary(terminalreporter):
         # результат и outcome заполнен, поэтому нормально добавляется в каждый файл теста по 1 пройденному тесту (всего 4 теста). НО предполагаю что outcome надо ->
         # брать в цикле ниже, потому что в этом цикле мы берем какой-то общий outcome, а ниже перебираем reports, и там в каждом написан результат теста, пример: ->
         # TestReport 'tests/login_test.py::TestLogin::test_authorization' when='call' outcome='passed'>
-        print("Смотреть здесь!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print(outcome)
-        print("_______________________________________________")
-        print(reports)
-        print("_______________________________________________")
         for report in reports:
             # в report.nodeid выглядит как: test_users.py::TestUser::test_create_user
             # в outcome статусы "passed" / "failed" / "skipped" / "error"
@@ -104,8 +100,9 @@ def pytest_terminal_summary(terminalreporter):
         )
 
     # Добавляем ссылку на GitLab
-    message += f"[Подробнее на GitLab Pages]({GITLAB_PAGE_URL})"
-
+    message += f"[Подробнее на GitHub Pages]({GITHUB_PAGE_URL})"  # Markdown позволяет создавать гиперссылки следующим образом: [текст ссылки](URL)
+    # Python сам по себе не поддерживает вывод Markdown непосредственно в консоль, но есть специальные библиотеки, такие как rich, markdown для этого и текст
+    # выведется в консоль с поддержкой Markdownё
     try:
         # Отправляем POST-запрос к Telegram Bot API
         response = requests.post(
