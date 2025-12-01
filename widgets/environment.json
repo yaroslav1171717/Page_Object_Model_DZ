@@ -9,6 +9,9 @@
   "name" : "Browser"
 }, {
   "values" : [ "release" ],
+  "name" : "Env"
+}, {
+  "values" : [ "release" ],
   "name" : "Stage"
 }, {
   "values" : [ "login_rel" ],
