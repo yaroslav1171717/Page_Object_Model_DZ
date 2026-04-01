@@ -3,73 +3,73 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=37069): Read timed out. (read timeout=120)",
+      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=39667): Read timed out. (read timeout=120)",
       "children" : [ {
         "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "d820c4121f97bcf4",
-        "parentUid" : "ae1b21df83f8e9d7b7bee1fe9675e8cf",
+        "uid" : "5e3721033d45ca4a",
+        "parentUid" : "3407d38dd9798423171adb6b603cddb3",
         "status" : "broken",
         "time" : {
-          "start" : 1772368055690,
-          "stop" : 1772368175706,
-          "duration" : 120016
+          "start" : 1775048120438,
+          "stop" : 1775048240465,
+          "duration" : 120027
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "ae1b21df83f8e9d7b7bee1fe9675e8cf"
+      "uid" : "3407d38dd9798423171adb6b603cddb3"
     }, {
-      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=50171): Read timed out. (read timeout=120)",
+      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=37347): Read timed out. (read timeout=120)",
       "children" : [ {
         "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "ac2c16645d68a162",
-        "parentUid" : "04462406e30cae5aa77d1975188f1881",
+        "uid" : "be94efd6e5d53599",
+        "parentUid" : "5c0b9e349cd964ddae5fc619d78e6100",
         "status" : "broken",
         "time" : {
-          "start" : 1772368356215,
-          "stop" : 1772368476261,
-          "duration" : 120046
+          "start" : 1775048421001,
+          "stop" : 1775048541054,
+          "duration" : 120053
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "04462406e30cae5aa77d1975188f1881"
+      "uid" : "5c0b9e349cd964ddae5fc619d78e6100"
     }, {
-      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=43227): Read timed out. (read timeout=120)",
+      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=33785): Read timed out. (read timeout=120)",
       "children" : [ {
         "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "596d8c973ec95018",
-        "parentUid" : "0320bb4ec1f8d78dcc9f8c4ca6e92b90",
+        "uid" : "36b23448bb1605a0",
+        "parentUid" : "6df7a762ca6d94be951a0ebd294f48dd",
         "status" : "broken",
         "time" : {
-          "start" : 1772368656723,
-          "stop" : 1772368776821,
-          "duration" : 120098
+          "start" : 1775048721572,
+          "stop" : 1775048841662,
+          "duration" : 120090
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "0320bb4ec1f8d78dcc9f8c4ca6e92b90"
+      "uid" : "6df7a762ca6d94be951a0ebd294f48dd"
     }, {
-      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=45863): Read timed out. (read timeout=120)",
+      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=42441): Read timed out. (read timeout=120)",
       "children" : [ {
         "name" : "Тестирование авторизации",
-        "uid" : "4836e69483ded593",
-        "parentUid" : "407e18bf4b605a3e85f97edda08788a7",
+        "uid" : "53582a1bfe643d1a",
+        "parentUid" : "bfcd69d7c961bd1dbeec26d1bc0e47ed",
         "status" : "broken",
         "time" : {
-          "start" : 1772368957263,
-          "stop" : 1772369077365,
-          "duration" : 120102
+          "start" : 1775049022161,
+          "stop" : 1775049142260,
+          "duration" : 120099
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "407e18bf4b605a3e85f97edda08788a7"
+      "uid" : "bfcd69d7c961bd1dbeec26d1bc0e47ed"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
