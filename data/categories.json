@@ -3,73 +3,61 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=34701): Read timed out. (read timeout=120)",
+      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=142.0.7444.59)",
       "children" : [ {
         "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "3d31e5b33823de9e",
-        "parentUid" : "7320563f7902d620c04286c629c345c4",
+        "uid" : "9ea22c86f14e2ea",
+        "parentUid" : "18bf189cc293377cea5f692a2969b2e2",
         "status" : "broken",
         "time" : {
-          "start" : 1777640136063,
-          "stop" : 1777640256119,
-          "duration" : 120056
+          "start" : 1780334197455,
+          "stop" : 1780334198260,
+          "duration" : 805
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "7320563f7902d620c04286c629c345c4"
-    }, {
-      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=36711): Read timed out. (read timeout=120)",
-      "children" : [ {
+      }, {
         "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "eb019d37f0138402",
-        "parentUid" : "53678bce39dba484104bd7bd80ff9543",
+        "uid" : "abe33f2e9c9eb7a3",
+        "parentUid" : "18bf189cc293377cea5f692a2969b2e2",
         "status" : "broken",
         "time" : {
-          "start" : 1777640436484,
-          "stop" : 1777640556572,
-          "duration" : 120088
+          "start" : 1780334198793,
+          "stop" : 1780334199473,
+          "duration" : 680
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "53678bce39dba484104bd7bd80ff9543"
-    }, {
-      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=55265): Read timed out. (read timeout=120)",
-      "children" : [ {
+      }, {
         "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "dc7b833875ff0ce4",
-        "parentUid" : "8a31c0f1480d2839f8493e9627ba5d43",
+        "uid" : "f2f442f6e043a7d1",
+        "parentUid" : "18bf189cc293377cea5f692a2969b2e2",
         "status" : "broken",
         "time" : {
-          "start" : 1777640736890,
-          "stop" : 1777640856899,
-          "duration" : 120009
+          "start" : 1780334199961,
+          "stop" : 1780334200742,
+          "duration" : 781
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "8a31c0f1480d2839f8493e9627ba5d43"
-    }, {
-      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=48009): Read timed out. (read timeout=120)",
-      "children" : [ {
+      }, {
         "name" : "Тестирование авторизации",
-        "uid" : "251b0fa1f9234f0c",
-        "parentUid" : "57fd53a0f629170bcb370a093a916953",
+        "uid" : "f3f93367bc795c01",
+        "parentUid" : "18bf189cc293377cea5f692a2969b2e2",
         "status" : "broken",
         "time" : {
-          "start" : 1777641037304,
-          "stop" : 1777641157381,
-          "duration" : 120077
+          "start" : 1780334201230,
+          "stop" : 1780334202051,
+          "duration" : 821
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "57fd53a0f629170bcb370a093a916953"
+      "uid" : "18bf189cc293377cea5f692a2969b2e2"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],

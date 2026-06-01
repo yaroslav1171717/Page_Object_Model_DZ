@@ -1,0 +1,335 @@
+{
+  "uid" : "f3f93367bc795c01",
+  "name" : "Тестирование авторизации",
+  "fullName" : "tests.login_test.TestLogin#test_authorization",
+  "historyId" : "4a2e7f781cbcf7e74a88a7626dcbde05",
+  "time" : {
+    "start" : 1780334201230,
+    "stop" : 1780334202051,
+    "duration" : 821
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=142.0.7444.59)",
+  "statusTrace" : "self = <tests.login_test.TestLogin object at 0x7f4a9ffc1950>\n\n    @pytest.mark.smoke\n    @allure.title(\"Тестирование авторизации\")\n    @allure.id(\"4\")\n    def test_authorization(self):\n>       self.contact_page.open_page()          # Открываем страницу контактов\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/login_test.py:13: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/base_page.py:26: in open_page\n    self.driver.get(f'{Links.HOST}{self.PATH}')   # клеим путь, PATH со страниц берем\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:479: in get\n    self.execute(Command.GET, {\"url\": url})\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:454: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f4a9ffb6e90>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"unknown error\",\"message\":\"unknown error: net::ERR_CONNECTION_REFUSED\\\\n  (Session info: chrome=142.0.7444.59)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                try:\n                    value = json.loads(value_json)\n                    if isinstance(value, dict):\n                        if len(value) == 1:\n                            value = value[\"value\"]\n                        status = value.get(\"error\", None)\n                        if not status:\n                            status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                            message = value.get(\"value\") or value.get(\"message\")\n                            if not isinstance(message, str):\n                                value = message\n                                message = message.get(\"message\")\n                        else:\n                            message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\nE         (Session info: chrome=142.0.7444.59)\n\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: WebDriverException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1780334200834,
+      "stop" : 1780334201229,
+      "duration" : 395
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestLogin",
+    "time" : {
+      "start" : 1780334201230,
+      "stop" : 1780334201230,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=142.0.7444.59)",
+    "statusTrace" : "self = <tests.login_test.TestLogin object at 0x7f4a9ffc1950>\n\n    @pytest.mark.smoke\n    @allure.title(\"Тестирование авторизации\")\n    @allure.id(\"4\")\n    def test_authorization(self):\n>       self.contact_page.open_page()          # Открываем страницу контактов\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/login_test.py:13: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/base_page.py:26: in open_page\n    self.driver.get(f'{Links.HOST}{self.PATH}')   # клеим путь, PATH со страниц берем\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:479: in get\n    self.execute(Command.GET, {\"url\": url})\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:454: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f4a9ffb6e90>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"unknown error\",\"message\":\"unknown error: net::ERR_CONNECTION_REFUSED\\\\n  (Session info: chrome=142.0.7444.59)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                try:\n                    value = json.loads(value_json)\n                    if isinstance(value, dict):\n                        if len(value) == 1:\n                            value = value[\"value\"]\n                        status = value.get(\"error\", None)\n                        if not status:\n                            status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                            message = value.get(\"value\") or value.get(\"message\")\n                            if not isinstance(message, str):\n                                value = message\n                                message = message.get(\"message\")\n                        else:\n                            message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\nE         (Session info: chrome=142.0.7444.59)\n\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: WebDriverException",
+    "steps" : [ {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/contacts",
+      "time" : {
+        "start" : 1780334201230,
+        "stop" : 1780334202050,
+        "duration" : 820
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=142.0.7444.59)\n\n",
+      "statusTrace" : "  File \"/usr/workspace/pages/base_page.py\", line 26, in open_page\n    self.driver.get(f'{Links.HOST}{self.PATH}')   # клеим путь, PATH со страниц берем\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 479, in get\n    self.execute(Command.GET, {\"url\": url})\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 454, in execute\n    self.error_handler.check_response(response)\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 232, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1780334202081,
+      "stop" : 1780334202142,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestLogin::0",
+    "time" : {
+      "start" : 1780334202081,
+      "stop" : 1780334202081,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "as_id",
+    "value" : "4"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "suite",
+    "value" : "login_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "631229672d3a"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.login_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 17,
+        "skipped" : 0,
+        "passed" : 78,
+        "unknown" : 0,
+        "total" : 100
+      },
+      "items" : [ {
+        "uid" : "251b0fa1f9234f0c",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=48009): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1777641037304,
+          "stop" : 1777641157381,
+          "duration" : 120077
+        }
+      }, {
+        "uid" : "53582a1bfe643d1a",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=42441): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1775049022161,
+          "stop" : 1775049142260,
+          "duration" : 120099
+        }
+      }, {
+        "uid" : "4836e69483ded593",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=45863): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1772368957263,
+          "stop" : 1772369077365,
+          "duration" : 120102
+        }
+      }, {
+        "uid" : "db706ccf646042b4",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=34889): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1769949786289,
+          "stop" : 1769949906389,
+          "duration" : 120100
+        }
+      }, {
+        "uid" : "1eb950a545724b00",
+        "status" : "passed",
+        "time" : {
+          "start" : 1767270287987,
+          "stop" : 1767270291246,
+          "duration" : 3259
+        }
+      }, {
+        "uid" : "1c6deaf687cc5252",
+        "status" : "passed",
+        "time" : {
+          "start" : 1764596885029,
+          "stop" : 1764596888004,
+          "duration" : 2975
+        }
+      }, {
+        "uid" : "efdd9389d1e2be5c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762520396462,
+          "stop" : 1762520399250,
+          "duration" : 2788
+        }
+      }, {
+        "uid" : "f8147b772deb847a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762517247044,
+          "stop" : 1762517250766,
+          "duration" : 3722
+        }
+      }, {
+        "uid" : "b4ac8847c0ea7b73",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762442638356,
+          "stop" : 1762442641518,
+          "duration" : 3162
+        }
+      }, {
+        "uid" : "c08c4e310a408a10",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762354110536,
+          "stop" : 1762354113468,
+          "duration" : 2932
+        }
+      }, {
+        "uid" : "d55101617356d1a5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762002562242,
+          "stop" : 1762002565010,
+          "duration" : 2768
+        }
+      }, {
+        "uid" : "94eee2666cdea208",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761581543862,
+          "stop" : 1761581546687,
+          "duration" : 2825
+        }
+      }, {
+        "uid" : "aca3ea42f31a934d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761581286882,
+          "stop" : 1761581289442,
+          "duration" : 2560
+        }
+      }, {
+        "uid" : "a6ae316ce2dd714d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761580784705,
+          "stop" : 1761580787501,
+          "duration" : 2796
+        }
+      }, {
+        "uid" : "6150b47ba21a83da",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761579516277,
+          "stop" : 1761579520212,
+          "duration" : 3935
+        }
+      }, {
+        "uid" : "c6168ca0ee09f92b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761578891965,
+          "stop" : 1761578895341,
+          "duration" : 3376
+        }
+      }, {
+        "uid" : "a92e32eff52e5d3e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761577251085,
+          "stop" : 1761577253766,
+          "duration" : 2681
+        }
+      }, {
+        "uid" : "8f81ff3872a8e5e9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576915617,
+          "stop" : 1761576918289,
+          "duration" : 2672
+        }
+      }, {
+        "uid" : "42680cee32cfe36f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576737669,
+          "stop" : 1761576740586,
+          "duration" : 2917
+        }
+      }, {
+        "uid" : "e17302b9fd7a9adc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576211689,
+          "stop" : 1761576214317,
+          "duration" : 2628
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "f3f93367bc795c01.json",
+  "parameterValues" : [ ]
+}
