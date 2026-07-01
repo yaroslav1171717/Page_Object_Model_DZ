@@ -1,0 +1,372 @@
+{
+  "uid" : "5728c98f3b2fd94",
+  "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+  "fullName" : "tests.deals_test.TestDeals#test_open_deals_and_add_note_and_check",
+  "historyId" : "f0f5e3318dbe089f0c6ea48989269ded",
+  "time" : {
+    "start" : 1782914910661,
+    "stop" : 1782914921366,
+    "duration" : 10705
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+  "statusTrace" : "self = <tests.deals_test.TestDeals object at 0x7f0aef486990>\n\n    @pytest.mark.regression\n    @allure.title(\"Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок\")\n    @allure.id(\"3\")\n    def test_open_deals_and_add_note_and_check(self):\n        self.dashboard_page.open_page()           # Открываем страницу dashboard\n>       name = self.dashboard_page.return_name_from_deals_pipeline_by_number(0)      # Получаем имя первой сделки\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/deals_test.py:14: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/dashboard_page.py:34: in return_name_from_deals_pipeline_by_number\n    self.wait.until(self.EC.element_to_be_clickable(self._DEALS_PIPELINE_LIST))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"bbd3df56777ec9f9abc8efaaef2d4308\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f0aef4727a0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Parameters:\n        -----------\n        method: callable(WebDriver)\n            - A callable object that takes a WebDriver instance as an argument.\n    \n        message: str\n            - Optional message for :exc:`TimeoutException`\n    \n        Return:\n        -------\n        object: T\n            - The result of the last call to `method`\n    \n        Raises:\n        -------\n        TimeoutException\n            - If 'method' does not return a truthy value within the WebDriverWait\n            object's timeout\n    \n        Example:\n        --------\n        >>> from selenium.webdriver.common.by import By\n        >>> from selenium.webdriver.support.ui import WebDriverWait\n        >>> from selenium.webdriver.support import expected_conditions as EC\n    \n        # Wait until an element is visible on the page\n        >>> wait = WebDriverWait(driver, 10)\n        >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n        >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n../local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:138: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1782914910239,
+      "stop" : 1782914910660,
+      "duration" : 421
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestDeals",
+    "time" : {
+      "start" : 1782914910661,
+      "stop" : 1782914910661,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+    "statusTrace" : "self = <tests.deals_test.TestDeals object at 0x7f0aef486990>\n\n    @pytest.mark.regression\n    @allure.title(\"Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок\")\n    @allure.id(\"3\")\n    def test_open_deals_and_add_note_and_check(self):\n        self.dashboard_page.open_page()           # Открываем страницу dashboard\n>       name = self.dashboard_page.return_name_from_deals_pipeline_by_number(0)      # Получаем имя первой сделки\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/deals_test.py:14: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \npages/dashboard_page.py:34: in return_name_from_deals_pipeline_by_number\n    self.wait.until(self.EC.element_to_be_clickable(self._DEALS_PIPELINE_LIST))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"bbd3df56777ec9f9abc8efaaef2d4308\")>\nmethod = <function element_to_be_clickable.<locals>._predicate at 0x7f0aef4727a0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Parameters:\n        -----------\n        method: callable(WebDriver)\n            - A callable object that takes a WebDriver instance as an argument.\n    \n        message: str\n            - Optional message for :exc:`TimeoutException`\n    \n        Return:\n        -------\n        object: T\n            - The result of the last call to `method`\n    \n        Raises:\n        -------\n        TimeoutException\n            - If 'method' does not return a truthy value within the WebDriverWait\n            object's timeout\n    \n        Example:\n        --------\n        >>> from selenium.webdriver.common.by import By\n        >>> from selenium.webdriver.support.ui import WebDriverWait\n        >>> from selenium.webdriver.support import expected_conditions as EC\n    \n        # Wait until an element is visible on the page\n        >>> wait = WebDriverWait(driver, 10)\n        >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n        >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n../local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:138: TimeoutException",
+    "steps" : [ {
+      "name" : "Открытие страницы https://release-crm.qa-playground.com/#/",
+      "time" : {
+        "start" : 1782914910661,
+        "stop" : 1782914911270,
+        "duration" : 609
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Получаем имя сделки по ее номеру на странице Дашборда",
+      "time" : {
+        "start" : 1782914911271,
+        "stop" : 1782914921365,
+        "duration" : 10094
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+      "statusTrace" : "  File \"/usr/local/lib/python3.11/site-packages/allure_commons/_allure.py\", line 202, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/usr/workspace/pages/dashboard_page.py\", line 34, in return_name_from_deals_pipeline_by_number\n    self.wait.until(self.EC.element_to_be_clickable(self._DEALS_PIPELINE_LIST))\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/support/wait.py\", line 138, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "number",
+        "value" : "0"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1782914921371,
+      "stop" : 1782914921435,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestDeals::0",
+    "time" : {
+      "start" : 1782914921371,
+      "stop" : 1782914921371,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "as_id",
+    "value" : "3"
+  }, {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "suite",
+    "value" : "deals_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDeals"
+  }, {
+    "name" : "host",
+    "value" : "06b0c47fc3f4"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.deals_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c94be235ef1c6118",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1782914899411,
+        "stop" : 1782914910168,
+        "duration" : 10757
+      }
+    }, {
+      "uid" : "a8c6db5421d49d39",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1782914888113,
+        "stop" : 1782914898900,
+        "duration" : 10787
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 8,
+        "skipped" : 0,
+        "passed" : 78,
+        "unknown" : 0,
+        "total" : 86
+      },
+      "items" : [ {
+        "uid" : "f2f442f6e043a7d1",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=142.0.7444.59)",
+        "time" : {
+          "start" : 1780334199961,
+          "stop" : 1780334200742,
+          "duration" : 781
+        }
+      }, {
+        "uid" : "dc7b833875ff0ce4",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=55265): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1777640736890,
+          "stop" : 1777640856899,
+          "duration" : 120009
+        }
+      }, {
+        "uid" : "36b23448bb1605a0",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=33785): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1775048721572,
+          "stop" : 1775048841662,
+          "duration" : 120090
+        }
+      }, {
+        "uid" : "596d8c973ec95018",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=43227): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1772368656723,
+          "stop" : 1772368776821,
+          "duration" : 120098
+        }
+      }, {
+        "uid" : "3d2f8838ebd110ce",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60957): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1769949485813,
+          "stop" : 1769949605908,
+          "duration" : 120095
+        }
+      }, {
+        "uid" : "965f3a0c80bed8ce",
+        "status" : "passed",
+        "time" : {
+          "start" : 1767270280112,
+          "stop" : 1767270287518,
+          "duration" : 7406
+        }
+      }, {
+        "uid" : "66e26b61a386ce2a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1764596877451,
+          "stop" : 1764596884512,
+          "duration" : 7061
+        }
+      }, {
+        "uid" : "a47c2a6620f8cb75",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762520389002,
+          "stop" : 1762520395975,
+          "duration" : 6973
+        }
+      }, {
+        "uid" : "56a673f05718c7eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762517239681,
+          "stop" : 1762517246574,
+          "duration" : 6893
+        }
+      }, {
+        "uid" : "f0e17bfccec86844",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762442630700,
+          "stop" : 1762442637901,
+          "duration" : 7201
+        }
+      }, {
+        "uid" : "b4b5145c0df6e29f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762354102720,
+          "stop" : 1762354110085,
+          "duration" : 7365
+        }
+      }, {
+        "uid" : "f8301fc640babc40",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762002554938,
+          "stop" : 1762002561773,
+          "duration" : 6835
+        }
+      }, {
+        "uid" : "6b4e501ea7d3f2a8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761581536570,
+          "stop" : 1761581543400,
+          "duration" : 6830
+        }
+      }, {
+        "uid" : "ad25644e1f6a70f6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761581279564,
+          "stop" : 1761581286430,
+          "duration" : 6866
+        }
+      }, {
+        "uid" : "f37e202a04ae8430",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761580777289,
+          "stop" : 1761580784238,
+          "duration" : 6949
+        }
+      }, {
+        "uid" : "f8b3cb9a4f8b2f9d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761579508595,
+          "stop" : 1761579515871,
+          "duration" : 7276
+        }
+      }, {
+        "uid" : "a765af4fcd808620",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761578884005,
+          "stop" : 1761578891520,
+          "duration" : 7515
+        }
+      }, {
+        "uid" : "93cbe49794e9dbc1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761577243833,
+          "stop" : 1761577250602,
+          "duration" : 6769
+        }
+      }, {
+        "uid" : "31cde98c23e9b0e9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576908211,
+          "stop" : 1761576915134,
+          "duration" : 6923
+        }
+      }, {
+        "uid" : "fc8cd1405101732",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576730304,
+          "stop" : 1761576737261,
+          "duration" : 6957
+        }
+      } ]
+    },
+    "tags" : [ "regression" ]
+  },
+  "source" : "5728c98f3b2fd94.json",
+  "parameterValues" : [ ]
+}

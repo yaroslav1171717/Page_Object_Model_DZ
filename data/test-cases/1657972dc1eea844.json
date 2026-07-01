@@ -1,0 +1,264 @@
+{
+  "uid" : "1657972dc1eea844",
+  "name" : "Тестирование авторизации",
+  "fullName" : "tests.login_test.TestLogin#test_authorization",
+  "historyId" : "4a2e7f781cbcf7e74a88a7626dcbde05",
+  "time" : {
+    "start" : 1782914921437,
+    "stop" : 1782914921437,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception",
+  "statusTrace" : "request = <SubRequest 'driver' for <Function test_authorization>>\n\n    @pytest.fixture(autouse=True)\n    def driver(request):\n        options = webdriver.ChromeOptions()\n        options.add_argument(\"window-size=1920,1080\")   # Эта тоже нужна для Docker и нам просто нужно\n        options.add_argument(\"--user-agent=AQA Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \"\n                             \"(KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36\")\n        options.add_argument(\"--disable-cache\")\n        options.add_argument(\"--ignore-certificate-errors\")\n        options.add_argument(\"--disable-blink-features=AutomationControlled\")\n        # Опции для Docker:\n        options.add_argument(\"--headless\")  # Запускает браузер в режиме без графического интерфейса (удобно для серверов)\n        options.add_argument(\"--no-sandbox\")  # Отключает режим песочницы для предотвращения проблем с правами доступа\n        options.add_argument(\n            \"--disable-dev-shm-usage\")  # Отключает использование общей памяти /dev/shm (для Docker и серверных сред)\n        options.add_argument(\"--disable-gpu\")  # Отключает GPU, необходимое для headless-режима на некоторых системах\n        # До сюда идут опции для Docker\n        options.add_experimental_option(\"excludeSwitches\", [\"enable-automation\"])\n        options.add_experimental_option('useAutomationExtension', False)\n    \n        browser = os.getenv('BROWSER', 'chrome')        # Если переменная не будет передана, то используем значение по дефолту chrome\n        driver = None\n        if browser == 'chrome':\n>           driver = webdriver.Chrome(options=options)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nconftest.py:30: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n../local/lib/python3.11/site-packages/selenium/webdriver/chrome/webdriver.py:47: in __init__\n    super().__init__(\n../local/lib/python3.11/site-packages/selenium/webdriver/chromium/webdriver.py:69: in __init__\n    super().__init__(command_executor=executor, options=options)\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:261: in __init__\n    self.start_session(capabilities)\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:362: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:454: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f0aef484cd0>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"session not created\",\"message\":\"session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                try:\n                    value = json.loads(value_json)\n                    if isinstance(value, dict):\n                        if len(value) == 1:\n                            value = value[\"value\"]\n                        status = value.get(\"error\", None)\n                        if not status:\n                            status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                            message = value.get(\"value\") or value.get(\"message\")\n                            if not isinstance(message, str):\n                                value = message\n                                message = message.get(\"message\")\n                        else:\n                            message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception\n\n../local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: SessionNotCreatedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1782914921437,
+      "stop" : 1782914922033,
+      "duration" : 596
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception\n\n",
+    "statusTrace" : "  File \"/usr/local/lib/python3.11/site-packages/pluggy/_callers.py\", line 38, in run_old_style_hookwrapper\n    res = yield\n          ^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pluggy/_callers.py\", line 139, in _multicall\n    teardown.throw(exception)\n  File \"/usr/local/lib/python3.11/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n            ^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/_pytest/fixtures.py\", line 1195, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/_pytest/fixtures.py\", line 922, in call_fixture_func\n    fixture_result = next(generator)\n                     ^^^^^^^^^^^^^^^\n  File \"/usr/workspace/conftest.py\", line 30, in driver\n    driver = webdriver.Chrome(options=options)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/chrome/webdriver.py\", line 47, in __init__\n    super().__init__(\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/chromium/webdriver.py\", line 69, in __init__\n    super().__init__(command_executor=executor, options=options)\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 261, in __init__\n    self.start_session(capabilities)\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 362, in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py\", line 454, in execute\n    self.error_handler.check_response(response)\n  File \"/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py\", line 232, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "as_id",
+    "value" : "4"
+  }, {
+    "name" : "epic",
+    "value" : "Тренировочный проект на https://release-crm.qa-playground.com"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "suite",
+    "value" : "login_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "06b0c47fc3f4"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.login_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 18,
+        "skipped" : 0,
+        "passed" : 78,
+        "unknown" : 0,
+        "total" : 101
+      },
+      "items" : [ {
+        "uid" : "f3f93367bc795c01",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=142.0.7444.59)",
+        "time" : {
+          "start" : 1780334201230,
+          "stop" : 1780334202051,
+          "duration" : 821
+        }
+      }, {
+        "uid" : "251b0fa1f9234f0c",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=48009): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1777641037304,
+          "stop" : 1777641157381,
+          "duration" : 120077
+        }
+      }, {
+        "uid" : "53582a1bfe643d1a",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=42441): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1775049022161,
+          "stop" : 1775049142260,
+          "duration" : 120099
+        }
+      }, {
+        "uid" : "4836e69483ded593",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=45863): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1772368957263,
+          "stop" : 1772369077365,
+          "duration" : 120102
+        }
+      }, {
+        "uid" : "db706ccf646042b4",
+        "status" : "broken",
+        "statusDetails" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=34889): Read timed out. (read timeout=120)",
+        "time" : {
+          "start" : 1769949786289,
+          "stop" : 1769949906389,
+          "duration" : 120100
+        }
+      }, {
+        "uid" : "1eb950a545724b00",
+        "status" : "passed",
+        "time" : {
+          "start" : 1767270287987,
+          "stop" : 1767270291246,
+          "duration" : 3259
+        }
+      }, {
+        "uid" : "1c6deaf687cc5252",
+        "status" : "passed",
+        "time" : {
+          "start" : 1764596885029,
+          "stop" : 1764596888004,
+          "duration" : 2975
+        }
+      }, {
+        "uid" : "efdd9389d1e2be5c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762520396462,
+          "stop" : 1762520399250,
+          "duration" : 2788
+        }
+      }, {
+        "uid" : "f8147b772deb847a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762517247044,
+          "stop" : 1762517250766,
+          "duration" : 3722
+        }
+      }, {
+        "uid" : "b4ac8847c0ea7b73",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762442638356,
+          "stop" : 1762442641518,
+          "duration" : 3162
+        }
+      }, {
+        "uid" : "c08c4e310a408a10",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762354110536,
+          "stop" : 1762354113468,
+          "duration" : 2932
+        }
+      }, {
+        "uid" : "d55101617356d1a5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1762002562242,
+          "stop" : 1762002565010,
+          "duration" : 2768
+        }
+      }, {
+        "uid" : "94eee2666cdea208",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761581543862,
+          "stop" : 1761581546687,
+          "duration" : 2825
+        }
+      }, {
+        "uid" : "aca3ea42f31a934d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761581286882,
+          "stop" : 1761581289442,
+          "duration" : 2560
+        }
+      }, {
+        "uid" : "a6ae316ce2dd714d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761580784705,
+          "stop" : 1761580787501,
+          "duration" : 2796
+        }
+      }, {
+        "uid" : "6150b47ba21a83da",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761579516277,
+          "stop" : 1761579520212,
+          "duration" : 3935
+        }
+      }, {
+        "uid" : "c6168ca0ee09f92b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761578891965,
+          "stop" : 1761578895341,
+          "duration" : 3376
+        }
+      }, {
+        "uid" : "a92e32eff52e5d3e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761577251085,
+          "stop" : 1761577253766,
+          "duration" : 2681
+        }
+      }, {
+        "uid" : "8f81ff3872a8e5e9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576915617,
+          "stop" : 1761576918289,
+          "duration" : 2672
+        }
+      }, {
+        "uid" : "42680cee32cfe36f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1761576737669,
+          "stop" : 1761576740586,
+          "duration" : 2917
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "1657972dc1eea844.json",
+  "parameterValues" : [ ]
+}

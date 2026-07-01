@@ -3,61 +3,65 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=142.0.7444.59)",
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
       "children" : [ {
         "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "9ea22c86f14e2ea",
-        "parentUid" : "18bf189cc293377cea5f692a2969b2e2",
+        "uid" : "d3e3f384e2594d57",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1780334197455,
-          "stop" : 1780334198260,
-          "duration" : 805
+          "start" : 1782914843268,
+          "stop" : 1782914853826,
+          "duration" : 10558
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "abe33f2e9c9eb7a3",
-        "parentUid" : "18bf189cc293377cea5f692a2969b2e2",
+        "uid" : "92f4bb12c3bb7d7d",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1780334198793,
-          "stop" : 1780334199473,
-          "duration" : 680
+          "start" : 1782914876786,
+          "stop" : 1782914887609,
+          "duration" : 10823
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "f2f442f6e043a7d1",
-        "parentUid" : "18bf189cc293377cea5f692a2969b2e2",
+        "uid" : "5728c98f3b2fd94",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1780334199961,
-          "stop" : 1780334200742,
-          "duration" : 781
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Тестирование авторизации",
-        "uid" : "f3f93367bc795c01",
-        "parentUid" : "18bf189cc293377cea5f692a2969b2e2",
-        "status" : "broken",
-        "time" : {
-          "start" : 1780334201230,
-          "stop" : 1780334202051,
-          "duration" : 821
+          "start" : 1782914910661,
+          "stop" : 1782914921366,
+          "duration" : 10705
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "18bf189cc293377cea5f692a2969b2e2"
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+    }, {
+      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception",
+      "children" : [ {
+        "name" : "Тестирование авторизации",
+        "uid" : "1657972dc1eea844",
+        "parentUid" : "94a7febd464384e1b281384bfa944d2e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1782914921437,
+          "stop" : 1782914921437,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "94a7febd464384e1b281384bfa944d2e"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
