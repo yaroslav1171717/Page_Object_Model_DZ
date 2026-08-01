@@ -2,13 +2,22 @@
   "7dc34a0dcf8cb5685c913ed3a260b9ff" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 8,
+      "broken" : 9,
       "skipped" : 0,
       "passed" : 79,
       "unknown" : 0,
-      "total" : 87
+      "total" : 88
     },
     "items" : [ {
+      "uid" : "c55ae22866baa381",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1785589112206,
+        "stop" : 1785589173840,
+        "duration" : 61634
+      }
+    }, {
       "uid" : "d3e3f384e2594d57",
       "status" : "broken",
       "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
@@ -166,26 +175,27 @@
         "stop" : 1761577239557,
         "duration" : 7530
       }
-    }, {
-      "uid" : "96dda66fa48a65f0",
-      "status" : "passed",
-      "time" : {
-        "start" : 1761576896050,
-        "stop" : 1761576903768,
-        "duration" : 7718
-      }
     } ]
   },
   "4a2e7f781cbcf7e74a88a7626dcbde05" : {
     "statistic" : {
       "failed" : 5,
-      "broken" : 18,
+      "broken" : 19,
       "skipped" : 0,
       "passed" : 78,
       "unknown" : 0,
-      "total" : 101
+      "total" : 102
     },
     "items" : [ {
+      "uid" : "8b36c847a83915c9",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1785589796909,
+        "stop" : 1785589892179,
+        "duration" : 95270
+      }
+    }, {
       "uid" : "1657972dc1eea844",
       "status" : "broken",
       "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception",
@@ -343,26 +353,27 @@
         "stop" : 1761577253766,
         "duration" : 2681
       }
-    }, {
-      "uid" : "8f81ff3872a8e5e9",
-      "status" : "passed",
-      "time" : {
-        "start" : 1761576915617,
-        "stop" : 1761576918289,
-        "duration" : 2672
-      }
     } ]
   },
   "f0f5e3318dbe089f0c6ea48989269ded" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 8,
+      "broken" : 9,
       "skipped" : 0,
       "passed" : 78,
       "unknown" : 0,
-      "total" : 86
+      "total" : 87
     },
     "items" : [ {
+      "uid" : "3f6d5a6a1feb4539",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1785589580690,
+        "stop" : 1785589642469,
+        "duration" : 61779
+      }
+    }, {
       "uid" : "5728c98f3b2fd94",
       "status" : "broken",
       "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
@@ -520,26 +531,27 @@
         "stop" : 1761577250602,
         "duration" : 6769
       }
-    }, {
-      "uid" : "31cde98c23e9b0e9",
-      "status" : "passed",
-      "time" : {
-        "start" : 1761576908211,
-        "stop" : 1761576915134,
-        "duration" : 6923
-      }
     } ]
   },
   "fdf659477fd6c733f5220db5e41affdd" : {
     "statistic" : {
       "failed" : 2,
-      "broken" : 6,
+      "broken" : 7,
       "skipped" : 0,
       "passed" : 79,
       "unknown" : 0,
-      "total" : 87
+      "total" : 88
     },
     "items" : [ {
+      "uid" : "99c7e137776b643c",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1785589361722,
+        "stop" : 1785589423328,
+        "duration" : 61606
+      }
+    }, {
       "uid" : "92f4bb12c3bb7d7d",
       "status" : "broken",
       "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
@@ -696,14 +708,6 @@
         "start" : 1761577240018,
         "stop" : 1761577243377,
         "duration" : 3359
-      }
-    }, {
-      "uid" : "11b24f17c53952e8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1761576904236,
-        "stop" : 1761576907761,
-        "duration" : 3525
       }
     } ]
   }
