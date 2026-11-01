@@ -3,61 +3,73 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.TimeoutException: Message:",
+      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=60543): Read timed out. (read timeout=120)",
       "children" : [ {
         "name" : "Открытие контакта со страницы Дашборда, ввод текста и проверка ввода через страницу Контакты",
-        "uid" : "5b57482f8f27ff53",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "uid" : "e3e4e2a9f78de044",
+        "parentUid" : "4c43deb169e9d7ff44ce1b89d5a695dc",
         "status" : "broken",
         "time" : {
-          "start" : 1790876726682,
-          "stop" : 1790876824477,
-          "duration" : 97795
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
-        "uid" : "f891a30f43fd6bd5",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1790876980427,
-          "stop" : 1790877042072,
-          "duration" : 61645
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
-        "uid" : "61005ef3828c5340",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1790877196776,
-          "stop" : 1790877288242,
-          "duration" : 91466
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Тестирование авторизации",
-        "uid" : "7e41cbf2822fa517",
-        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1790877444870,
-          "stop" : 1790877536304,
-          "duration" : 91434
+          "start" : 1793553846403,
+          "stop" : 1793553966498,
+          "duration" : 120095
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
+      "uid" : "4c43deb169e9d7ff44ce1b89d5a695dc"
+    }, {
+      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=52637): Read timed out. (read timeout=120)",
+      "children" : [ {
+        "name" : "Проверка кнопок меню в шапке со страницы Дашборды",
+        "uid" : "135fa21097ba1f9",
+        "parentUid" : "bef790bcbc13e1e232c846b619c12799",
+        "status" : "broken",
+        "time" : {
+          "start" : 1793554147058,
+          "stop" : 1793554267133,
+          "duration" : 120075
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bef790bcbc13e1e232c846b619c12799"
+    }, {
+      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=43759): Read timed out. (read timeout=120)",
+      "children" : [ {
+        "name" : "Открытие сделки со страницы Дашборда, ввод текста и проверка ввода через страницу Сделок",
+        "uid" : "9d31c234c0e66e62",
+        "parentUid" : "78e644ab0fefc914e4fbdb52eeb84bfd",
+        "status" : "broken",
+        "time" : {
+          "start" : 1793554447633,
+          "stop" : 1793554567728,
+          "duration" : 120095
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "78e644ab0fefc914e4fbdb52eeb84bfd"
+    }, {
+      "name" : "urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=41703): Read timed out. (read timeout=120)",
+      "children" : [ {
+        "name" : "Тестирование авторизации",
+        "uid" : "4cdee29521934e72",
+        "parentUid" : "17757d1458d45cd9fa5a2cdb177364fa",
+        "status" : "broken",
+        "time" : {
+          "start" : 1793554748221,
+          "stop" : 1793554868238,
+          "duration" : 120017
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "17757d1458d45cd9fa5a2cdb177364fa"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],

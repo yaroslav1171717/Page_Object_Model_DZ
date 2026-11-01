@@ -1,6 +1,11 @@
 [ {
   "data" : {
     "run" : 4,
+    "retry" : 0
+  }
+}, {
+  "data" : {
+    "run" : 4,
     "retry" : 8
   }
 }, {
@@ -17,11 +22,6 @@
   "data" : {
     "run" : 4,
     "retry" : 6
-  }
-}, {
-  "data" : {
-    "run" : 4,
-    "retry" : 0
   }
 }, {
   "data" : {
